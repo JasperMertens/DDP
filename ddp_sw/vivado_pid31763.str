@@ -1,0 +1,92 @@
+/*
+
+Vivado v2016.2 (64-bit)
+SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+Process ID: 31763
+
+Current time: 	10/28/17 11:51:15 AM CEST
+Time zone: 	Central European Time (Europe/Brussels)
+
+OS: CentOS Linux release 7.4.1708 (Core) 
+Version: 3.10.0-693.2.2.el7.x86_64
+Architecture: amd64
+Available processors (cores): 8
+
+DISPLAY: localhost:30.0
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/tps/lnx64/jre
+
+User name: 	r0575928
+User home directory: /users/start2015/r0575928
+User working directory: /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI Base root directory: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado
+RDI Data directory: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data
+RDI Bin directory: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin
+
+Vivado preferences path: /users/start2015/r0575928/.Xilinx/Vivado/2016.2/vivado.ini
+Vivado layouts directory: /users/start2015/r0575928/.Xilinx/Vivado/2016.2/layouts
+
+GUI allocated memory:	170 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 4,882 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 33 MB (+31922kb) [00:00:11]
+// [Engine Memory]: 4,859 MB (+4943813kb) [00:00:11]
+// Opening Vivado Project: montgomery_sw_project/montgomery_sw_project.xpr. Version: Vivado v2016.2 
+// bL:g (cv:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,887 MB. GUI used memory: 22 MB. Current time: 10/28/17 11:51:15 AM CEST
+// Tcl Message: open_project montgomery_sw_project/montgomery_sw_project.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 38 MB (+3470kb) [00:00:25]
+// [GUI Memory]: 54 MB (+15506kb) [00:00:26]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project montgomery_sw_project/montgomery_sw_project.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 60 MB (+2547kb) [00:00:32]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 64 MB (+1800kb) [00:00:32]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: montgomery_sw_project; location: /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project; part: xc7z010clg400-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:15 . Memory (MB): peak = 5991.316 ; gain = 141.680 ; free physical = 617 ; free virtual = 33462 
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // af:JMenuItem (JPopupMenu:JComponent, cv:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// ai:x (cv:JFrame): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ai:x)
+// 'p' command handler elapsed time: 7 seconds
+dismissDialog("Launch SDK"); // ai:x (cv:JFrame)
+// Tcl Message: launch_sdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.sdk/montgomery_sw_project_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.sdk/montgomery_sw_project_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 

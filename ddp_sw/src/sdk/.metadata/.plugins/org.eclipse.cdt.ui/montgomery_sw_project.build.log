@@ -1,0 +1,10 @@
+12:55:38 **** Incremental Build of configuration Debug for project montgomery_sw_project ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/src/sdk/montgomery_sw_project/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/src/sdk/montgomery_sw_project/Debug'
+
+12:55:38 Build Finished (took 64ms)
+

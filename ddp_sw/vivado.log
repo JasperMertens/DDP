@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Thu Dec  7 12:33:57 2017
+# Process ID: 11520
+# Current directory: /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw
+# Command line: vivado montgomery_sw_project/montgomery_sw_project.xpr -tempDir /tmp
+# Log file: /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/vivado.log
+# Journal file: /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project montgomery_sw_project/montgomery_sw_project.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/src/ip_repo'.
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/src/ip_repo'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/src/ip_repo'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/src/ip_repo' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/src/ip_repo'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 5969.102 ; gain = 129.195 ; free physical = 3364 ; free virtual = 22152
+update_compile_order -fileset sources_1
+launch_sdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.sdk/montgomery_sw_project_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.sdk/montgomery_sw_project_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec  7 12:37:55 2017] Launched impl_1...
+Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.runs/impl_1/runme.log
+file copy -force /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.runs/impl_1/montgomery_sw_project_wrapper.sysdef /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.sdk/montgomery_sw_project_wrapper.hdf
+
+launch_sdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.sdk/montgomery_sw_project_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.sdk/montgomery_sw_project_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.sdk/montgomery_sw_project_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_sw/montgomery_sw_project/montgomery_sw_project.sdk/montgomery_sw_project_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  7 12:56:50 2017...

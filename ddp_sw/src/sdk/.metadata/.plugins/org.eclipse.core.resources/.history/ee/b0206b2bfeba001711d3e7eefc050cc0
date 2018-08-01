@@ -1,0 +1,213 @@
+.text
+
+.global add_c
+.func add_c, add_c
+.type add_c, %function
+
+add_c:
+cmp r2, #0					// while c!=0
+beq end_add_c
+add r0, r0, r1, lsl #2		// *t + 4*i
+
+ldr r3, [r0]	 			// r3 <= t[i]
+adds r1, r3, r2
+str r1, [r0], #4			// store r1 to memory adress of r0, increase pointer to memory address by 4
+bcc end_add_c
+
+add_c_loop:					// propagate carry
+ldr r3, [r0]				// r3 <= t[i]
+adds r1, r3, #1
+str r1, [r0], #4
+bcs add_c_loop
+
+end_add_c:
+bx lr
+.endfunc
+
+
+.text
+
+.global asm_sum
+.func asm_sum, asm_sum
+.type asm_sum, %function
+
+asm_sum:
+push {r4-r7}
+ldr r4, [sp, #16]
+ldr r5, [sp, #20]
+ldr r6, [sp, #24]
+ldr r7, [sp, #28]
+
+add r2,r2,r7, lsl #2	//*t + 4j
+add r3,r3,r7, lsl #2	//*a + 4j
+add r4,r4,r6, lsl #2	//*b + 4i
+
+ldr r2, [r2]
+ldr r3, [r3]
+ldr r4, [r4]
+
+umull r7,r6,r3,r4
+adds r2,r2,r5
+addcs r6,r6, #1
+adds r7, r7, r2
+addcs r6, r6, #1
+
+str r6, [r0]
+str r7, [r1]
+pop {r4-r7}
+
+bx lr
+.endfunc
+
+
+.text
+
+.global asm_sum1
+.func asm_sum1, asm_sum1
+.type asm_sum1, %function
+
+asm_sum1:
+push {r4-r5}
+ldr r4, [sp, #8]
+ldr r5, [sp, #12]
+
+add r4,r4,r5, lsl #2	//*b + 4i
+
+ldr r2, [r2]
+ldr r3, [r3]
+ldr r4, [r4]
+
+umull r3,r4,r3,r4
+adds r3, r3, r2
+addcs r4, r4, #1
+
+str r4, [r0]
+str r3, [r1]
+pop {r4-r5}
+
+bx lr
+.endfunc
+
+
+
+.text
+
+.global asm_sum2
+.func asm_sum2, asm_sum2
+.type asm_sum2, %function
+
+asm_sum2:
+push {r4}
+ldr r4, [sp, #4]
+
+ldr r3, [r3]
+ldr r4, [r4]
+
+umull r3,r4,r3,r4
+adds r3,r3,r2
+addcs r4,r4, #1
+
+str r4, [r0]
+str r3, [r1]
+pop {r4}
+
+bx lr
+.endfunc
+
+
+.text
+
+.global asm_sum3
+.func asm_sum3, asm_sum3
+.type asm_sum3, %function
+
+asm_sum3:
+push {r4-r5}
+ldr r4, [sp, #8]
+ldr r5, [sp, #12]
+
+add r4,r4,r5, lsl #2	//*n + 4j
+
+ldr r3, [r3]
+ldr r4, [r4]
+
+umull r3,r4,r3,r4
+adds r3,r3,r2
+addcs r4,r4, #1
+
+str r4, [r0]
+str r3, [r1]
+pop {r4-r5}
+
+bx lr
+.endfunc
+
+
+.text
+
+.global asm_sum4
+.func asm_sum4, asm_sum4
+.type asm_sum4, %function
+
+asm_sum4:
+
+ldr r2, [r2, #128]
+
+adds r2,r2,r3
+
+//ldr r3, [r0]
+
+//addcs r3,r3, #1
+mov r3, #0
+
+addcs r3, r3, #1
+str r3, [r0]
+str r2, [r1]
+
+bx lr
+.endfunc
+
+
+.text
+
+.global inner_loop
+.func inner_loop, inner_loop
+.type inner_loop, %function
+
+inner_loop:
+
+push {r4-r8, lr}
+
+add r4, r4, r7, lsl #2 // *b -> *b+i*4
+						// r7 is now free
+
+LOOP:
+add r2, r2, #1, lsl #2 // *t -> *t+4
+add r3, r3, #1, lsl #2 // *a -> *a+4
+add r6, r6, #1, lsl #2 // *n -> *n+4
+
+push{r2, r3}	// save *t[j+1] and *a[j+1]
+
+bl ASM_SUM_1
+
+mov r7, r1		// temporarily save *S in r7
+pop{r1, r3}		// store *t[j+1] in r1 and restore *a[j+1] to r3
+
+bl ASM_ADD
+
+push{r3,r4,r5}	// save *a[j+1], *b[j+1] and m
+mov r3, r1		// clear r2, store *t[j+1] in r3
+mov r1, r7		// get *S back in r1
+mov r2, r1		// get *t[j+1] back in r2
+mov r3, r5		// get m in r3
+mov r4, r6		// get *n[j+1] in r4
+
+bl ASM_SUM_2
+
+mov r6, r4
+pop{r4}
+.endfunc
+
+
+
+

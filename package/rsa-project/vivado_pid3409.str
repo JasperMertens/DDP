@@ -2150,3 +2150,6 @@ dismissDialog("Launch SDK"); // ai:x (cv:JFrame)
 // Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
 // HMemoryUtils.trashcanNow. Engine heap size: 6,041 MB. GUI used memory: 81 MB. Current time: 8/1/18 3:23:32 PM CEST
 // HMemoryUtils.trashcanNow. Engine heap size: 6,041 MB. GUI used memory: 80 MB. Current time: 8/1/18 3:53:33 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 6,041 MB. GUI used memory: 80 MB. Current time: 8/1/18 4:23:33 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 6,041 MB. GUI used memory: 79 MB. Current time: 8/1/18 4:53:33 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 6,041 MB. GUI used memory: 78 MB. Current time: 8/1/18 5:23:33 PM CEST
