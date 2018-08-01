@@ -1,0 +1,608 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Oct 24 19:04:17 2017
+# Process ID: 12810
+# Current directory: /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project
+# Command line: vivado rsa_project/rsa_project.xpr -tempDir /tmp
+# Log file: /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/vivado.log
+# Journal file: /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project rsa_project/rsa_project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 5947.227 ; gain = 106.785 ; free physical = 5061 ; free virtual = 22855
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_adder' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_adder_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/tb_adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 68139036194b486f867537134e53a7f7 --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_adder_behav xil_defaultlib.tb_adder xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.tb_adder
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_adder_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/xsim.dir/tb_adder_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct 24 19:05:06 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_adder_behav -key {Behavioral:sim_1:Functional:tb_adder} -tclbatch {tb_adder.tcl} -view {/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/tb_adder_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_adder.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+result=3cae6faa5a33f7b644fa44e3366e1027b6e3b765113475c1fc4fee955901dfad931b4ee3efa4d6c3ce29feaf1ba45d18ba6691aa518b36d3c4bb4b15983879c51
+result=18629ec2eea705a0352a4c9d88a2b12dd8ac5ad0aa2d96ed41f4c5b737a5daacf0a16e146d8c2f25c6235378bcb6fcbc37194ea6ef14fee06746cdd4b742fb81b
+$finish called at time : 335 ns : File "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/tb_adder.v" Line 129
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_adder_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 6063.383 ; gain = 108.680 ; free physical = 4870 ; free virtual = 22802
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_adder' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_adder_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/tb_adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 68139036194b486f867537134e53a7f7 --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_adder_behav xil_defaultlib.tb_adder xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.tb_adder
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_adder_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/xsim.dir/tb_adder_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct 24 19:13:05 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_adder_behav -key {Behavioral:sim_1:Functional:tb_adder} -tclbatch {tb_adder.tcl} -view {/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/tb_adder_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_adder.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+result=3cae6faa5a33f7b644fa44e3366e1027b6e3b765113475c1fc4fee955901dfad931b4ee3efa4d6c3ce29feaf1ba45d18ba6691aa518b36d3c4bb4b15983879c51
+result=18629ec2eea705a0352a4c9d88a2b12dd8ac5ad0aa2d96ed41f4c5b737a5daacf0a16e146d8c2f25c6235378bcb6fcbc37194ea6ef14fee06746cdd4b742fb81b
+$finish called at time : 335 ns : File "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/tb_adder.v" Line 129
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_adder_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+save_wave_config {/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/tb_adder_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_adder' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_adder_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/tb_adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 68139036194b486f867537134e53a7f7 --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_adder_behav xil_defaultlib.tb_adder xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.tb_adder
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_adder_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/xsim.dir/tb_adder_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct 24 19:45:53 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '0' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_adder_behav -key {Behavioral:sim_1:Functional:tb_adder} -tclbatch {tb_adder.tcl} -view {/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/tb_adder_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_adder.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+result=3cae6faa5a33f7b644fa44e3366e1027b6e3b765113475c1fc4fee955901dfad931b4ee3efa4d6c3ce29feaf1ba45d18ba6691aa518b36d3c4bb4b15983879c51
+result=1ffffffffffffffffffffffffffffffffffffffffffc0000000000000000000000000000000000000000007ffffffffffffffffffffffffffffffffffffffffff
+$finish called at time : 335 ns : File "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/tb_adder.v" Line 131
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_adder_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+save_wave_config {/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/tb_adder_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_adder' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_adder_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/tb_adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 68139036194b486f867537134e53a7f7 --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_adder_behav xil_defaultlib.tb_adder xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.tb_adder
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_adder_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/xsim.dir/tb_adder_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct 24 20:00:26 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_adder_behav -key {Behavioral:sim_1:Functional:tb_adder} -tclbatch {tb_adder.tcl} -view {/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/tb_adder_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_adder.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+result=3cae6faa5a33f7b644fa44e3366e1027b6e3b765113475c1fc4fee955901dfad931b4ee3efa4d6c3ce29feaf1ba45d18ba6691aa518b36d3c4bb4b15983879c51
+result=000000000000000000000000000000000000000000040000000000000000000000000000000000000000007ffffffffffffffffffffffffffffffffffffffffff
+$finish called at time : 305 ns : File "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/tb_adder.v" Line 131
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_adder_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z010clg400-1
+Top: hweval_adder
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:03:55 ; elapsed = 01:01:11 . Memory (MB): peak = 6137.926 ; gain = 5150.688 ; free physical = 3860 ; free virtual = 22039
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'hweval_adder' [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/hweval_adder.v:3]
+INFO: [Synth 8-638] synthesizing module 'adder' [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v:3]
+	Parameter SIZE bound to: 171 - type: integer 
+	Parameter STATES bound to: 3 - type: integer 
+	Parameter IDLE bound to: 3'b001 
+	Parameter CALC bound to: 3'b010 
+	Parameter SHIFT bound to: 3'b100 
+INFO: [Synth 8-155] case statement is not full and has no default [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v:78]
+INFO: [Synth 8-256] done synthesizing module 'adder' (1#1) [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v:3]
+INFO: [Synth 8-256] done synthesizing module 'hweval_adder' (2#1) [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/hweval_adder.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:03:56 ; elapsed = 01:01:11 . Memory (MB): peak = 6173.184 ; gain = 5185.945 ; free physical = 3819 ; free virtual = 21999
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:03:56 ; elapsed = 01:01:12 . Memory (MB): peak = 6173.184 ; gain = 5185.945 ; free physical = 3818 ; free virtual = 21999
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Sourcing Tcl File [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/constraints/constraints.tcl]
+Constraints for hw_evals
+Finished Sourcing Tcl File [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/constraints/constraints.tcl]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:04:11 ; elapsed = 01:01:24 . Memory (MB): peak = 6575.332 ; gain = 5588.094 ; free physical = 3469 ; free virtual = 21692
+9 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 6575.332 ; gain = 449.398 ; free physical = 3469 ; free virtual = 21692
+refresh_design
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Sourcing Tcl File [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/constraints/constraints.tcl]
+Constraints for hw_evals
+Finished Sourcing Tcl File [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/constraints/constraints.tcl]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_adder' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_adder_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/tb_adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 68139036194b486f867537134e53a7f7 --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_adder_behav xil_defaultlib.tb_adder xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.tb_adder
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_adder_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/xsim.dir/tb_adder_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct 24 20:13:36 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_adder_behav -key {Behavioral:sim_1:Functional:tb_adder} -tclbatch {tb_adder.tcl} -view {/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/tb_adder_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_adder.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+result=3cae6faa5a33f7b644fa44e3366e1027b6e3b765113475c1fc4fee955901dfad931b4ee3efa4d6c3ce29feaf1ba45d18ba6691aa518b36d3c4bb4b15983879c51
+result=00000000000000000000000000000000000000000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+$finish called at time : 305 ns : File "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/tb_adder.v" Line 131
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_adder_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_adder' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_adder_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/tb_adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 68139036194b486f867537134e53a7f7 --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_adder_behav xil_defaultlib.tb_adder xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.tb_adder
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_adder_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/xsim.dir/tb_adder_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct 24 20:15:28 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_adder_behav -key {Behavioral:sim_1:Functional:tb_adder} -tclbatch {tb_adder.tcl} -view {/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/tb_adder_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_adder.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+result=3cae6faa5a33f7b644fa44e3366e1027b6e3b765113475c1fc4fee955901dfad931b4ee3efa4d6c3ce29feaf1ba45d18ba6691aa518b36d3c4bb4b15983879c51
+result=0000000000000000000000000000000000000000000196ed41f4c5b737a5daacf0a16e146d8c2f25c62352f8bcb6fcbc37194ea6ef14fee06746cdd4b742fb81b
+$finish called at time : 305 ns : File "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/tb_adder.v" Line 131
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_adder_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+launch_runs impl_1
+[Tue Oct 24 20:15:51 2017] Launched synth_1...
+Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.runs/synth_1/runme.log
+[Tue Oct 24 20:15:51 2017] Launched impl_1...
+Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_adder' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_adder_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/tb_adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 68139036194b486f867537134e53a7f7 --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_adder_behav xil_defaultlib.tb_adder xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.tb_adder
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_adder_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/xsim.dir/tb_adder_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct 24 20:17:29 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_adder_behav -key {Behavioral:sim_1:Functional:tb_adder} -tclbatch {tb_adder.tcl} -view {/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/tb_adder_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_adder.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+result=3cae6faa5a33f7b644fa44e3366e1027b6e3b765113475c1fc4fee955901dfad931b4ee3efa4d6c3ce29feaf1ba45d18ba6691aa518b36d3c4bb4b15983879c51
+result=0000000000000000000000000000000000000000000196ed41f4c5b737a5daacf0a16e146d8c2f25c62352f8bcb6fcbc37194ea6ef14fee06746cdd4b742fb81b
+$finish called at time : 305 ns : File "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/tb_adder.v" Line 131
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_adder_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 88 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/tmp/.Xil_r0575928/Vivado-12810-pc-klas1-5.esat.kuleuven.be/dcp/hweval_adder.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0575928/Vivado-12810-pc-klas1-5.esat.kuleuven.be/dcp/hweval_adder.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.24 . Memory (MB): peak = 6596.336 ; gain = 0.000 ; free physical = 3320 ; free virtual = 21574
+Restored from archive | CPU: 0.240000 secs | Memory: 4.499809 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.24 . Memory (MB): peak = 6596.336 ; gain = 0.000 ; free physical = 3320 ; free virtual = 21574
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+current_design rtl_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:07:15 ; elapsed = 01:20:25 . Memory (MB): peak = 7123.297 ; gain = 6136.059 ; free physical = 2722 ; free virtual = 21054
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'hweval_adder' [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/hweval_adder.v:3]
+INFO: [Synth 8-638] synthesizing module 'adder' [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v:3]
+	Parameter SIZE bound to: 171 - type: integer 
+	Parameter STATES bound to: 3 - type: integer 
+	Parameter IDLE bound to: 3'b001 
+	Parameter CALC bound to: 3'b010 
+	Parameter SHIFT bound to: 3'b100 
+INFO: [Synth 8-155] case statement is not full and has no default [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v:80]
+INFO: [Synth 8-256] done synthesizing module 'adder' (1#1) [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v:3]
+INFO: [Synth 8-256] done synthesizing module 'hweval_adder' (2#1) [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/hweval_adder.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:07:15 ; elapsed = 01:20:26 . Memory (MB): peak = 7146.812 ; gain = 6159.574 ; free physical = 2697 ; free virtual = 21030
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:07:16 ; elapsed = 01:20:26 . Memory (MB): peak = 7146.812 ; gain = 6159.574 ; free physical = 2697 ; free virtual = 21030
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Sourcing Tcl File [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/constraints/constraints.tcl]
+Constraints for hw_evals
+Finished Sourcing Tcl File [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/constraints/constraints.tcl]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 7250.441 ; gain = 127.145 ; free physical = 2692 ; free virtual = 21023
+current_design impl_1
+report_utilization -name utilization_1
+report_utilization: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 7250.441 ; gain = 0.000 ; free physical = 2635 ; free virtual = 20964
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 24 20:34:29 2017...

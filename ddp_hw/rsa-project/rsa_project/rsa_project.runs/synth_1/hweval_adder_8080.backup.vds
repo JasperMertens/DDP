@@ -1,0 +1,178 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Oct 24 10:29:40 2017
+# Process ID: 8080
+# Current directory: /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.runs/synth_1
+# Command line: vivado -log hweval_adder.vds -tempDir /tmp -mode batch -messageDb vivado.pb -notrace -source hweval_adder.tcl
+# Log file: /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.runs/synth_1/hweval_adder.vds
+# Journal file: /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source hweval_adder.tcl -notrace
+Command: synth_design -top hweval_adder -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8096 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1151.383 ; gain = 164.137 ; free physical = 2218 ; free virtual = 20705
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'hweval_adder' [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/hweval_adder.v:3]
+INFO: [Synth 8-638] synthesizing module 'adder' [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v:3]
+	Parameter SIZE bound to: 171 - type: integer 
+	Parameter STATES bound to: 3 - type: integer 
+	Parameter IDLE bound to: 3'b001 
+	Parameter CALC bound to: 3'b010 
+	Parameter SHIFT bound to: 3'b100 
+WARNING: [Synth 8-567] referenced signal 'stop_add' should be on the sensitivity list [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v:46]
+INFO: [Synth 8-256] done synthesizing module 'adder' (1#1) [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v:3]
+INFO: [Synth 8-256] done synthesizing module 'hweval_adder' (2#1) [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/hweval_adder.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1191.828 ; gain = 204.582 ; free physical = 2177 ; free virtual = 20664
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1191.828 ; gain = 204.582 ; free physical = 2176 ; free virtual = 20663
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Sourcing Tcl File [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/constraints/constraints.tcl]
+Constraints for hw_evals
+INFO: [Vivado 12-1808] Property 'PACKAGE_PIN' is not supported for elaborated designs for objects of type 'port'. [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/constraints/constraints.tcl:7]
+Finished Sourcing Tcl File [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/constraints/constraints.tcl]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1537.336 ; gain = 0.000 ; free physical = 1993 ; free virtual = 20480
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1537.340 ; gain = 550.094 ; free physical = 1990 ; free virtual = 20477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1537.344 ; gain = 550.098 ; free physical = 1990 ; free virtual = 20477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1537.344 ; gain = 550.098 ; free physical = 1990 ; free virtual = 20477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v:128]
+INFO: [Synth 8-5544] ROM "a" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "reg_result" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1537.344 ; gain = 550.098 ; free physical = 1982 ; free virtual = 20469
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input    172 Bit       Adders := 1     
++---XORs : 
+	   2 Input    513 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	              514 Bit    Registers := 1     
+	              513 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input    514 Bit        Muxes := 3     
+	   4 Input    513 Bit        Muxes := 2     
+	   2 Input    513 Bit        Muxes := 2     
+	   2 Input    172 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module hweval_adder 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    513 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	              513 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
+Module adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input    172 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	              514 Bit    Registers := 1     
+	              513 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   4 Input    514 Bit        Muxes := 3     
+	   4 Input    513 Bit        Muxes := 2     
+	   2 Input    513 Bit        Muxes := 2     
+	   2 Input    172 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1537.344 ; gain = 550.098 ; free physical = 1982 ; free virtual = 20469
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "reg_result" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1537.344 ; gain = 550.098 ; free physical = 1974 ; free virtual = 20461
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1537.344 ; gain = 550.098 ; free physical = 1974 ; free virtual = 20461
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_a_reg[512] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_b_reg[512] )
+WARNING: [Synth 8-3332] Sequential element (b_reg[512]) is unused and will be removed from module adder.
+WARNING: [Synth 8-3332] Sequential element (a_reg[512]) is unused and will be removed from module adder.
+WARNING: [Synth 8-3332] Sequential element (in_a_reg[512]) is unused and will be removed from module hweval_adder.
+WARNING: [Synth 8-3332] Sequential element (in_b_reg[512]) is unused and will be removed from module hweval_adder.

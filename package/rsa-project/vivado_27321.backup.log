@@ -1,0 +1,103 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Dec 12 01:33:16 2017
+# Process ID: 27321
+# Current directory: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project
+# Command line: vivado rsa_project/rsa_project.xpr -tempDir /tmp
+# Log file: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/vivado.log
+# Journal file: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project rsa_project/rsa_project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo'.
+INFO: [IP_Flow 19-2207] Repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 5995.004 ; gain = 151.355 ; free physical = 3190 ; free virtual = 21974
+update_compile_order -fileset sources_1
+set_property top rsa_project_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 2
+Adding cell -- user.org:user:Montgomery_Interface:1.0 - Montgomery_Interface_0
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding cell -- user.org:user:axis_to_bram:1.0 - axis_to_bram_0
+Adding cell -- user.org:module_ref:montgomery_wrapper:1.0 - montgomery_wrapper_0
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Successfully read diagram <rsa_project> from BD file </users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd>
+INFO: [BD 41-1662] The design 'rsa_project.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.v
+Verilog Output written to : /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project_wrapper.v
+Wrote  : </users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Montgomery_Interface_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_to_bram_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block montgomery_wrapper_0 .
+WARNING: [xilinx.com:ip:processing_system7:5.5-1] rsa_project_processing_system7_0_0: The Zynq BFM requires an AXI BFM license to run. Please ensure that you have purchased and setup the AXI BFM license prior to running simulation with this block. Please contact your Xilinx sales office for more information on purchasing this license
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m01_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m02_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m03_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project.hwh
+Generated Block Design Tcl file /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project_bd.tcl
+Generated Hardware Definition File /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.hwdef
+INFO: [HDL 9-2216] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.v" into library work [/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.v:1]
+[Tue Dec 12 01:34:46 2017] Launched synth_1...
+Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 6156.633 ; gain = 159.629 ; free physical = 3027 ; free virtual = 21866
+launch_runs impl_1 -jobs 2
+[Tue Dec 12 01:42:20 2017] Launched impl_1...
+Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Dec 12 01:44:03 2017] Launched impl_1...
+Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 136 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/tmp/.Xil_r0575928/Vivado-27321-pc-klas5-16.esat.kuleuven.be/dcp/rsa_project_wrapper_early.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0575928/Vivado-27321-pc-klas5-16.esat.kuleuven.be/dcp/rsa_project_wrapper_early.xdc]
+Parsing XDC File [/tmp/.Xil_r0575928/Vivado-27321-pc-klas5-16.esat.kuleuven.be/dcp/rsa_project_wrapper.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0575928/Vivado-27321-pc-klas5-16.esat.kuleuven.be/dcp/rsa_project_wrapper.xdc]
+Parsing XDC File [/tmp/.Xil_r0575928/Vivado-27321-pc-klas5-16.esat.kuleuven.be/dcp/rsa_project_wrapper_late.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0575928/Vivado-27321-pc-klas5-16.esat.kuleuven.be/dcp/rsa_project_wrapper_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.90 ; elapsed = 00:00:00.89 . Memory (MB): peak = 6387.359 ; gain = 16.000 ; free physical = 2798 ; free virtual = 21713
+Restored from archive | CPU: 0.920000 secs | Memory: 14.042831 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.90 ; elapsed = 00:00:00.89 . Memory (MB): peak = 6387.359 ; gain = 16.000 ; free physical = 2798 ; free virtual = 21713
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
+
+open_run: Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 6502.137 ; gain = 306.090 ; free physical = 2710 ; free virtual = 21602
+file copy -force /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/rsa_project_wrapper.sysdef /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf
+
+launch_sdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+source ./export_bitstream.tcl
+# file copy -force ./rsa_project/rsa_project.runs/impl_1/rsa_project_wrapper.bit ./src/sdk/rsa_project_wrapper_hw_platform_0/rsa_project_wrapper.bit
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 12 02:01:28 2017...

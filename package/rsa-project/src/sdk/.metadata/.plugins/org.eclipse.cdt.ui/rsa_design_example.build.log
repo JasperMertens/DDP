@@ -1,0 +1,10 @@
+15:18:33 **** Incremental Build of configuration Debug for project rsa_design_example ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/sdk/rsa_design_example/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/sdk/rsa_design_example/Debug'
+
+15:18:33 Build Finished (took 137ms)
+

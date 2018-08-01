@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_adder_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_adder" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="122234800fs"></ZoomStartTime>
+      <ZoomEndTime time="265234801fs"></ZoomEndTime>
+      <Cursor1Time time="216000000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="16" />
+   <wvobject type="logic" fp_name="/tb_adder/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_adder/resetn">
+      <obj_property name="ElementShortName">resetn</obj_property>
+      <obj_property name="ObjectShortName">resetn</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_adder/in_a">
+      <obj_property name="ElementShortName">in_a[512:0]</obj_property>
+      <obj_property name="ObjectShortName">in_a[512:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_adder/in_b">
+      <obj_property name="ElementShortName">in_b[512:0]</obj_property>
+      <obj_property name="ObjectShortName">in_b[512:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_adder/start">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_adder/subtract">
+      <obj_property name="ElementShortName">subtract</obj_property>
+      <obj_property name="ObjectShortName">subtract</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_adder/result_ok">
+      <obj_property name="ElementShortName">result_ok</obj_property>
+      <obj_property name="ObjectShortName">result_ok</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_adder/result">
+      <obj_property name="ElementShortName">result[513:0]</obj_property>
+      <obj_property name="ObjectShortName">result[513:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_adder/done">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_adder/dut/state">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_adder/dut/next_state">
+      <obj_property name="ElementShortName">next_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_adder/dut/a">
+      <obj_property name="ElementShortName">a[512:0]</obj_property>
+      <obj_property name="ObjectShortName">a[512:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_adder/dut/b">
+      <obj_property name="ElementShortName">b[512:0]</obj_property>
+      <obj_property name="ObjectShortName">b[512:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_adder/dut/c">
+      <obj_property name="ElementShortName">c</obj_property>
+      <obj_property name="ObjectShortName">c</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_adder/dut/stop_add">
+      <obj_property name="ElementShortName">stop_add</obj_property>
+      <obj_property name="ObjectShortName">stop_add</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_adder/dut/counter">
+      <obj_property name="ElementShortName">counter[2:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[2:0]</obj_property>
+   </wvobject>
+</wave_config>

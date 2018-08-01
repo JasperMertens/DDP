@@ -1,0 +1,32 @@
+/*
+ * montgomery.c
+ *
+ */
+
+#include "montgomery_exponentiation.h"
+#include "montgomery.h"
+
+// header void mont(uint32_t *a, uint32_t *b, uint32_t *n, uint32_t *n0, uint32_t *res, uint32_t SIZE);
+
+#define SIZE 32
+
+void mont_exp(uint32_t *x, uint32_t *e, uint32_t *m, uint32_t *m0, uint32_t t, uint32_t *Rmodm, uint32_t *R2modm) {
+
+	uint32_t xtilde[SIZE];
+	uint32_t i;
+	uint32_t one = 1;
+
+	mont(x, R2modm, m, m0, xtilde, SIZE);
+
+	for (i = t ; i >= 0 ; i--) {
+
+		mont(Rmodm, Rmodm, m, m0, Rmodm, SIZE);
+
+		if (e[i] == 1) {
+			mont(Rmodm, xtilde, m, m0, Rmodm, SIZE);
+		}
+	}
+
+	mont(Rmodm, &one, m, m0, Rmodm, SIZE);
+
+}

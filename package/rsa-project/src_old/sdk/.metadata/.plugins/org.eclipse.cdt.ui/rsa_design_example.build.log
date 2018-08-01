@@ -1,0 +1,9 @@
+10:24:46 **** Clean-only build of configuration Debug for project rsa_design_example ****
+make clean 
+make[1]: Entering directory `/volume1/fturan/DDP/ddp/2017-2018/work-packages/hw/rsa-project/src/sdk/rsa_design_example/Debug'
+rm -rf  ./src/platform/platform.o  ./src/asm_func.o ./src/hw.o ./src/interface.o ./src/main.o ./src/sw.o ./src/testvector.o  ./src/asm_func.d  ./src/platform/platform.d  ./src/hw.d ./src/interface.d ./src/main.d ./src/sw.d ./src/testvector.d  rsa_design_example.elf.size  rsa_design_example.elf
+ 
+make[1]: Leaving directory `/volume1/fturan/DDP/ddp/2017-2018/work-packages/hw/rsa-project/src/sdk/rsa_design_example/Debug'
+
+10:24:46 Build Finished (took 167ms)
+

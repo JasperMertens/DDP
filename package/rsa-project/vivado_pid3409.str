@@ -1,0 +1,2152 @@
+/*
+
+Vivado v2016.2 (64-bit)
+SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+Process ID: 3409
+
+Current time: 	8/1/18 12:41:10 PM CEST
+Time zone: 	Central European Time (Europe/Brussels)
+
+OS: CentOS Linux release 7.5.1804 (Core) 
+Version: 3.10.0-862.3.2.el7.x86_64
+Architecture: amd64
+Available processors (cores): 4
+
+DISPLAY: :0
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/tps/lnx64/jre
+
+User name: 	r0575928
+User home directory: /users/start2015/r0575928
+User working directory: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI Base root directory: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado
+RDI Data directory: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data
+RDI Bin directory: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin
+
+Vivado preferences path: /users/start2015/r0575928/.Xilinx/Vivado/2016.2/vivado.ini
+Vivado layouts directory: /users/start2015/r0575928/.Xilinx/Vivado/2016.2/layouts
+
+GUI allocated memory:	188 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 4,891 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 37 MB (+36151kb) [00:00:04]
+// [Engine Memory]: 4,872 MB (+4956756kb) [00:00:04]
+// bL:g (cv:JFrame):  Open Project : addNotify
+// Opening Vivado Project: rsa_project/rsa_project.xpr. Version: Vivado v2016.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project rsa_project/rsa_project.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// [GUI Memory]: 42 MB (+3708kb) [00:00:09]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,906 MB. GUI used memory: 22 MB. Current time: 8/1/18 12:41:12 PM CEST
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 46 MB (+2132kb) [00:00:22]
+// [GUI Memory]: 52 MB (+3518kb) [00:00:27]
+// [GUI Memory]: 57 MB (+2792kb) [00:00:27]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 5,037 MB. GUI used memory: 36 MB. Current time: 8/1/18 12:41:30 PM CEST
+// Tcl Message: open_project rsa_project/rsa_project.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo'. INFO: [IP_Flow 19-2207] Repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo' already exists; ignoring attempt to add it again. INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Project name: rsa_project; location: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project; part: xc7z010clg400-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 6009.500 ; gain = 169.312 ; free physical = 4785 ; free virtual = 22659 
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 611 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+// [GUI Memory]: 60 MB (+29kb) [00:11:32]
+// [GUI Memory]: 64 MB (+321kb) [00:15:57]
+// [GUI Memory]: 67 MB (+102kb) [00:23:37]
+// HMemoryUtils.trashcanNow. Engine heap size: 5,039 MB. GUI used memory: 36 MB. Current time: 8/1/18 1:11:32 PM CEST
+// [GUI Memory]: 70 MB (+83kb) [00:33:32]
+// [GUI Memory]: 74 MB (+427kb) [00:43:32]
+// Elapsed time: 2038 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 6); // z:k (G:JPanel, cv:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 7); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_adder (tb_adder.v)]", 8, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_adder (tb_adder.v)]", 8, true, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 5,058 MB. GUI used memory: 38 MB. Current time: 8/1/18 1:25:52 PM CEST
+// [GUI Memory]: 79 MB (+595kb) [00:45:22]
+// Elapsed time: 35 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_adder (tb_adder.v), dut - adder (adder.v)]", 9, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_adder (tb_adder.v), dut - adder (adder.v)]", 9, false, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click
+// Elapsed time: 29 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_montgomery (tb_montgomery.v)]", 10); // z:k (G:JPanel, cv:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_montgomery_wrapper (tb_montgomery_wrapper.v)]", 13); // z:k (G:JPanel, cv:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_montgomery_wrapper (tb_montgomery_wrapper.v)]", 13); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_montgomery (tb_montgomery.v), montgomery_instance - montgomery (montgomery.v)]", 11, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_montgomery (tb_montgomery.v), montgomery_instance - montgomery (montgomery.v)]", 11, true, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click - Node
+// [GUI Memory]: 84 MB (+1579kb) [00:46:00]
+// Elapsed time: 17 seconds
+selectCodeEditor("montgomery.v", 196, 248); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 192, 248); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 32 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // x:Y (w:G, cv:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // af:JMenuItem (am:JPopupMenu, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: FILE_SET_CHANGE
+// f:bL (cv:JFrame):  Run Simulation : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [USF-XSim-27] Simulation object is 'sim_1' INFO: [USF-XSim-37] Inspecting design source files for 'tb_adder' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... 
+// Tcl Message: INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM_LOG
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message:  ****** Webtalk v2016.2 (64-bit)   **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016   **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.  source /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/xsim.dir/tb_adder_behav/webtalk/xsim_webtalk.tcl -notrace INFO: [Common 17-206] Exiting Webtalk at Wed Aug  1 13:28:52 2018... 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds 
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tb_adder_behav -key {Behavioral:sim_1:Functional:tb_adder} -tclbatch {tb_adder.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2016.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: Time resolution is 1 ps 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,108 MB. GUI used memory: 45 MB. Current time: 8/1/18 1:29:03 PM CEST
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: source tb_adder.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// [Engine Memory]: 5,163 MB (+49882kb) [00:48:01]
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_adder_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:27 ; elapsed = 00:01:07 . Memory (MB): peak = 6164.410 ; gain = 127.602 ; free physical = 4194 ; free virtual = 22456 
+// 'e' command handler elapsed time: 67 seconds
+// Elapsed time: 67 seconds
+dismissDialog("Run Simulation"); // f:bL (cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 1", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 34 seconds
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // y:JideButton (CommandBar:DockableBar, cv:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 5,180 MB. GUI used memory: 50 MB. Current time: 8/1/18 1:29:43 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Elapsed time: 75 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 625, 274); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,180 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:30:59 PM CEST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 529, 267); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 95, 271); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 162, 269); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,180 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:31:16 PM CEST
+// Elapsed time: 16 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 175, 213); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, expected[514:0]]", 10, true); // a:k (JViewport:JComponent, cv:JFrame) - Node
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,180 MB. GUI used memory: 72 MB. Current time: 8/1/18 1:31:46 PM CEST
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// [GUI Memory]: 89 MB (+944kb) [00:51:09]
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Elapsed time: 50 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 217, 253); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,180 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:32:30 PM CEST
+// Elapsed time: 17 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 229, 264); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Elapsed time: 15 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 269, 266); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 194, 271); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,180 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:33:07 PM CEST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 320, 267); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 413, 270); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Elapsed time: 725 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 96, 256); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,180 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:45:21 PM CEST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 102, 249); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 170, 249); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 167, 252); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,180 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:45:30 PM CEST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 171, 251); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 163, 249); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 176, 245); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:45:38 PM CEST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 223, 250); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 235, 248); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Elapsed time: 36 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 234, 251); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 44 MB. Current time: 8/1/18 1:46:23 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 231, 252); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:46:24 PM CEST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 230, 231); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 224, 232); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:46:27 PM CEST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 233, 242); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // y:JideButton (CommandBar:DockableBar, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:46:33 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // y:JideButton (CommandBar:DockableBar, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:46:36 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:46:36 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:46:36 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:46:36 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 12 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 286, 219); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 414, 222); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:46:48 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:46:51 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 49 MB. Current time: 8/1/18 1:46:51 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:46:52 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 49 MB. Current time: 8/1/18 1:46:52 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 48 MB. Current time: 8/1/18 1:46:52 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 51 MB. Current time: 8/1/18 1:46:52 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:46:52 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 49 MB. Current time: 8/1/18 1:46:53 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 49 MB. Current time: 8/1/18 1:46:53 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:46:53 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 49 MB. Current time: 8/1/18 1:46:53 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 51 MB. Current time: 8/1/18 1:46:54 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:46:55 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:46:55 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 21 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 311, 231); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:09 PM CEST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 312, 272); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 398, 248); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:11 PM CEST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 600, 245); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:15 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:15 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:15 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:47:15 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:16 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 48 MB. Current time: 8/1/18 1:47:16 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:20 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:20 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 60 MB. Current time: 8/1/18 1:47:24 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:24 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:24 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:25 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 48 MB. Current time: 8/1/18 1:47:25 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 49 MB. Current time: 8/1/18 1:47:25 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:25 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:25 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:25 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:47:25 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:25 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:26 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:26 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:26 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:26 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:26 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:47:26 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:27 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:27 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:27 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:32 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:32 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:32 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:47:33 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 21 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 479, 216); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:47:34 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:48:21 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 46 MB. Current time: 8/1/18 1:48:21 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:21 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:22 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:22 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:48:22 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:22 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:22 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:22 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:22 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:23 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:23 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:48:23 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:23 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:48:23 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:23 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 48 MB. Current time: 8/1/18 1:48:24 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:24 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:24 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:24 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:48:24 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:24 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:24 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 47 MB. Current time: 8/1/18 1:48:24 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:35 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 48 MB. Current time: 8/1/18 1:48:35 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:35 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:35 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:35 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:35 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 48 MB. Current time: 8/1/18 1:48:36 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 46 MB. Current time: 8/1/18 1:48:36 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:36 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:36 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 48 MB. Current time: 8/1/18 1:48:36 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:36 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:36 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:48:36 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:36 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:48:37 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 45 MB. Current time: 8/1/18 1:48:37 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 55 MB. Current time: 8/1/18 1:48:38 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 46 MB. Current time: 8/1/18 1:48:38 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 54 MB. Current time: 8/1/18 1:48:38 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 48 MB. Current time: 8/1/18 1:48:38 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:38 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:38 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 49 MB. Current time: 8/1/18 1:48:38 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 43 MB. Current time: 8/1/18 1:48:38 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 47 MB. Current time: 8/1/18 1:48:38 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 55 MB. Current time: 8/1/18 1:48:39 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 50 MB. Current time: 8/1/18 1:48:39 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 46 MB. Current time: 8/1/18 1:48:39 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:39 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:39 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 47 MB. Current time: 8/1/18 1:48:39 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 42 MB. Current time: 8/1/18 1:48:39 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,182 MB. GUI used memory: 48 MB. Current time: 8/1/18 1:48:39 PM CEST
+// Elapsed time: 235 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "montgomery.v", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adder.v", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "montgomery.v", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+// Elapsed time: 197 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rsa_project_wrapper (rsa_project_wrapper.v)]", 1, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rsa_project_wrapper (rsa_project_wrapper.v)]", 1, true, false, false, false, true, false); // z:k (G:JPanel, cv:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 6); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// G:be (cv:JFrame): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, G:be)
+dismissDialog("Run Synthesis"); // G:be (cv:JFrame)
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+selectButton("PAResourceEtoH.ExpRunMgr_MODULE_REFERENCES_OUT_OF_DATE_WOULD_YOU_LIKE_Refresh and Launch", "Refresh and Launch"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: IP_LOCK_CHANGE
+// Tcl Message: update_module_reference rsa_project_montgomery_wrapper_0_0 
+// Tcl Message: INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'. INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'. INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'STATE_BITS' by 4 for port or parameter 'r_state' INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'STATE_BITS' by 4 for port or parameter 'next_state' 
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Upgrading '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd' Adding cell -- user.org:user:Montgomery_Interface:1.0 - Montgomery_Interface_0 Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: INFO: [IP_Flow 19-1972] Upgraded rsa_project_montgomery_wrapper_0_0 from montgomery_wrapper_v1_0 1.0 to montgomery_wrapper_v1_0 1.0 
+// Tcl Message: Wrote  : </users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd>  
+// Tcl Message: upgrade_ip: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 6201.105 ; gain = 25.320 ; free physical = 1451 ; free virtual = 21454 update_module_reference: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 6201.105 ; gain = 28.312 ; free physical = 1451 ; free virtual = 21454 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// HMemoryUtils.trashcanNow. Engine heap size: 5,210 MB. GUI used memory: 40 MB. Current time: 8/1/18 1:55:37 PM CEST
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Verilog Output written to : /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.v Verilog Output written to : /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project_wrapper.v 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Wrote  : </users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd>  
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block Montgomery_Interface_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_to_bram_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block montgomery_wrapper_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/xbar . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M . 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us . INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m01_couplers/auto_pc . INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m02_couplers/auto_pc . INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m03_couplers/auto_pc . INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: Exporting to file /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project.hwh 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// Tcl Message: Generated Block Design Tcl file /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project_bd.tcl Generated Hardware Definition File /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.hwdef 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Aug  1 13:55:50 2018] Launched synth_1... Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/synth_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 6405.422 ; gain = 204.316 ; free physical = 1308 ; free virtual = 21315 
+// 'm' command handler elapsed time: 34 seconds
+// Elapsed time: 25 seconds
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Synthesis Completed: addNotify
+// Elapsed time: 441 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// Tcl Message: launch_runs impl_1 -jobs 2 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Aug  1 14:03:13 2018] Launched impl_1... Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 5 seconds
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Implementation Completed: addNotify
+// Elapsed time: 271 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a:JRadioButton (JPanel:JComponent, ap:G)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // ap:G (cv:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Wed Aug  1 14:07:51 2018] Launched impl_1... Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 42 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bL:g (cv:JFrame):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,445 MB. GUI used memory: 46 MB. Current time: 8/1/18 2:08:37 PM CEST
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// [Engine Memory]: 5,547 MB (+132137kb) [01:27:36]
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 5,559 MB. GUI used memory: 47 MB. Current time: 8/1/18 2:08:42 PM CEST
+// Xgd.load filename: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/parts/xilinx/zynq/devint/zynq/xc7z010/xc7z010.xgd; ZipEntry: xc7z010_detail.xgd elapsed time: 0.7s
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.7s
+// TclEventType: DESIGN_NEW
+// Device: addNotify
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 136 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2016.2 INFO: [Device 21-403] Loading part xc7z010clg400-1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.77 ; elapsed = 00:00:00.77 . Memory (MB): peak = 6623.070 ; gain = 8.000 ; free physical = 1247 ; free virtual = 20899 
+// Tcl Message: Restored from archive | CPU: 0.780000 secs | Memory: 7.574982 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.77 ; elapsed = 00:00:00.77 . Memory (MB): peak = 6623.070 ; gain = 8.000 ; free physical = 1247 ; free virtual = 20899 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 1 instances were transformed.   RAM32X1D => RAM32X1D (RAMD32, RAMD32): 1 instances  
+// 'dG' command handler elapsed time: 22 seconds
+// Device view-level: 0.0
+// [GUI Memory]: 94 MB (+59kb) [01:27:53]
+// Elapsed time: 22 seconds
+dismissDialog("Open Implemented Design"); // bL:g (cv:JFrame)
+// bL:g (cv:JFrame):  Open Report Power : addNotify
+// TclEventType: POWER_UPDATED
+// [GUI Memory]: 100 MB (+1038kb) [01:27:54]
+// [GUI Memory]: 109 MB (+4636kb) [01:27:55]
+// [GUI Memory]: 116 MB (+2054kb) [01:27:55]
+// [GUI Memory]: 123 MB (+1072kb) [01:27:55]
+// [GUI Memory]: 130 MB (+552kb) [01:27:55]
+// TclEventType: TIMING_SUMMARY_UPDATED
+// [GUI Memory]: 137 MB (+292kb) [01:27:57]
+dismissDialog("Open Report Power"); // bL:g (cv:JFrame)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cv:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 5,780 MB. GUI used memory: 107 MB. Current time: 8/1/18 2:09:02 PM CEST
+// [Engine Memory]: 5,896 MB (+75156kb) [01:28:00]
+// RouteApi::initDelayMediator elapsed time: 7.9s
+// [GUI Memory]: 144 MB (+222kb) [01:28:14]
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 35, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 -prev_step  
+// bL:g (cv:JFrame):  Generate Bitstream : addNotify
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Wed Aug  1 14:09:30 2018] Launched impl_1... Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log 
+// [GUI Memory]: 152 MB (+929kb) [01:28:35]
+// Elapsed time: 19 seconds
+dismissDialog("Generate Bitstream"); // bL:g (cv:JFrame)
+selectTab((HResource) null, (HResource) null, "Timing", 7); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cv:JFrame)
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 104 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ap:G (cv:JFrame)
+// Elapsed time: 55 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_IMPORT, "Import"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // af:JMenuItem (JPopupMenu:JComponent, cv:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// af:x (cv:JFrame): Export Hardware: addNotify
+selectCheckBox(PAResourceItoN.NewExportHardwareDialog_INCLUDE_BITSTREAM, "Include bitstream", true); // h:JCheckBox (JPanel:JComponent, af:x): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, af:x)
+// 'n' command handler elapsed time: 3 seconds
+selectButton("PAResourceItoN.NewExportHardwareDialog_EXPORTED_FILE_FOR_THIS_MODULE_WAS_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, U:JDialog)
+dismissDialog("Export Hardware"); // af:x (cv:JFrame)
+// Tcl Message: file copy -force /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/rsa_project_wrapper.sysdef /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf  
+// Elapsed time: 24 seconds
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cv:JFrame)
+// Tcl Command: 'rdi::info_commands {so*}'
+// Tcl Command: 'rdi::info_commands {souc*}'
+// Tcl Command: 'rdi::info_commands {sou*}'
+// Tcl Command: 'rdi::info_commands {sour*}'
+// Tcl Command: 'rdi::info_commands {sour*}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {source} {./} {}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {source} {./} {e}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {source} {./} {ex}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {source} {./} {exp}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {source} {./exp\\} {}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {source} {./} {exp}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {source} {./} {expo}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {source} {./} {expo}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {source} {./} {export_bitstream.tcl}'
+// Elapsed time: 14 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "source ./export_bitstream.tcl", true); // ap:ao (R:ak, cv:JFrame)
+// Tcl Command: 'source ./export_bitstream.tcl'
+// Tcl Command: 'source ./export_bitstream.tcl'
+// bL:g (cv:JFrame):  Tcl Command Line : addNotify
+// Tcl Message: source ./export_bitstream.tcl 
+// Tcl Message: # file copy -force ./rsa_project/rsa_project.runs/impl_1/rsa_project_wrapper.bit ./src/sdk/rsa_project_wrapper_hw_platform_0/rsa_project_wrapper.bit 
+dismissDialog("Tcl Command Line"); // bL:g (cv:JFrame)
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, (String) null); // ap:ao (R:ak, cv:JFrame)
+// Elapsed time: 48 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_IMPORT, "Import"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // af:JMenuItem (JPopupMenu:JComponent, cv:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// ai:x (cv:JFrame): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ai:x)
+dismissDialog("Launch SDK"); // ai:x (cv:JFrame)
+// Tcl Message: launch_sdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, (String) null); // ap:ao (R:ak, cv:JFrame)
+// Elapsed time: 1202 seconds
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 19); // x:Y (w:G, cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_adder.v", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+// [GUI Memory]: 160 MB (+516kb) [01:53:28]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adder.v", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+// Elapsed time: 20 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_adder.v", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adder.v", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectCodeEditor("adder.v", 135, 111); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 19 seconds
+selectCodeEditor("adder.v", 482, 297); // bH:N (JPanel:JComponent, cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 43 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_adder.v", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adder.v", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+// Elapsed time: 29 seconds
+selectCodeEditor("adder.v", 234, 267); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("adder.v", 806, 233); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("adder.v", 66, 222); // bH:N (JPanel:JComponent, cv:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 6,004 MB. GUI used memory: 104 MB. Current time: 8/1/18 2:39:02 PM CEST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 234 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// G:be (cv:JFrame): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, G:be)
+dismissDialog("Run Synthesis"); // G:be (cv:JFrame)
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+selectButton("PAResourceEtoH.ExpRunMgr_MODULE_REFERENCES_OUT_OF_DATE_WOULD_YOU_LIKE_Refresh and Launch", "Refresh and Launch"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: update_module_reference rsa_project_montgomery_wrapper_0_0 
+// Tcl Message: Upgrading '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd' 
+// Tcl Message: INFO: [IP_Flow 19-1972] Upgraded rsa_project_montgomery_wrapper_0_0 from montgomery_wrapper_v1_0 1.0 to montgomery_wrapper_v1_0 1.0 
+// Tcl Message: Wrote  : </users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd>  
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Verilog Output written to : /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.v Verilog Output written to : /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project_wrapper.v 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Wrote  : </users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd>  
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block Montgomery_Interface_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_to_bram_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block montgomery_wrapper_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/xbar . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M . 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us . INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m01_couplers/auto_pc . INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m02_couplers/auto_pc . INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m03_couplers/auto_pc . INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: Exporting to file /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project.hwh 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: Generated Block Design Tcl file /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project_bd.tcl Generated Hardware Definition File /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.hwdef 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Aug  1 14:41:06 2018] Launched synth_1... Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/synth_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 7075.066 ; gain = 0.000 ; free physical = 944 ; free virtual = 20463 
+// 'm' command handler elapsed time: 19 seconds
+// Elapsed time: 15 seconds
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 121 seconds
+selectButton(PAResourceQtoS.StateMonitor_CANCEL, "Cancel"); // a:JButton (r:JPanel, cv:JFrame)
+selectButton("PAResourceQtoS.StateMonitor_YOU_ABOUT_TO_CANCEL_YOUR_RUNNING_Cancel", "Cancel"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adder.v", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+// Elapsed time: 46 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "montgomery.v", 4); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("montgomery.v", 168, 341); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 168, 341, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+// Elapsed time: 17 seconds
+selectCodeEditor("montgomery.v", 188, 398); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 190, 389); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 163, 377); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 220, 423); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 220, 462); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 193, 498); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 192, 469); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 190, 508); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 163, 466); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 164, 459); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 218, 397); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 218, 430); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 191, 472); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 159, 519); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 190, 443); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 190, 475); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 16 seconds
+selectCodeEditor("montgomery.v", 160, 292); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 165, 337); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 164, 342); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 207, 366); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 202, 371); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 33 seconds
+selectButton(PAResourceQtoS.StateMonitor_CANCEL, "Cancel"); // a:JButton (r:JPanel, cv:JFrame)
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.StateMonitor_YOU_ABOUT_TO_CANCEL_YOUR_RUNNING_Keep Files", "Keep Files"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 -noclean_dir  
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bL:g (cv:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 6); // z:k (G:JPanel, cv:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 7); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_adder (tb_adder.v)]", 8, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_adder (tb_adder.v)]", 8, true, false, false, false, true, false); // z:k (G:JPanel, cv:JFrame) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 7, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 7, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_adder (tb_adder.v)]", 8, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // x:Y (w:G, cv:JFrame)
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 455, 221); // n:a (JViewport:JComponent, cv:JFrame)Waveform: addNotify
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 455, 221); // n:a (JViewport:JComponent, cv:JFrame)Waveform: addNotify
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 455, 221); // n:a (JViewport:JComponent, cv:JFrame)Waveform: addNotify
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 1", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 6,005 MB. GUI used memory: 151 MB. Current time: 8/1/18 2:46:58 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 15 seconds
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // y:JideButton (CommandBar:DockableBar, cv:JFrame)
+// Elapsed time: 10 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 121, 245); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 6,005 MB. GUI used memory: 104 MB. Current time: 8/1/18 2:47:12 PM CEST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 122, 253); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// aV:y (cv:JFrame): Save Project: addNotify
+// 'm' command handler elapsed time: 5 seconds
+dismissDialog("Save Project"); // aV:y (cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hweval_adder (hweval_adder.v)]", 2, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hweval_adder (hweval_adder.v)]", 2, true, false, false, false, true, false); // z:k (G:JPanel, cv:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // af:JMenuItem (am:JPopupMenu, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top hweval_adder [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Synthesis Settings]", 16, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SYNTH_SETTINGS
+// Project Settings: addNotify
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// HOptionPane Warning: 'Project Setting dialog is open. Please close it and try again. (Project Settings)'
+// HMemoryUtils.trashcanNow. Engine heap size: 6,007 MB. GUI used memory: 102 MB. Current time: 8/1/18 2:47:42 PM CEST
+selectButton("PAResourceQtoS.SaveProjectUtils_PROJECT_SETTING_DIALOG_OPEN_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+dismissDialog("Project Settings"); // k:aP (cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// aV:y (cv:JFrame): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a:JButton (JPanel:JComponent, aV:y)
+// bL:g (cv:JFrame):  Save Constraints : addNotify
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Save Project"); // aV:y (cv:JFrame)
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Wed Aug  1 14:47:47 2018] Launched synth_1... Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Synthesis Completed: addNotify
+// Elapsed time: 52 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "Run Implementation"); // a:JRadioButton (JPanel:JComponent, ap:G)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+selectButton("PAResourceEtoH.ExpRunMgr_MODULE_REFERENCES_OUT_OF_DATE_WOULD_Refresh and Launch", "Refresh and Launch"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: update_module_reference rsa_project_montgomery_wrapper_0_0 
+// Tcl Message: Upgrading '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd' 
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: INFO: [IP_Flow 19-1972] Upgraded rsa_project_montgomery_wrapper_0_0 from montgomery_wrapper_v1_0 1.0 to montgomery_wrapper_v1_0 1.0 
+// Tcl Message: Wrote  : </users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd>  
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 2 
+// Tcl Message: [Wed Aug  1 14:48:52 2018] Launched impl_1... Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Implementation Completed: addNotify
+// Elapsed time: 55 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bL:g (cv:JFrame):  Reloading : addNotify
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,007 MB. GUI used memory: 72 MB. Current time: 8/1/18 2:49:50 PM CEST
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 6,007 MB. GUI used memory: 72 MB. Current time: 8/1/18 2:49:50 PM CEST
+// Tcl Message: refresh_design 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,007 MB. GUI used memory: 50 MB. Current time: 8/1/18 2:49:52 PM CEST
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 89 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2016.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/tmp/.Xil_r0575928/Vivado-3409-pc-klas1-10.esat.kuleuven.be/dcp/hweval_adder.xdc] Finished Parsing XDC File [/tmp/.Xil_r0575928/Vivado-3409-pc-klas1-10.esat.kuleuven.be/dcp/hweval_adder.xdc] Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.21 . Memory (MB): peak = 7076.543 ; gain = 0.000 ; free physical = 1032 ; free virtual = 20409 
+// Tcl Message: Restored from archive | CPU: 0.220000 secs | Memory: 4.818260 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.21 . Memory (MB): peak = 7076.543 ; gain = 0.000 ; free physical = 1032 ; free virtual = 20409 
+dismissDialog("Reloading"); // bL:g (cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // x:Y (w:G, cv:JFrame)
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 122, 253); // n:a (JViewport:JComponent, cv:JFrame)Waveform: addNotify
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 122, 253); // n:a (JViewport:JComponent, cv:JFrame)Waveform: addNotify
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 122, 253); // n:a (JViewport:JComponent, cv:JFrame)Waveform: addNotify
+selectButton(PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN_ALL, "simulation_live_run_all"); // y:JideButton (CommandBar:DockableBar, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN_ALL
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// Tcl Message: run all 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// bL:g (cv:JFrame):  Run All : addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, bL:g)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. 
+// Tcl Message: run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 7101.844 ; gain = 0.000 ; free physical = 966 ; free virtual = 20394 
+// Tcl Message: INFO: [Common 17-344] 'run' was cancelled 
+dismissDialog("Run All"); // bL:g (cv:JFrame)
+selectComboBox(PAResourceQtoS.SimulationLiveRunForComp_SPECIFY_TIME_AND_UNITS, "ps", 4); // b:f (a:JPanel, cv:JFrame)
+selectButton(PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN_ALL, "simulation_live_run_all"); // y:JideButton (CommandBar:DockableBar, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN_ALL
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// Tcl Message: run all 
+// bL:g (cv:JFrame):  Run All : addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, bL:g)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. 
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 7101.844 ; gain = 0.000 ; free physical = 920 ; free virtual = 20390 
+// Tcl Message: INFO: [Common 17-344] 'run' was cancelled 
+dismissDialog("Run All"); // bL:g (cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 1", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectButton(PAResourceCommand.PACommandNames_SIMULATION_LIVE_RESTART, "simulation_live_restart"); // y:JideButton (CommandBar:DockableBar, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_LIVE_RESTART
+// bL:g (cv:JFrame):  Restart : addNotify
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// Tcl Message: restart 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// HMemoryUtils.trashcanNow. Engine heap size: 6,025 MB. GUI used memory: 89 MB. Current time: 8/1/18 2:50:25 PM CEST
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// Tcl Message: INFO: [Simtcl 6-17] Simulation restarted 
+dismissDialog("Restart"); // bL:g (cv:JFrame)
+selectButton(PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN_ALL, "simulation_live_run_all"); // y:JideButton (CommandBar:DockableBar, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN_ALL
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: run all 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 1", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // y:JideButton (CommandBar:DockableBar, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 118, 248); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 6,025 MB. GUI used memory: 75 MB. Current time: 8/1/18 2:50:41 PM CEST
+// Elapsed time: 10 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 208, 247); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 216, 250); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 204, 246); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 6,025 MB. GUI used memory: 78 MB. Current time: 8/1/18 2:51:03 PM CEST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 217, 244); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adder.v", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectCodeEditor("adder.v", 196, 185); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("adder.v", 106, 374); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("adder.v", 148, 341); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 30 seconds
+selectCodeEditor("adder.v", 183, 396); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // x:Y (w:G, cv:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // af:JMenuItem (am:JPopupMenu, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: FILE_SET_CHANGE
+// c:x (cv:JFrame): Save Simulation Sources: addNotify
+selectButton("PAResourceQtoS.SimulationRun_SIMULATION_ALREADY_RUNNING_DO_YOU_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, c:x)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_CLOSE
+// G:be (cv:JFrame): Confirm Close: addNotify
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Save Simulation Sources"); // c:x (cv:JFrame)
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, G:be)
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// TclEventType: DG_UPDATE_GRAPH
+// f:bL (cv:JFrame):  Run Simulation : addNotify
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+dismissDialog("Confirm Close"); // G:be (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [USF-XSim-27] Simulation object is 'sim_1' INFO: [USF-XSim-37] Inspecting design source files for 'tb_adder' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... 
+// Tcl Message: INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message:  ****** Webtalk v2016.2 (64-bit)   **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016   **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.  source /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/xsim.dir/tb_adder_behav/webtalk/xsim_webtalk.tcl -notrace INFO: [Common 17-206] Exiting Webtalk at Wed Aug  1 14:53:22 2018... 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds 
+// Tcl Message: INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tb_adder_behav -key {Behavioral:sim_1:Functional:tb_adder} -tclbatch {tb_adder.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2016.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: source tb_adder.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_adder_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:12 ; elapsed = 00:00:55 . Memory (MB): peak = 7101.844 ; gain = 0.000 ; free physical = 832 ; free virtual = 20380 
+// 'e' command handler elapsed time: 60 seconds
+// Elapsed time: 56 seconds
+dismissDialog("Run Simulation"); // f:bL (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 2", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // y:JideButton (CommandBar:DockableBar, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 6,013 MB. GUI used memory: 97 MB. Current time: 8/1/18 2:53:29 PM CEST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 105, 249); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 173, 248); // n:a (JViewport:JComponent, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "montgomery.v", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+// Elapsed time: 10 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rsa_project_wrapper (rsa_project_wrapper.v)]", 4, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rsa_project_wrapper (rsa_project_wrapper.v)]", 4, true, false, false, false, true, false); // z:k (G:JPanel, cv:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // af:JMenuItem (am:JPopupMenu, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// bL:g (cv:JFrame):  Set as Top : addNotify
+// Tcl Message: set_property top rsa_project_wrapper [current_fileset] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Set as Top"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// G:be (cv:JFrame): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, G:be)
+dismissDialog("Run Synthesis"); // G:be (cv:JFrame)
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+selectButton("PAResourceEtoH.ExpRunMgr_MODULE_REFERENCES_OUT_OF_DATE_WOULD_YOU_LIKE_Refresh and Launch", "Refresh and Launch"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: update_module_reference rsa_project_montgomery_wrapper_0_0 
+// Tcl Message: Upgrading '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd' 
+// Tcl Message: INFO: [IP_Flow 19-1972] Upgraded rsa_project_montgomery_wrapper_0_0 from montgomery_wrapper_v1_0 1.0 to montgomery_wrapper_v1_0 1.0 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: Wrote  : </users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd>  
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Verilog Output written to : /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.v Verilog Output written to : /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project_wrapper.v Wrote  : </users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd>  
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block Montgomery_Interface_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_to_bram_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block montgomery_wrapper_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/xbar . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M . 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us . INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m01_couplers/auto_pc . INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m02_couplers/auto_pc . INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m03_couplers/auto_pc . INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: Exporting to file /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project.hwh 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: Generated Block Design Tcl file /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project_bd.tcl Generated Hardware Definition File /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.hwdef [Wed Aug  1 14:54:39 2018] Launched synth_1... Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/synth_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 7106.562 ; gain = 4.719 ; free physical = 820 ; free virtual = 20348 
+// 'm' command handler elapsed time: 20 seconds
+// Elapsed time: 12 seconds
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Synthesis Completed: addNotify
+// Elapsed time: 451 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 2 
+// Tcl Message: [Wed Aug  1 15:02:11 2018] Launched impl_1... Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 7 seconds
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Implementation Completed: addNotify
+// Elapsed time: 116 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a:JRadioButton (JPanel:JComponent, ap:G)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // ap:G (cv:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Wed Aug  1 15:04:17 2018] Launched impl_1... Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log 
+// bL:g (cv:JFrame):  Generate Bitstream : addNotify
+dismissDialog("Generate Bitstream"); // bL:g (cv:JFrame)
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 37 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ap:G (cv:JFrame)
+// Elapsed time: 264 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // af:JMenuItem (JPopupMenu:JComponent, cv:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// af:x (cv:JFrame): Export Hardware: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, af:x)
+selectButton("PAResourceItoN.NewExportHardwareDialog_EXPORTED_FILE_FOR_THIS_MODULE_WAS_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, U:JDialog)
+dismissDialog("Export Hardware"); // af:x (cv:JFrame)
+// Tcl Message: file copy -force /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/rsa_project_wrapper.sysdef /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf  
+// Elapsed time: 58 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adder.v", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+// Elapsed time: 196 seconds
+selectCodeEditor("adder.v", 872, 427); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 165 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+// Tcl Command: 'rdi::info_commands {so*}'
+// Tcl Command: 'rdi::info_commands {sou*}'
+// Tcl Command: 'rdi::info_commands {sou*}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {source} {./} {}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {source} {./} {e}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {source} {./} {e}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {source} {./} {export_bitstream.tcl}'
+// Elapsed time: 16 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "source ./export_bitstream.tcl", true); // ap:ao (R:ak, cv:JFrame)
+// Tcl Command: 'source ./export_bitstream.tcl'
+// Tcl Command: 'source ./export_bitstream.tcl'
+// bL:g (cv:JFrame):  Tcl Command Line : addNotify
+// Tcl Message: source ./export_bitstream.tcl 
+// Tcl Message: # file copy -force ./rsa_project/rsa_project.runs/impl_1/rsa_project_wrapper.bit ./src/sdk/rsa_project_wrapper_hw_platform_0/rsa_project_wrapper.bit 
+dismissDialog("Tcl Command Line"); // bL:g (cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // af:JMenuItem (JPopupMenu:JComponent, cv:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// ai:x (cv:JFrame): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ai:x)
+// 'p' command handler elapsed time: 5 seconds
+dismissDialog("Launch SDK"); // ai:x (cv:JFrame)
+// Tcl Message: launch_sdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// HMemoryUtils.trashcanNow. Engine heap size: 6,041 MB. GUI used memory: 81 MB. Current time: 8/1/18 3:23:32 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 6,041 MB. GUI used memory: 80 MB. Current time: 8/1/18 3:53:33 PM CEST

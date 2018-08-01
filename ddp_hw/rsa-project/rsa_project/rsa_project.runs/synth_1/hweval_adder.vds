@@ -1,0 +1,342 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Oct 24 20:15:51 2017
+# Process ID: 20685
+# Current directory: /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.runs/synth_1
+# Command line: vivado -log hweval_adder.vds -tempDir /tmp -mode batch -messageDb vivado.pb -notrace -source hweval_adder.tcl
+# Log file: /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.runs/synth_1/hweval_adder.vds
+# Journal file: /users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/rsa_project/rsa_project.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source hweval_adder.tcl -notrace
+Command: synth_design -top hweval_adder -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 20697 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1151.383 ; gain = 164.137 ; free physical = 3137 ; free virtual = 21357
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'hweval_adder' [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/hweval_adder.v:3]
+INFO: [Synth 8-638] synthesizing module 'adder' [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v:3]
+	Parameter SIZE bound to: 171 - type: integer 
+	Parameter STATES bound to: 3 - type: integer 
+	Parameter IDLE bound to: 3'b001 
+	Parameter CALC bound to: 3'b010 
+	Parameter SHIFT bound to: 3'b100 
+INFO: [Synth 8-155] case statement is not full and has no default [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v:80]
+INFO: [Synth 8-256] done synthesizing module 'adder' (1#1) [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v:3]
+INFO: [Synth 8-256] done synthesizing module 'hweval_adder' (2#1) [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/hweval_adder.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1191.828 ; gain = 204.582 ; free physical = 3094 ; free virtual = 21314
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1191.828 ; gain = 204.582 ; free physical = 3093 ; free virtual = 21314
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Sourcing Tcl File [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/constraints/constraints.tcl]
+Constraints for hw_evals
+INFO: [Vivado 12-1808] Property 'PACKAGE_PIN' is not supported for elaborated designs for objects of type 'port'. [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/constraints/constraints.tcl:7]
+Finished Sourcing Tcl File [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/constraints/constraints.tcl]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1537.344 ; gain = 0.000 ; free physical = 2912 ; free virtual = 21132
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1537.348 ; gain = 550.102 ; free physical = 2907 ; free virtual = 21128
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1537.352 ; gain = 550.105 ; free physical = 2907 ; free virtual = 21128
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1537.352 ; gain = 550.105 ; free physical = 2907 ; free virtual = 21128
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/adder.v:116]
+INFO: [Synth 8-5544] ROM "a" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "reg_result" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1537.352 ; gain = 550.105 ; free physical = 2901 ; free virtual = 21122
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input    172 Bit       Adders := 1     
++---XORs : 
+	   2 Input    513 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	              514 Bit    Registers := 1     
+	              513 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input    514 Bit        Muxes := 2     
+	   2 Input    514 Bit        Muxes := 1     
+	   4 Input    513 Bit        Muxes := 2     
+	   2 Input    513 Bit        Muxes := 2     
+	   2 Input    172 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module hweval_adder 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    513 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	              513 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
+Module adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input    172 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	              514 Bit    Registers := 1     
+	              513 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
++---Muxes : 
+	   4 Input    514 Bit        Muxes := 2     
+	   2 Input    514 Bit        Muxes := 1     
+	   4 Input    513 Bit        Muxes := 2     
+	   2 Input    513 Bit        Muxes := 2     
+	   2 Input    172 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1537.352 ; gain = 550.105 ; free physical = 2901 ; free virtual = 21122
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1537.352 ; gain = 550.105 ; free physical = 2893 ; free virtual = 21114
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1537.352 ; gain = 550.105 ; free physical = 2893 ; free virtual = 21114
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_b_reg[512] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_a_reg[512] )
+WARNING: [Synth 8-3332] Sequential element (a_reg[512]) is unused and will be removed from module adder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[512]) is unused and will be removed from module adder.
+WARNING: [Synth 8-3332] Sequential element (in_a_reg[512]) is unused and will be removed from module hweval_adder.
+WARNING: [Synth 8-3332] Sequential element (in_b_reg[512]) is unused and will be removed from module hweval_adder.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1537.352 ; gain = 550.105 ; free physical = 2857 ; free virtual = 21078
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1537.352 ; gain = 550.105 ; free physical = 2857 ; free virtual = 21078
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+Reading /tmp/.Xil_r0575928/Vivado-20685-pc-klas1-5.esat.kuleuven.be/realtime/hweval_adder_synth.xdc
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1537.352 ; gain = 550.105 ; free physical = 2792 ; free virtual = 21019
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1654.328 ; gain = 667.082 ; free physical = 2672 ; free virtual = 20900
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1654.328 ; gain = 667.082 ; free physical = 2670 ; free virtual = 20898
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1654.328 ; gain = 667.082 ; free physical = 2670 ; free virtual = 20898
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1654.328 ; gain = 667.082 ; free physical = 2670 ; free virtual = 20898
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1654.328 ; gain = 667.082 ; free physical = 2669 ; free virtual = 20897
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1654.328 ; gain = 667.082 ; free physical = 2669 ; free virtual = 20897
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1654.328 ; gain = 667.082 ; free physical = 2669 ; free virtual = 20897
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1654.328 ; gain = 667.082 ; free physical = 2669 ; free virtual = 20897
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1654.328 ; gain = 667.082 ; free physical = 2673 ; free virtual = 20901
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1654.328 ; gain = 667.082 ; free physical = 2673 ; free virtual = 20901
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    86|
+|3     |LUT1   |  1039|
+|4     |LUT2   |     2|
+|5     |LUT3   |   342|
+|6     |LUT4   |   186|
+|7     |LUT5   |   703|
+|8     |LUT6   |   684|
+|9     |FDRE   |  2591|
+|10    |FDSE   |    15|
+|11    |IBUF   |     2|
+|12    |OBUF   |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |  5652|
+|2     |  dut    |adder  |  3575|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1654.328 ; gain = 667.082 ; free physical = 2673 ; free virtual = 20901
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1654.328 ; gain = 229.426 ; free physical = 2673 ; free virtual = 20901
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1654.336 ; gain = 667.090 ; free physical = 2674 ; free virtual = 20902
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 88 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1654.336 ; gain = 587.535 ; free physical = 2672 ; free virtual = 20900
+report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1686.352 ; gain = 0.000 ; free physical = 2675 ; free virtual = 20903
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 24 20:16:40 2017...

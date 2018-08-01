@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document>
+<!--The data in this file is primarily intended for consumption by Xilinx tools.
+The structure and the elements are likely to change over the next few releases.
+This means code written to parse this file will need to be revisited each subsequent release.-->
+<application name="pa" timeStamp="Wed Nov 22 18:28:40 2017">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="9f4bc9f7e4ce4c78a86fcb71d2c3a216" type="ProjectID"/>
+<property name="ProjectIteration" value="5" type="ProjectIteration"/>
+</section>
+<section name="PlanAhead Usage" visible="true">
+<item name="Project Data">
+<property name="SrcSetCount" value="1" type="SrcSetCount"/>
+<property name="ConstraintSetCount" value="1" type="ConstraintSetCount"/>
+<property name="DesignMode" value="RTL" type="DesignMode"/>
+<property name="SynthesisStrategy" value="Vivado Synthesis Defaults" type="SynthesisStrategy"/>
+<property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
+</item>
+<item name="Java Command Handlers">
+<property name="AddSources" value="1" type="JavaHandler"/>
+<property name="EditDelete" value="1" type="JavaHandler"/>
+<property name="EditUndo" value="56" type="JavaHandler"/>
+<property name="NewExportHardware" value="1" type="JavaHandler"/>
+<property name="NewLaunchHardware" value="3" type="JavaHandler"/>
+<property name="ProjectSettingsCmdHandler" value="3" type="JavaHandler"/>
+<property name="RunBitgen" value="2" type="JavaHandler"/>
+<property name="RunImplementation" value="2" type="JavaHandler"/>
+<property name="RunSynthesis" value="2" type="JavaHandler"/>
+<property name="SaveFileProxyHandler" value="8" type="JavaHandler"/>
+<property name="SetTopNode" value="7" type="JavaHandler"/>
+<property name="ShowView" value="1" type="JavaHandler"/>
+<property name="SimulationClose" value="106" type="JavaHandler"/>
+<property name="SimulationRestart" value="23" type="JavaHandler"/>
+<property name="SimulationRun" value="122" type="JavaHandler"/>
+<property name="SimulationRunAll" value="1" type="JavaHandler"/>
+<property name="SimulationRunForTime" value="27" type="JavaHandler"/>
+<property name="WaveformSaveConfiguration" value="2" type="JavaHandler"/>
+</item>
+<item name="Gui Resources Info">
+<property name="PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, Hierarchy Update" value="2" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_SIMULATION_LIVE_RESTART, simulation_live_restart" value="7" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN, simulation_live_run_for_time" value="7" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, Run Behavioral Simulation" value="7" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_SIMULATION_RUN_POST_SYNTHESIS_FUNCTIONAL, Run Post-Synthesis Functional Simulation" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, hweval_adder (hweval_adder.v" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, hweval_montgomery (hweval_montgomery.v" value="6" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources], 0" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources, sim_1, tb_adder (tb_adder.v" value="3" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources, sim_1, tb_montgomery (tb_montgomery.v" value="4" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources, sim_1], 6" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources], 5" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Simulation, Run Simulation], 11, false" value="9" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PAViews_CODE, Code" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PAViews_PROJECT_SUMMARY, Project Summary" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SimulationLiveRunForComp_SPECIFY_TIME_AND_UNITS, 1" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SimulationLiveRunForComp_SPECIFY_TIME_AND_UNITS, 50" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SimulationLiveRunForComp_SPECIFY_TIME_AND_UNITS, ms, 1" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SimulationLiveRunForComp_SPECIFY_TIME_AND_UNITS, us, 2" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, expected[511:0] ; 989c4842b4d4e09c463ce7eb282963433113fc4f59dd86fc94ae85db3a992a9da4d38f4aaf9c263810e38ba8969c21e32857163a64deb38db64bb0c957fd0578 ; Array, 8, expected[511:0], 0, true" value="2" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SrcMenu_IP_HIERARCHY, IP Hierarchy" value="2" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="6" type="GuiResourceData"/>
+<property name="RDIResource.GraphicalView_ZOOM_FIT, Waveform Viewer_zoom_fit" value="3" type="GuiResourceData"/>
+<property name="RDIResource.GraphicalView_ZOOM_IN, Waveform Viewer_zoom_in" value="4" type="GuiResourceData"/>
+<property name="RDIResource.GraphicalView_ZOOM_OUT, Waveform Viewer_zoom_out" value="8" type="GuiResourceData"/>
+<property name="RDIResource.ProgressDialog_CANCEL, Cancel" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 148, 231" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 208, 486" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 244, 187" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 246, 145" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 257, 442" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 274, 437" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 284, 465" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 359, 203" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 436, 255" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 469, 426" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 483, 490" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 509, 424" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 541, 422" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 549, 262" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 567, 405" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 671, 214" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 708, 228" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 728, 217" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 731, 161" value="1" type="GuiResourceData"/>
+<property name="RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 542, 65" value="1" type="GuiResourceData"/>
+<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, Test], 0" value="14" type="GuiResourceData"/>
+<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, Test], 0, true" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 107, 200" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 107, 200, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 143, 276" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 143, 462" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 148, 427" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 158, 235" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 163, 287" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 173, 422" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 175, 442" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 223, 291" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 223, 301" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 226, 232" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 229, 521" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 231, 234" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 234, 290" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 234, 414" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 240, 214" value="2" type="GuiResourceData"/>
+<property name="montgomery.v, 240, 214, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 245, 110" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 246, 444" value="2" type="GuiResourceData"/>
+<property name="montgomery.v, 246, 444, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 246, 500" value="2" type="GuiResourceData"/>
+<property name="montgomery.v, 246, 500, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 247, 472" value="5" type="GuiResourceData"/>
+<property name="montgomery.v, 247, 472, false, false, false, false, true" value="3" type="GuiResourceData"/>
+<property name="montgomery.v, 247, 63" value="2" type="GuiResourceData"/>
+<property name="montgomery.v, 247, 63, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 248, 331" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 252, 275" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 252, 275, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 253, 341" value="2" type="GuiResourceData"/>
+<property name="montgomery.v, 253, 341, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 263, 412, false, false, false, true, false" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 267, 169" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 267, 403" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 267, 403, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 268, 235" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 271, 376" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 271, 376, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 272, 199" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 272, 77" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 274, 210" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 286, 461" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 294, 364" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 325, 457" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 327, 201" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 328, 270" value="2" type="GuiResourceData"/>
+<property name="montgomery.v, 329, 375" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 329, 467" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 333, 186" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 336, 458" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 338, 401" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 426, 274" value="2" type="GuiResourceData"/>
+<property name="montgomery.v, 426, 274, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 437, 460" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 438, 195" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 442, 189" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 473, 176" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 568, 193" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 626, 101" value="1" type="GuiResourceData"/>
+<property name="tb_montgomery.v, 157, 305" value="1" type="GuiResourceData"/>
+<property name="tb_montgomery.v, 48, 292" value="1" type="GuiResourceData"/>
+<property name="tb_montgomery.v, 56, 290" value="1" type="GuiResourceData"/>
+<property name="tb_montgomery.v, 57, 295" value="1" type="GuiResourceData"/>
+<property name="tb_montgomery.v, 621, 275" value="1" type="GuiResourceData"/>
+<property name="tb_montgomery.v, 636, 269" value="1" type="GuiResourceData"/>
+<property name="tb_montgomery.v, 849, 291" value="1" type="GuiResourceData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="41" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="37" type="TclMode"/>
+</item>
+</section>
+</application>
+</document>

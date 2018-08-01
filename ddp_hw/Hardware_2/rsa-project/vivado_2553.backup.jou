@@ -1,0 +1,219 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Thu Nov 16 10:41:40 2017
+# Process ID: 2553
+# Current directory: /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project
+# Command line: vivado rsa_project/rsa_project.xpr -tempDir /tmp
+# Log file: /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/vivado.log
+# Journal file: /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project rsa_project/rsa_project.xpr
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_montgomery [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top hweval_montgomery [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_simulation
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+save_wave_config {/users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+save_wave_config {/users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+save_wave_config {/users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+save_wave_config {/users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+save_wave_config {/users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+restart
+run all
+run 250 ps
+restart
+run 250 ps
+run 250 ps
+run 200 ns
+save_wave_config {/users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+save_wave_config {/users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+restart
+run 150 ns
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top hweval_adder [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_adder [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_adder.tcl
+save_wave_config {/users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_adder.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top hweval_montgomery [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top montgomery [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_montgomery [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+current_sim simulation_16
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+save_wave_config {/users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+save_wave_config {/users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+restart
+run 150 ns
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+save_wave_config {/users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+restart
+run 150 ns
+save_wave_config {/users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+restart
+run 150 ns
+save_wave_config {/users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+close_sim
+launch_simulation
+open_wave_config /users/start2016/r0594518/Desktop/DDP_Alles/Hardware_2/rsa-project/rsa_project/tb_adder_behav.wcfg
+source tb_montgomery.tcl
+close_sim
+close_sim

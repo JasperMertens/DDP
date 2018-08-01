@@ -1,0 +1,8 @@
+10:24:47 **** Clean-only build of project rsa_design_example_bsp ****
+make -k clean 
+make[1]: Entering directory `/volume1/fturan/DDP/ddp/2017-2018/work-packages/hw/rsa-project/src/sdk/rsa_design_example_bsp'
+rm -f ps7_cortexa9_0/lib/libxil.a
+make[1]: Leaving directory `/volume1/fturan/DDP/ddp/2017-2018/work-packages/hw/rsa-project/src/sdk/rsa_design_example_bsp'
+
+10:24:47 Build Finished (took 144ms)
+
