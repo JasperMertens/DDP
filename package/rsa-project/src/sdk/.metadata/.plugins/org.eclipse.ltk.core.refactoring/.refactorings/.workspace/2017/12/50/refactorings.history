@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;rsa_project_wrapper_hw_platform_3&apos;" deleteContents="true" description="Delete resource &apos;rsa_project_wrapper_hw_platform_3&apos;" element1="/rsa_project_wrapper_hw_platform_3" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1513007678216"/>
-</session>

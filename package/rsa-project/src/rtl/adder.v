@@ -8,7 +8,7 @@ module adder(
     input  wire         shift,
     input  wire [513:0] in_a,
     input  wire [513:0] in_b,
-    output wire [514:0] result,
+    output wire [514:0] out_result,
     output wire         done,    
     output wire         carry
     );
@@ -30,126 +30,137 @@ module adder(
     // assign result = in_a + in_b;
     // assign done = 1'b1;
     
-    parameter nb_bits = 172;
+    parameter n = 172;
+    parameter STATES = 5;
+    parameter STATESBITS = 3;
+    parameter IDLE  =     3'b000,  // state 0
+              CALC1 =     3'b001,  // state 1
+              CALC2 =     3'b010,  // state 2
+              CALC3 =     3'b011,  // state 3
+              DONE  =     3'b100;  
+
+    reg [STATESBITS-1:0]    state;
+    reg [STATESBITS-1:0]    next_state;
     
-    reg [nb_bits-1:0] a,b;
-    reg [2:0] count = 3'b000;
+    assign done = (state == DONE);
+    
+    reg [513:0] in_a_reg, in_b_reg;
+    reg [n-1:0] a,b;
+    wire [n:0] add_out;
+    wire [514:0] result;
+    wire [514:0] result_shifted;
+    assign add_out = a + b + carry;
     reg c;
     assign carry = c;
-    reg keep_result;
-    reg [513:0] in_a_reg, in_b_reg;
+    reg [515:0] result_reg;
     
-    reg [515:0] reg_result;
-    
-    wire [nb_bits:0] add_out;
-    assign add_out = a + b + c;
-    
-    wire [515:0] resultwire;
-    
-    assign resultwire = keep_result ? reg_result[515:0] : {add_out[nb_bits-1:0], reg_result[515:nb_bits]};
-    
-//    wire [515:0] shiftwire;
-//    assign shiftwire = {1'b0,resultwire[515:1]};
-    
-    //assign res_shift = shift ? {1'b0,resultwire[515:1]} : resultwire[515:0];
-    //assign res_shift = resultwire[514:0];
-    
-    //assign result= {(c^subtract), reg_result[515:0]};   // XOR the carry bit with substract
-    //assign result = shift ? {c, 1'b0,resultwire[514:1]} : {c,reg_result[514:0]};
-    assign result = shift ? {c,resultwire[514:1]} : {c,reg_result[514:0]};
+    assign result_reg_out   = result_reg[515:0];
+    assign result           = result_reg[514:0]; 
+    assign result_shifted   = {1'b0,result_reg[514:1]};
+        //assign out_result       = (state == DONE) ? (shift ? result_shifted : result) : {515{1'b0}} ;
+    assign out_result       = shift ? result_shifted : result;
 
     
-    assign done = (count == 3'b100);
+    always @(state or start or shift)
+    begin : FSM_COMBO
+        case(state)
+        IDLE:
+            if (start == 1'b1)
+                next_state = CALC1;
+            else  
+                next_state = IDLE;
+        
+        CALC1:
+            next_state = CALC2;
+        
+        CALC2:
+            next_state = CALC3;
+        
+        CALC3:
+            next_state = DONE;
+            
+        DONE:
+            next_state = IDLE;
+        
+        default : next_state = IDLE;
+        endcase
+    end
+    
+    // FSM Seq part
+    always @ (posedge clk)
+    begin : FSM_SEQ
+        if (resetn == 1'b0) begin
+          state <= IDLE;
+        end else begin
+          state <= next_state;
+        end
+    end
     
     always @(posedge clk)
-    begin
-    if (resetn==1'b0) begin     // a <= 0;
-        c <= 0;                 // b <= 0;
-        reg_result <= {516{1'b0}};
-        count <= 3'b000;
-        keep_result <= 1'b0;     
-    end
-    else if (start==1'd1) begin     // a <= in_a[nb_bits-1:0];
-        c <= subtract;              // b <= (~)in_b[nb_bits-1:0];
-        reg_result <= {516{1'b0}};
-        count <= 3'b001;   
-        keep_result <= 1'b0;     
-    end
-    else if (shift == 1'b1) begin
-        c <= subtract;
-        reg_result <= {c,resultwire[514:1]};
-        count <= 3'b100;
-        keep_result <= 1'b1;
-    end 
-    else if (start == 1'b0 && done != 1'b1) begin   // different inputs are selected for a and b
-        reg_result <= resultwire;
-        //reg_result <= res_shift;
-        c <= add_out[nb_bits];
-        if (count == 3'b011) begin
-            keep_result <= 1'b1;
-            end
-        count <= count+1;
-    end
-    else if (start == 1'b0 && done == 1'b1) begin   // a <= 0;
-        count <= 0;                                 // b <= 0;
-    end
-    else begin                                      // a <= 0;
-        c <= 0;                                     // b <= 0;
-        count <= 0;
-        reg_result <= 0;
-    end
-    end 
-    
-//    always @(posedge clk)
-//    begin
-//    if (shift==1'b1) begin
-//    reg_result <= reg_result >> 1;
-//    end
-//    end
-    
-    always @(posedge clk)
-    begin
-        if (resetn==1'b0) begin                             // c <= 0;
-            a <= 0;                                         // reg_result <= 0;
-            b <= 0;                                         // count <= 3'b000;
+    begin : DATAPATH
+        if (resetn==1'b0) begin
+            in_a_reg   <= {(514){1'b0}};
+            in_b_reg   <= {(514){1'b0}};
+            a          <= {(n){1'b0}};
+            b          <= {(n){1'b0}};
+            c          <= 0;
+            result_reg <= {(516){1'b0}};
         end
-        else if (start==1'd1 && subtract == 1'b0) begin     // c <= 0;
-            a <= in_a[nb_bits-1:0];                         // reg_result <= 0;
-            b <= in_b[nb_bits-1:0];                         // count <= 3'b001;
-            in_a_reg <= in_a;
-            in_b_reg <= in_b;
+        
+        else begin
+            case(state)
+            
+                IDLE:
+                begin
+                // result_reg niet clearen omdat het kan dat we nog moeten shiften!
+                    if (start == 1) begin
+                        result_reg <= {(516){1'b0}};
+                        in_a_reg   <= in_a;
+                        a          <= in_a[n-1:0];
+                        c          <= subtract;
+                        if (subtract == 1'b1)           begin
+                            in_b_reg   <= ~in_b;
+                            b          <= ~in_b[n-1:0]; end
+                        else                            begin
+                            in_b_reg   <= in_b;
+                            b          <= in_b[n-1:0];  end
+                    end
+                    if (shift == 1)
+                        result_reg <= {1'b0, result_reg[515:1]};
+                end
+                
+                CALC1:
+                begin
+                    c <= add_out[n];
+                    result_reg <= {add_out[n-1:0], result_reg[515:n]};
+                    a <= in_a_reg[(2*n)-1:n];
+                    //if (subtract == 1'b0) b <= in_b_reg[(2*nb_bits)-1:nb_bits];
+                    //else b <= ~in_b_reg[(2*nb_bits)-1:nb_bits];
+                    if (subtract == 1'b0) b <= in_b[(2*n)-1:n];
+                    else b <= ~in_b[(2*n)-1:n];
+                end
+                
+                CALC2:
+                begin
+                    c <= add_out[n];
+                    result_reg <= {add_out[n-1:0], result_reg[515:n]};
+                    a <= in_a_reg[(3*n)-3:2*n];
+                    //if (subtract == 1'b0) b <= in_b_reg[(3*nb_bits)-3:2*nb_bits];
+                    //else b <= ~in_b_reg[(3*nb_bits)-3:2*nb_bits];
+                    if (subtract == 1'b0) b <= in_b[(3*n)-3:2*n];
+                    else b <= ~in_b[(3*n)-3:2*n];
+                end
+                
+                CALC3:
+                begin 
+                    result_reg <= {add_out[n-1:0], result_reg[515:n]};
+                end
+                
+                DONE:
+                begin
+                
+                end
+            endcase
         end
-        else if (start==1'd1 && subtract == 1'b1) begin     // c <= 1;
-            a <= in_a[nb_bits-1:0];                         // reg_result <= 0;
-            b <= ~in_b[nb_bits-1:0];                        // count <= 3'b001;
-            in_a_reg <= in_a;
-            in_b_reg <= in_b;
-        end
-        else if (start == 1'b0 && done != 1'b1) begin       // reg_result <= resultwire;
-                                                            // c <= add_out[nb_bits];      
-                                                            // count <= count+1;          
-            if (count == 3'b001) begin
-                a <= in_a_reg[(2*nb_bits)-1:nb_bits];
-                if (subtract == 1'b0) b <= in_b_reg[(2*nb_bits)-1:nb_bits];
-                else b <= ~in_b_reg[(2*nb_bits)-1:nb_bits];
-            end
-            else if (count == 3'b010) begin
-                a <= in_a_reg[(3*nb_bits)-3:2*nb_bits];
-                if (subtract == 1'b0) b <= in_b_reg[(3*nb_bits)-3:2*nb_bits];
-                else b <= ~in_b_reg[(3*nb_bits)-3:2*nb_bits];
-            end
-        end
-        //else if (start == 1'b0 && done == 1'b1) begin
-            //a <= 0;
-            //b <= 0;
-            //c <= c;
-            //reg_result <= loop;
-            //count <= 0;
-        //end
-        /*else begin
-            //a <= 0;
-            //b <= 0;
-        end*/
-    end 
-
+    end
 endmodule
