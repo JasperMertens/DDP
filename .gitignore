@@ -1,0 +1,6 @@
+#Exclude everything except the c code and the verilog code and the testvectors
+/**
+!/.gitignore
+!/ddp_sw/src/sdk/montgomery_sw_project/src/
+!/package/testvectors/
+!/package/rsa-project/src/rtl
