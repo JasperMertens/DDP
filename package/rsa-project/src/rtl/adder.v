@@ -8,7 +8,7 @@ module adder(
     input  wire         shift,
     input  wire [513:0] in_a,
     input  wire [513:0] in_b,
-    output wire [514:0] out_result,
+    output wire [514:0] result,
     output wire         done,    
     output wire         carry
     );
@@ -47,7 +47,7 @@ module adder(
     reg [513:0] in_a_reg, in_b_reg;
     reg [n-1:0] a,b;
     wire [n:0] add_out;
-    wire [514:0] result;
+    wire [514:0] resultwire;
     wire [514:0] result_shifted;
     assign add_out = a + b + carry;
     reg c;
@@ -55,10 +55,10 @@ module adder(
     reg [515:0] result_reg;
     
     assign result_reg_out   = result_reg[515:0];
-    assign result           = result_reg[514:0]; 
+    assign resultwire       = result_reg[514:0]; 
     assign result_shifted   = {1'b0,result_reg[514:1]};
         //assign out_result       = (state == DONE) ? (shift ? result_shifted : result) : {515{1'b0}} ;
-    assign out_result       = shift ? result_shifted : result;
+    assign result           = shift ? result_shifted : resultwire;
 
     
     always @(state or start or shift)

@@ -23,7 +23,7 @@ module hweval_adder(
         .shift    (shift   ),
         .in_a     (in_a    ),
         .in_b     (in_b    ),
-        .out_result   (result  ),
+        .result   (result  ),
         .done     (done    ));
 
     // Assign values to the inputs to the adder
