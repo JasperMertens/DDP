@@ -71,7 +71,6 @@ if operation == 3:
 
   A = helpers.getRandomInt(512)
   B = helpers.getRandomInt(512)
-  A = B
   M = helpers.getModulus(512)
   C = HW.MontMul_512(A, B, M)
   D = (A*B*helpers.Modinv(2**512,M)) % M
@@ -87,6 +86,8 @@ if operation == 3:
   print "uint32_t A[16] = {" + helpers.WriteConstants(A,16) + "};"
   print "uint32_t B[16] = {" + helpers.WriteConstants(B,16) + "};"   
   print "uint32_t M[16] = {" + helpers.WriteConstants(M,16) + "};" 
+  print "uint32_t EXPECTED[16] = {" + helpers.WriteConstants(C,16) + "};" 
+
 #####################################################
 if operation == 6:
   print "Debug Montgomery Exponentiation\n"
@@ -145,7 +146,8 @@ if operation == 4:
 
   print "uint32_t X[16] = {" + helpers.WriteConstants(X,16) + "};"
   print "uint32_t E[16] = {" + helpers.WriteConstants(E,16) + "};"   
-  print "uint32_t M[16] = {" + helpers.WriteConstants(M,16) + "};"       
+  print "uint32_t M[16] = {" + helpers.WriteConstants(M,16) + "};" 
+  print "uint32_t EXPECTED[16] = {" + helpers.WriteConstants(C,16) + "};"       
 
 #####################################################
 

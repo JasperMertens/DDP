@@ -99,10 +99,29 @@ uint32_t n0[32] = {0x16f2105f, 0xfdddd2ad, 0x95f75ac0, 0xa8c30990, 0xf655e370, 0
 //uint32_t Ct_p[16] = {0x5d2b54bb, 0x8fedf314, 0x2b521a7b, 0x3f7a1310, 0x9aeb4816, 0x2f173173, 0x56c3684e, 0xb1075bb6, 0xd7cf7067, 0x50d27449, 0x015401c5, 0x0f7aab71, 0xeb85a6f5, 0xa96627c9, 0x57a373bb, 0xae29d398};
 //
 
+
+
+
+
+/*
+// EXPONENTIATION
+uint32_t X[16] = {0x7b8c972d, 0x8d53e828, 0x32c23195, 0x9372b2a4, 0xe606cb6c, 0xee29ae83, 0x562f9bcf, 0xdd874c23, 0x88eda03c, 0x1896bada, 0x5faeaec0, 0xd8b0d182, 0xeb5c8bc1, 0x3d6506f0, 0xcb7f2e9f, 0xeda6cba4};
+uint32_t E[16] = {0x000000a7, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000};
+uint32_t M[16] = {0xdcbcbfa9, 0x74224d21, 0x7d83160c, 0xbf60e00d, 0x7b990427, 0xabd5fa2c, 0x4d03f8be, 0xa76cf900, 0x2ec55f9c, 0x96c55c2f, 0x4345b5a2, 0x221ca99c, 0x6f5d1b99, 0xafdbe33d, 0x81c27763, 0x845e3450};
+uint32_t EXPECTED[16] = {0xc4e9122c, 0xc6fab26f, 0x084bbdf4, 0x37da30d1, 0x1bd3e172, 0x0695959e, 0xa667d20f, 0x417a5266, 0x455d21ad, 0x780d02dc, 0xad3d8cd4, 0x89cf8bfc, 0x0e3344ae, 0xf3b2e137, 0xf751d796, 0x78460f46};
+*/
+
+// MULTIPLICATION
+uint32_t A16[16] = {0x51977946, 0x7957b1be, 0x9f030fbd, 0x04561a82, 0x1fad9525, 0xab8e0526, 0x05c0a4a8, 0x4dcc3907, 0xc8ae12c7, 0x8b7d54ca, 0x22e43d05, 0x806b8cac, 0x13cbfd6b, 0x36d3028f, 0x52132ef0, 0xc51931a9};
+uint32_t B16[16] = {0x5fc3d1ef, 0x96dec894, 0x2d5929f7, 0xc0810a9f, 0x8b55af12, 0x3548fef6, 0x3d61e914, 0xc5784013, 0x20669791, 0x154a73de, 0x98e985d3, 0xe3d56445, 0xcb4fba56, 0x5f0012cc, 0xca83b655, 0xb220f8c0};
+uint32_t N16[16] = {0x0ebd5f75, 0x948cb7ab, 0x58727656, 0x0f02d0b4, 0x6ed897f2, 0x052304af, 0xcea1ed9f, 0x2e3b3a4c, 0xaa19906f, 0x0a3be041, 0x6ae0754b, 0x28470c40, 0xc871a4de, 0x10943525, 0x105d393e, 0xc6bb131b};
+uint32_t N_prime16[16] = {0x7648c723, 0xdc590cb1, 0xbb4c5143, 0x58be381a, 0x7f1c698f, 0x46297b6c, 0xb991e392, 0x3d7d04c2, 0xa0eb979b, 0x3f231be6, 0x9c6760bf, 0x4ed1e95f, 0x464cc4b6, 0xde39afa8, 0xa1bfa709, 0xed55fac2};
+uint32_t expected_output[16] = {0x9e31ea81, 0xe265cbb7, 0x5e453a5a, 0xffe854d5, 0x58b4d35b, 0x5370eae7, 0xfd0d421a, 0x66dd18b8, 0x7b232ec6, 0xb6df247f, 0x3f359f29, 0x4c244688, 0xc901b64c, 0xda554d8d, 0x7e49f069, 0x9712a929};
+
 int main()
 {
 
-    int i;
+    //int i;
 
     init_platform();
     init_performance_counters(1);
@@ -120,17 +139,21 @@ int main()
 
 	// test_mod_add();
 
-	// test_mont_mult();
+	//test_mont_mult();
+    //printMontExpResult(16);
 
-    test_mont_exp();
-    printMontExpResult(32);
-	// test_hw_mont_mult();
+
+    //test_mont_exp();
+    //printMontExpResult(32);
+
+	test_hw_mont_mult();
+    printMontExpResult(16);
 
 	// test_hw_mont_exp();
 
 
-	test_hw_mont_decrypt();
-    printMontExpResult(32);
+	//test_hw_mont_decrypt();
+    //printMontExpResult(32);
 
     STOP_TIMING
 
@@ -235,13 +258,13 @@ int main()
 //	mod_add(a32, b32, N32, result, 32);
 //}
 
-//void test_mont_mult() {
-//
-//	montgomery_multiply(a, b, n, n0, result, 32);
-//
-//	xil_printf("\n\r");
-//
-//}
+void test_mont_mult() {
+
+	montgomery_multiply(A16, B16, N16, N_prime16, result, 16);
+
+	xil_printf("\n\r");
+
+}
 
 void test_mont_exp() {
 
@@ -251,10 +274,11 @@ void test_mont_exp() {
 
 }
 
-//void test_hw_mont_mult() {
-//	hw_montgomery_multiply((unsigned int*) B16, (unsigned int*) B16, (unsigned int*) M16, (unsigned int*) result, 16);
-//
-//}
+void test_hw_mont_mult() {
+	hw_montgomery_multiply((unsigned int*) A16, (unsigned int*) B16, (unsigned int*) N16, (unsigned int*) result, 16);
+
+}
+
 //void test_hw_mont_exp() {
 //	hw_mod_exp(Ct_p,d_p, d_p_len, p, Rp, R2p, result);
 //}
