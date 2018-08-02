@@ -196,6 +196,7 @@ module montgomery(
         INLOOPADDSHIFTWAIT:
             begin
                 start_a <= 1'b0;
+                shift_a <= 1'b0;
             end
         MODULOCHECK:
             begin
@@ -280,7 +281,7 @@ module montgomery(
                 end
                 CHOOSERESULT:
                 begin 
-                    c <= result_a[514] ? result_a[513:0] : c;
+                    c <= result_a[514] ? c : result_a[513:0];
                 end
                 STOP:
                 begin

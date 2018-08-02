@@ -37,11 +37,13 @@ module adder(
               CALC1 =     3'b001,  // state 1
               CALC2 =     3'b010,  // state 2
               CALC3 =     3'b011,  // state 3
-              DONE  =     3'b100;  
+              SHIFT =     3'b100,
+              DONE  =     3'b101;  
 
     reg [STATESBITS-1:0]    state;
     reg [STATESBITS-1:0]    next_state;
     
+    reg shifted;
     assign done = (state == DONE);
     
     reg [513:0] in_a_reg, in_b_reg;
@@ -77,8 +79,12 @@ module adder(
             next_state = CALC3;
         
         CALC3:
+            if (shifted == 1) next_state = SHIFT;
+            else next_state = DONE;
+        
+        SHIFT:
             next_state = DONE;
-            
+        
         DONE:
             next_state = IDLE;
         
@@ -103,8 +109,9 @@ module adder(
             in_b_reg   <= {(514){1'b0}};
             a          <= {(n){1'b0}};
             b          <= {(n){1'b0}};
-            c          <= 0;
+            c          <= 1'b0;
             result_reg <= {(516){1'b0}};
+            shifted    <= 1'b0;
         end
         
         else begin
@@ -124,9 +131,9 @@ module adder(
                         else                            begin
                             in_b_reg   <= in_b;
                             b          <= in_b[n-1:0];  end
+                        if (shift == 1) shifted <= 1'b1;
+                        else shifted <= 1'b0;
                     end
-                    if (shift == 1)
-                        result_reg <= {1'b0, result_reg[515:1]};
                 end
                 
                 CALC1:
@@ -136,8 +143,8 @@ module adder(
                     a <= in_a_reg[(2*n)-1:n];
                     //if (subtract == 1'b0) b <= in_b_reg[(2*nb_bits)-1:nb_bits];
                     //else b <= ~in_b_reg[(2*nb_bits)-1:nb_bits];
-                    if (subtract == 1'b0) b <= in_b[(2*n)-1:n];
-                    else b <= ~in_b[(2*n)-1:n];
+                    if (subtract == 1'b0) b <= in_b_reg[(2*n)-1:n];
+                    else b <= ~in_b_reg[(2*n)-1:n];
                 end
                 
                 CALC2:
@@ -147,13 +154,18 @@ module adder(
                     a <= in_a_reg[(3*n)-3:2*n];
                     //if (subtract == 1'b0) b <= in_b_reg[(3*nb_bits)-3:2*nb_bits];
                     //else b <= ~in_b_reg[(3*nb_bits)-3:2*nb_bits];
-                    if (subtract == 1'b0) b <= in_b[(3*n)-3:2*n];
-                    else b <= ~in_b[(3*n)-3:2*n];
+                    if (subtract == 1'b0) b <= in_b_reg[(3*n)-3:2*n];
+                    else b <= ~in_b_reg[(3*n)-3:2*n];
                 end
                 
                 CALC3:
                 begin 
                     result_reg <= {add_out[n-1:0], result_reg[515:n]};
+                end
+                
+                SHIFT:
+                begin
+                    result_reg <= {1'b0, result_reg[515:1]};
                 end
                 
                 DONE:
