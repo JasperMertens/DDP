@@ -45,12 +45,12 @@ def MontExp_512(X, E, M):
     A  = R % M;
     X_tilde = MontMul_512(X,R2,M)
     t = helpers.bitlen(E)
-    for i in range(0,20):
+    for i in range(0,t):
         A = MontMul_512(A,A,M)
         if helpers.bit(E,t-i-1) == 1:
             A = MontMul_512(A,X_tilde,M)
 	#if i >= 505:
-    	print "uint32_t A_test = {" + helpers.WriteConstants(A,16) + "};"
-	print " "
+    	#print "uint32_t A_test = {" + helpers.WriteConstants(A,16) + "};"
+	#print " "
     A = MontMul_512(A,1,M)
     return A
