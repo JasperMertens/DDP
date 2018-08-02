@@ -143,8 +143,7 @@ module adder(
                     a <= in_a_reg[(2*n)-1:n];
                     //if (subtract == 1'b0) b <= in_b_reg[(2*nb_bits)-1:nb_bits];
                     //else b <= ~in_b_reg[(2*nb_bits)-1:nb_bits];
-                    if (subtract == 1'b0) b <= in_b_reg[(2*n)-1:n];
-                    else b <= ~in_b_reg[(2*n)-1:n];
+                    b <= in_b_reg[(2*n)-1:n];
                 end
                 
                 CALC2:
@@ -154,13 +153,13 @@ module adder(
                     a <= in_a_reg[(3*n)-3:2*n];
                     //if (subtract == 1'b0) b <= in_b_reg[(3*nb_bits)-3:2*nb_bits];
                     //else b <= ~in_b_reg[(3*nb_bits)-3:2*nb_bits];
-                    if (subtract == 1'b0) b <= in_b_reg[(3*n)-3:2*n];
-                    else b <= ~in_b_reg[(3*n)-3:2*n];
+                    b <= in_b_reg[(3*n)-3:2*n];
                 end
                 
                 CALC3:
                 begin 
-                    result_reg <= {add_out[n-1:0], result_reg[515:n]};
+                    //result_reg <= {add_out[n-1:0], result_reg[515:n]};
+                    result_reg <= {0, (subtract^add_out[n-2]) , add_out[n-3:0], result_reg[515:n]};
                 end
                 
                 SHIFT:
