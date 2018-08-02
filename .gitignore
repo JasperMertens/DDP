@@ -4,25 +4,25 @@
 !/ddp_sw
 !/package
 
-./ddp_sw/*
+/ddp_sw/*
 !/ddp_sw/src
 
-./ddp_sw/src/*
+/ddp_sw/src/*
 !/ddp_sw/src/sdk
 
-./ddp_sw/src/sdk/*
+/ddp_sw/src/sdk/*
 !/ddp_sw/src/sdk/montgomery_sw_project
 
-./ddp_sw/src/sdk/montgomery_sw_project/*
+/ddp_sw/src/sdk/montgomery_sw_project/*
 !/ddp_sw/src/sdk/montgomery_sw_project/src
 
-./package/*
+/package/*
 !/package/testvectors
 !/package/rsa-project
 
-./package/rsa-project/*
+/package/rsa-project/*
 !/package/rsa-project/src
 
-./package/rsa-project/src/*
+/package/rsa-project/src/*
 !/package/rsa-project/src/rtl
 
