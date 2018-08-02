@@ -23,10 +23,12 @@ module hweval_adder(
         .shift    (shift   ),
         .in_a     (in_a    ),
         .in_b     (in_b    ),
-        .result   (result  ),
+        .out_result   (result  ),
         .done     (done    ));
 
     // Assign values to the inputs to the adder
+    //test 
+    
     always @(posedge(clk))
     begin
         if (resetn==0)
