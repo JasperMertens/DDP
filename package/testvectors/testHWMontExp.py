@@ -116,5 +116,5 @@ print "uint32_t M[16] = {" + helpers.WriteConstants(M,16) + "};"
 print "uint32_t R[16] = {" + helpers.WriteConstants(R,16) + "};" 
 print "uint32_t R2[16] = {" + helpers.WriteConstants(R2,16) + "};"  
 print "uint32_t exp_len = ", exp_len, ";"
-print "uint32_t expected[16] = {" + helpers.WriteConstants(D,16) + "};"
+print "uint32_t expected_output[16] = {" + helpers.WriteConstants(D,16) + "};"
 
