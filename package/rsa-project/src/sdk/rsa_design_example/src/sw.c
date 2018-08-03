@@ -25,7 +25,7 @@ void sub_cond(uint32_t *t, uint32_t *n, uint32_t *p);
 #define SIZEA 32
 
 // Calculates res = (x^exp) mod N
-void mod_exp(uint32_t *msg, uint32_t *exp, uint32_t exp_len, uint32_t *n, uint32_t *n_prime, uint32_t *res) {
+void mod_exp(uint32_t *msg, uint32_t *exp, uint32_t exp_len, uint32_t *n, uint32_t *n_prime, uint32_t *R, uint32_t *R2, uint32_t *res) {
 	int i;
 	int bit;
 
@@ -34,12 +34,12 @@ void mod_exp(uint32_t *msg, uint32_t *exp, uint32_t exp_len, uint32_t *n, uint32
 
 	// Calculate x_tilde = MontMul(x, R^2 mod m)
 	//   R2_1024 is defined in global.h
-	montgomery_multiply(msg, R2_1024, n, n_prime, x_tilde, SIZEA);
+	montgomery_multiply(msg, R2, n, n_prime, x_tilde, SIZEA);
 
 	// Copy R to A
 	//   R_1024 is defined in global.h
 	for(i = 0; i < 32; i++) {
-	    A[i] = R_1024[i];
+	    A[i] = R[i];
 	}
 	while(exp_len>0)
 	{
