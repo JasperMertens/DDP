@@ -93,10 +93,10 @@ def MontMul_512(A, B, M):
 #expected = 0x9712A9297E49F069DA554D8DC901B64C4C2446883F359F29B6DF247F7B232EC666DD18B8FD0D421A5370EAE758B4D35BFFE854D55E453A5AE265CBB79E31EA81
 
 # Testvector 7
-in_a = 0x8e99981827cc58bec9022bad1285dd240b1ff924f0acb0d06ac46232a53b20f07786425f65f0c2fce8a63fffb0fd3fa70995e07acc848d93f9c07fe3e99c0d36
-in_b = 0x3e1fc5f4b106897bb3e733d32c51e12a91d6c518d5da2b1a639149e8b944284d38fb80ffa26b94efef68d1958585f2178b28a43acdeba809a7cce3ca33ffe466
-in_m = 0x92c96dcdf75c45342c660ebce79e52ca8a239ec453f8d7e4fc80b8e2a151284d26f54d7b1220cd68f8f5314a247ff2703aebb0f7aed3b9a8947ab35ca51a5baf
-expected = 0x54dd8102a63a4a1d79851fe0e51aa7ed9965143d6152e22c3082e129a5f3c3cb3db0199a7dca7d3616017e18498d19ad85c59cd41ac62a8ee96cb8ec597ef324
+#in_a = 0x8e99981827cc58bec9022bad1285dd240b1ff924f0acb0d06ac46232a53b20f07786425f65f0c2fce8a63fffb0fd3fa70995e07acc848d93f9c07fe3e99c0d36
+#in_b = 0x3e1fc5f4b106897bb3e733d32c51e12a91d6c518d5da2b1a639149e8b944284d38fb80ffa26b94efef68d1958585f2178b28a43acdeba809a7cce3ca33ffe466
+#in_m = 0x92c96dcdf75c45342c660ebce79e52ca8a239ec453f8d7e4fc80b8e2a151284d26f54d7b1220cd68f8f5314a247ff2703aebb0f7aed3b9a8947ab35ca51a5baf
+#expected = 0x54dd8102a63a4a1d79851fe0e51aa7ed9965143d6152e22c3082e129a5f3c3cb3db0199a7dca7d3616017e18498d19ad85c59cd41ac62a8ee96cb8ec597ef324
 
 # Testvector 8
 #in_a = 0x87bd031a5fe5cb6dc1cecdb8bd7b2a75fbc9aae06d4fe65b3f8de91ee315b4eeab17e8f03020227b365a6cac95550e29d8bf767f0dae4f33d48382abaf3f13d
@@ -104,10 +104,20 @@ expected = 0x54dd8102a63a4a1d79851fe0e51aa7ed9965143d6152e22c3082e129a5f3c3cb3db
 #in_m = 0xf47bc3b53d770d4020bc0ad81c44ba80c9a5235cf674df8f5ea047b9a1c1a53dc567882a5c5083d70548c94863559705e3ab778720b9da4b7a6e2ad90fbe29d3
 #expected = 0x7fa6e8248a5628f457069fecb4fea621a6c39779a09de9ef0f93708f80ff4f406b20710594933ce599f734c8f3df736e577230ac974e2f8eb8b8219c5c99333f
 
+# Testvector 9
+#in_a = 0xae8a151477a26eee3d23d751289bc924cf3c9f9a85ee3e98965705bf6dd116daf75e26b4b5f0eb8c66a29154a6734271353809632e0ae82e0ac85ad8394bb869
+#in_b = 0x96952c757f3da325b9718beac7c5b2df1715b57465750b157b2307690fa09f2eaadcaea17d07f88c8acbeab9cb8d25a456032052d153e4f3184b0dad521da139
+#in_m = 0xafd40356369d990228cfadda9a083ca2c86622f7b80efcda5ebe1521b459a4a240855018749fe9d878fb7a784d6b648ae9f5a682dd8a0cf7062825573a5a2fe1
+#expected = 0x600d37587bc22ac2ad1020f28cccf3bf6d895c9f13583024dcde67cffeeb7ed4c12627f11ba9a7eff5434089b0f1d1dcbb265a05c020d2e8b4316f86965eae17
 
-#in_m = helpers.getModulus(512)
-#in_a = helpers.getRandomInt(512) % in_m
-#in_b = helpers.getRandomInt(512) % in_m
+
+
+in_m = helpers.getModulus(512)
+in_a = helpers.getRandomInt(512) % in_m
+in_b = helpers.getRandomInt(512) % in_m
+expected = 0
+
+
 result = MontMul_512(in_a, in_b, in_m)
 
 print
@@ -115,6 +125,11 @@ print "in_a     <= 512'h" + format(in_a, "02x") + ";"
 print "in_b     <= 512'h" + format(in_b, "02x") + ";"
 print "in_m     <= 512'h" + format(in_m, "02x") + ";"
 print "expected <= 512'h" + format(result, "02x") + ";"
+print
+print "uint32_t A16[16]       = {" + helpers.WriteConstants(in_a,16) + "};"
+print "uint32_t B16[16]       = {" + helpers.WriteConstants(in_b,16) + "};"
+print "uint32_t N16[16]       = {" + helpers.WriteConstants(in_m,16) + "};"
+print "uint32_t expected_output[16]       = {" + helpers.WriteConstants(result,16) + "};"
 print
 print "in_a = 0x" + format(in_a, "02x")
 print "in_b = 0x" + format(in_b, "02x")
