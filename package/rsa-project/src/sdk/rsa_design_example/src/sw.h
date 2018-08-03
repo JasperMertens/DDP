@@ -28,4 +28,5 @@ void mp_add(uint32_t *a, uint32_t *b, uint32_t *res, uint32_t size);
 void mp_sub(uint32_t *a, uint32_t *b, uint32_t *res, uint32_t size);
 
 void combineResult(uint32_t *pp, uint32_t *pq, uint32_t *result);
+void printMontResult(uint32_t *result, uint32_t size);
 #endif
