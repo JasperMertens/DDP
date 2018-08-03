@@ -131,7 +131,7 @@ void combineResult(uint32_t *pp, uint32_t *pq, uint32_t *result) {
 	montgomery_multiply(T, R2_1024, N, N_prime, result, SIZEA);
 }
 
-void printMontResult(uint32_t *result, uint32_t size)
+void printArray(uint32_t *result, uint32_t size)
 {
 	int i;
 	if (result[size-1] != 0) {
