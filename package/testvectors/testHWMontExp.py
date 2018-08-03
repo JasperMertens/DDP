@@ -82,20 +82,21 @@ def MontExp_512(X, E, M):
 #expected	  =  0x64ee3fd57fa7ddcd9083bf3ffffad952c693667cd94b23341ac9f64f53df68069486449f92a9155259dc47bac6901639a2d268b2529d982441c2e438f75084c2L
 
 # Testvector 2
-X                =  0x1c836853ffc0b7389a5824e5472d5f9cf5e2e949e805b057d77af168365232bd1b80c645f321f2dae93b3a0ea844ad2f7d90773f79abcdd4cfa2f28ee1e4acacL
-E                =  0x86
-M                =  0xb3688c5d2cc56478044ed0f3d2b070b2355adcd9ea0a26636d5187ccf69d061d0264007a824258be9c1b31c1dbe25735f2af5e4246d46d3e8d90319747bb976dL
-expected	  =  0xab96e8e6f23948c35faed2c71f9b8f85c405fe12099a7a3a2bd8dde217a20e1b6d4cc1cecd7e4c08d0af1219244186b59d66ae39cc05a3a99dcee2dd73138981L
+#X                =  0x1c836853ffc0b7389a5824e5472d5f9cf5e2e949e805b057d77af168365232bd1b80c645f321f2dae93b3a0ea844ad2f7d90773f79abcdd4cfa2f28ee1e4acacL
+#E                =  0x86
+#M                =  0xb3688c5d2cc56478044ed0f3d2b070b2355adcd9ea0a26636d5187ccf69d061d0264007a824258be9c1b31c1dbe25735f2af5e4246d46d3e8d90319747bb976dL
+#expected	  =  0xab96e8e6f23948c35faed2c71f9b8f85c405fe12099a7a3a2bd8dde217a20e1b6d4cc1cecd7e4c08d0af1219244186b59d66ae39cc05a3a99dcee2dd73138981L
 
-#M = helpers.getModulus(512)
-#X = helpers.getRandomInt(512)%M
-exp_len = 8
-#E = helpers.getRandomInt(exp_len)
+M = helpers.getModulus(512)
+X = helpers.getRandomInt(512)%M
+exp_len = 88
+E = helpers.getRandomInt(exp_len)
 
 R = 2**512 % M
 R2 = R*R % M
 
 C = MontExp_512(X, E, M)
+#C = helpers.Modexp(X, E, M)
 D = helpers.Modexp(X, E, M)
 e = C - D
 
