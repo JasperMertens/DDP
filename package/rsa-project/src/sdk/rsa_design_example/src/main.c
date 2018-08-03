@@ -50,7 +50,6 @@ uint32_t result[32] = {0};
 uint32_t size = 32;
 
 
-
 // MULTIPLICATION TESTVECTORS
 uint32_t A16[16] = 					{0x51977946, 0x7957b1be, 0x9f030fbd, 0x04561a82, 0x1fad9525, 0xab8e0526, 0x05c0a4a8, 0x4dcc3907, 0xc8ae12c7, 0x8b7d54ca, 0x22e43d05, 0x806b8cac, 0x13cbfd6b, 0x36d3028f, 0x52132ef0, 0xc51931a9};
 uint32_t B16[16] = 					{0x5fc3d1ef, 0x96dec894, 0x2d5929f7, 0xc0810a9f, 0x8b55af12, 0x3548fef6, 0x3d61e914, 0xc5784013, 0x20669791, 0x154a73de, 0x98e985d3, 0xe3d56445, 0xcb4fba56, 0x5f0012cc, 0xca83b655, 0xb220f8c0};
@@ -58,13 +57,11 @@ uint32_t N16[16] = 					{0x0ebd5f75, 0x948cb7ab, 0x58727656, 0x0f02d0b4, 0x6ed89
 uint32_t N_prime16[16] = 			{0x7648c723, 0xdc590cb1, 0xbb4c5143, 0x58be381a, 0x7f1c698f, 0x46297b6c, 0xb991e392, 0x3d7d04c2, 0xa0eb979b, 0x3f231be6, 0x9c6760bf, 0x4ed1e95f, 0x464cc4b6, 0xde39afa8, 0xa1bfa709, 0xed55fac2};
 uint32_t expected_output16[16] = 	{0x9e31ea81, 0xe265cbb7, 0x5e453a5a, 0xffe854d5, 0x58b4d35b, 0x5370eae7, 0xfd0d421a, 0x66dd18b8, 0x7b232ec6, 0xb6df247f, 0x3f359f29, 0x4c244688, 0xc901b64c, 0xda554d8d, 0x7e49f069, 0x9712a929};
 
-
 uint32_t A32[32] = 					{0xf484e847, 0x4ae251f1, 0xedfa617d, 0x58ab6bf4, 0x46bf4848, 0xf67c1061, 0x8811c17a, 0x578fde16, 0x493ee595, 0x1eafc4c3, 0xc4f11a2e, 0x8cb6fba7, 0x724c03a4, 0x2e6c1dbd, 0x57ebc43d, 0x3e6ee260, 0x4089c050, 0xf0384e03, 0x7357f72c, 0x87acb658, 0x7ea2490e, 0x61069112, 0x42e3f8b9, 0x9e778cef, 0x5cdf77c7, 0x10bce41c, 0x1121beec, 0x3db59a36, 0xc34620c5, 0xc6b030ae, 0xe8fc5934, 0x63a0a0cb};
 uint32_t B32[32] = 					{0xfeb1b9f4, 0xe91d3bec, 0xfb09354d, 0x07f21d6d, 0x9ece9e1b, 0x18def18b, 0x4119e1e9, 0x55c85f24, 0x60ef0e23, 0x10e8ab54, 0x1e95cdcc, 0x4373912f, 0x6f42204d, 0x7126650d, 0xb61c1c8d, 0x98af9011, 0xa42c03b4, 0xd29e0870, 0x7923cb60, 0xdf87cfe5, 0xde4fffa0, 0x3ce537ca, 0x201040c6, 0x6e54b058, 0x814c53dc, 0xf16243f0, 0x57decf64, 0x8d0d4f37, 0x9b6d93e5, 0x45396d71, 0x615213c4, 0x65f89f9f};
 uint32_t N32[32] = 					{0x4aeeb107, 0x5d78aa98, 0x6c55dd05, 0x6f5326c9, 0xf93f738c, 0xc10fa093, 0x20478120, 0x099d6d70, 0x833d9b82, 0x1248f3ed, 0xa43ed737, 0xc1c1da45, 0x9f23e5c7, 0xb17c3598, 0xe8938df6, 0x7ae59036, 0x9f84d87b, 0xc8710dc6, 0x249ee0f8, 0x46eeae2f, 0x66a3bb9b, 0xfeef4c6b, 0xc7b55eae, 0x7951dd0c, 0x0b4391e8, 0x141ad586, 0x1a568588, 0x908293dd, 0x472c0bea, 0x8d00abfe, 0xed17377f, 0x83a01efe};
 uint32_t N_prime32[32] = 			{0xe7d41349, 0x0c828dcd, 0x2dc06d90, 0x318f87bf, 0x1992ba09, 0x4b1bef10, 0x011ba664, 0xe3a7d9cf, 0x44449fbd, 0x89714d34, 0x6cd49cc4, 0x49c5b99d, 0xf90435b1, 0x38f037b7, 0xba9720db, 0x9641b106, 0xbca01d2a, 0xfdb82893, 0xbd7ce9c7, 0x372823e1, 0x4901cdde, 0xaa28d457, 0xe9f78c94, 0xb6e1e5b3, 0x5a79f7a6, 0xf5212a83, 0x2b1aab45, 0xa3924b69, 0x3c63a8af, 0x12fa121d, 0x7500bea0, 0xe58878e7};
 uint32_t expected_output32[32] = 	{0xeb7e3ef3, 0x40b90c4f, 0xd9c234b1, 0x2461cd34, 0x183481c7, 0x0bc4e5bd, 0x4803996e, 0x755d1777, 0x698f88c7, 0x2e78b03b, 0xa55cfb32, 0x74d1c12a, 0xc6bc8934, 0x581d4714, 0x7d504a58, 0xb29753f1, 0x99ae0c37, 0x65c4cc3a, 0x4153aacb, 0xe0a5c4bf, 0xce0a9c7c, 0x4babfb22, 0x75aa490d, 0x43b6ec25, 0xdcb17a10, 0x47deec3c, 0xd0e2735f, 0x16726b8e, 0x0f486246, 0x0f74d471, 0xe62a3577, 0x065a0397};
-
 
 /*
 // EXPONENTIATION TESTVECTORS
@@ -74,12 +71,8 @@ uint32_t M[16] = {0xdcbcbfa9, 0x74224d21, 0x7d83160c, 0xbf60e00d, 0x7b990427, 0x
 uint32_t EXPECTED[16] = {0xc4e9122c, 0xc6fab26f, 0x084bbdf4, 0x37da30d1, 0x1bd3e172, 0x0695959e, 0xa667d20f, 0x417a5266, 0x455d21ad, 0x780d02dc, 0xad3d8cd4, 0x89cf8bfc, 0x0e3344ae, 0xf3b2e137, 0xf751d796, 0x78460f46};
 */
 
-
-
 int main()
 {
-
-    //int i;
 
     init_platform();
     init_performance_counters(1);
@@ -89,32 +82,26 @@ int main()
 
     START_TIMING
 
-	// test_dma_transfer();
+	//test_dma_transfer();
 
-	// test_mp_add();
+	//test_mp_add();
 
-	// test_mp_sub();
+	//test_mp_sub();
 
-	// test_mod_add();
+	//test_mod_add();
     
     test_mont_mult();
 
+	//test_hw_mont_mult();
+
     //test_mont_exp();
-    //printMontExpResult(32);
 
-	//test_hw_mont_mult();
-   // printMontExpResult(16);
-
-	//test_hw_mont_mult();
-
-	// test_hw_mont_exp();
-
+	//test_hw_mont_exp();
 
 	//test_hw_mont_decrypt();
     //printMontExpResult(32);
 
     STOP_TIMING
-
 
     ////////////// Test the port-based communication //////////////
 
@@ -204,18 +191,6 @@ int main()
     return 0;
 }
 
-//void test_mp_add() {
-//	mp_add(a32, b32, result, 32);
-//}
-//
-//void test_mp_sub() {
-//	mp_sub(a32, b32, result, 32);
-//}
-//
-//void test_mod_add() {
-//	mod_add(a32, b32, N32, result, 32);
-//}
-
 void test_mont_mult() {
 
 #define MULT_TESTVECTOR 1
@@ -253,6 +228,9 @@ void test_mont_mult() {
 	// Code Jasper semester 2 from montgomery2.c
 	mont_mult(a, b, N, n_prime, result, 32);
 
+	// Code semester 1 from sw.c
+	// montgomery_multiply(A16, B16, N16, N_prime16, result, 16);
+
 	printMontResult(32);
 	xil_printf("Expected ");
 	printArray(expected_output, 32);
@@ -263,11 +241,6 @@ void test_mont_mult() {
 	}
 
 	xil_printf("Test software montgomery mult succeeded\r\n");
-
-
-
-	// Code semester 1 from sw.c
-	// montgomery_multiply(A16, B16, N16, N_prime16, result, 16);
 
 
 }
