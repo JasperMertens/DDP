@@ -80,18 +80,39 @@ def MontMul_512(A, B, M):
 #in_m = 0x85043c00a323657b8b1b421888721ddda6fee5b443f4e3920ec0e8d961496ee7c1a6e0edbf97c8186ab20403110d58e3fc32af1f7ef8b302d75bc796ec62a577;
 #expected = 0x0d2c7a007de6e0bcd84baa0c8614cb8168afa2004dc70c2e33b76c7b7f2aa091bdaa6004c70e5f40a63f74c43a5ddc95ecb7ac30de4742c452f8135cbb2a7955;
 
-#in_a = helpers.getRandomInt(512)
-#in_b = helpers.getRandomInt(512)
-#in_m = helpers.getModulus(512)
+# Testvector 5
+#in_a = 0x2266dfd35b839d9584e9fc9b4e477ea07805aeb64b029710631036650dd36d7730b2d4145d87835824e3ea8d142f7c624585659a308a06c405f1f9511d42803f
+#in_b = 0x8003892db22eb9a44895c40ff7762ea91dd74f61a794995ad7df83506fc8869d902465117950e42f80fc7d66235fb809c645678d0e6cfffbb4e8e9f7021f8195
+#in_m = 0x9f229799de5b7470cf4680b94f28b51f53b37c047b684396e1bd2b09c4504bb6deabef2cfe1921d42ccd5b786cb526527d4fecb79de5fd21d3d328e0c7cb40bb
+#expected = 0x28656b6ac06697daea4f6457ecfe574b6ffdb6a23c207f3ccf1505a68369b89a6525d5abb19da641a64b33059a5ff0196204bcc35a39bd6b7c02b0c0aab8e1a
 
-in_a = 0x2266dfd35b839d9584e9fc9b4e477ea07805aeb64b029710631036650dd36d7730b2d4145d87835824e3ea8d142f7c624585659a308a06c405f1f9511d42803f
-in_b = 0x8003892db22eb9a44895c40ff7762ea91dd74f61a794995ad7df83506fc8869d902465117950e42f80fc7d66235fb809c645678d0e6cfffbb4e8e9f7021f8195
-in_m = 0x9f229799de5b7470cf4680b94f28b51f53b37c047b684396e1bd2b09c4504bb6deabef2cfe1921d42ccd5b786cb526527d4fecb79de5fd21d3d328e0c7cb40bb
+# Testvector 7
+#in_a = 0x8e99981827cc58bec9022bad1285dd240b1ff924f0acb0d06ac46232a53b20f07786425f65f0c2fce8a63fffb0fd3fa70995e07acc848d93f9c07fe3e99c0d36
+#in_b = 0x3e1fc5f4b106897bb3e733d32c51e12a91d6c518d5da2b1a639149e8b944284d38fb80ffa26b94efef68d1958585f2178b28a43acdeba809a7cce3ca33ffe466
+#in_m = 0x92c96dcdf75c45342c660ebce79e52ca8a239ec453f8d7e4fc80b8e2a151284d26f54d7b1220cd68f8f5314a247ff2703aebb0f7aed3b9a8947ab35ca51a5baf
+#expected = 0x54dd8102a63a4a1d79851fe0e51aa7ed9965143d6152e22c3082e129a5f3c3cb3db0199a7dca7d3616017e18498d19ad85c59cd41ac62a8ee96cb8ec597ef324
 
-result = MontMul_512_print(in_a, in_b, in_m)
+# Testvector 8
+#in_a = 0x87bd031a5fe5cb6dc1cecdb8bd7b2a75fbc9aae06d4fe65b3f8de91ee315b4eeab17e8f03020227b365a6cac95550e29d8bf767f0dae4f33d48382abaf3f13d
+#in_b = 0x3028f0f258466ec853b4af0fe6bed6c4ddf8edb143850a94869a6eaa2e27c64fc70a562756b5fea1d5f918ea9f6e1d338e5d2526c0e64b2cfb1b4be2b406a1f
+#in_m = 0xf47bc3b53d770d4020bc0ad81c44ba80c9a5235cf674df8f5ea047b9a1c1a53dc567882a5c5083d70548c94863559705e3ab778720b9da4b7a6e2ad90fbe29d3
+#expected = 0x7fa6e8248a5628f457069fecb4fea621a6c39779a09de9ef0f93708f80ff4f406b20710594933ce599f734c8f3df736e577230ac974e2f8eb8b8219c5c99333f
 
-print "in_a     <= 512'h", format(in_a, "02x")
-print "in_b     <= 512'h", format(in_b, "02x")
-print "in_m     <= 512'h", format(in_m, "02x")
-print "expected     <= 512'h", format(result, "02x")
+
+in_m = helpers.getModulus(512)
+in_a = helpers.getRandomInt(512) % in_m
+in_b = helpers.getRandomInt(512) % in_m
+
+result = MontMul_512(in_a, in_b, in_m)
+
+print
+print "in_a     <= 512'h" + format(in_a, "02x") + ";"
+print "in_b     <= 512'h" + format(in_b, "02x") + ";"
+print "in_m     <= 512'h" + format(in_m, "02x") + ";"
+print "expected <= 512'h" + format(result, "02x") + ";"
+print
+print "in_a = 0x" + format(in_a, "02x")
+print "in_b = 0x" + format(in_b, "02x")
+print "in_m = 0x" + format(in_m, "02x")
+print "expected = 0x" + format(result, "02x")
 
