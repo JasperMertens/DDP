@@ -57,7 +57,7 @@ void hw_mod_exp(uint32_t *msg, uint32_t *exp, uint32_t exp_len, uint32_t *n, uin
 	{
 		exp_len--;
 		bit = (exp[exp_len/32] >> (exp_len%32)) & 1;
-		xil_printf("Bit[%d] of exponent is: %d\n\r", exp_len, bit);
+		//xil_printf("Bit[%d] of exponent is: %d\n\r", exp_len, bit);
 		// Calculate A = MontMul(A, A)
 		hw_montgomery_multiply(A, A, (unsigned int *)n, A, 16);
 		if(bit)

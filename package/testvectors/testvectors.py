@@ -278,6 +278,8 @@ if operation == 5:
 
   print "Ciphertext_p = ", hex(Ct_p)            # 512-bits
   print "Ciphertext_q = ", hex(Ct_q)            # 512-bits
+  print "uint32_t Ciphertext_p[16] = {" + helpers.WriteConstants(Ct_p,16) + "};"
+  print "uint32_t Ciphertext_q[16] = {" + helpers.WriteConstants(Ct_q,16) + "};"
 
   # Exponentiation, in Hardware
   
@@ -293,6 +295,9 @@ if operation == 5:
 
   P_p = helpers.Modexp(Ct_p, d_p, p)            # 512-bit HW modular exp.
   P_q = helpers.Modexp(Ct_q, d_q, q)            # 512-bit HW modular exp.
+
+  print "uint32_t P_p[16] = {" + helpers.WriteConstants(P_p,16) + "};"
+  print "uint32_t P_q[16] = {" + helpers.WriteConstants(P_q,16) + "};"
 
   #x_tilde   = HW.MontMul_512(Ct_p, R2p, p)           # 512-bits HW montgomery mult.
   #A = HW.MontMul_512(Rp, Rp, p) 
@@ -345,6 +350,9 @@ if operation == 5:
   s       = (tp + tq) % N                       # 1024-bit SW addition
   Pt3     = SW.MontMul_1024(s , R2_1024, N);    # 1024-bit SW montgomery mult.
 
+  print "t_p    = ", hex(tp)             # 1024-bits
+  print "uint32_t t_p[32] = {" + helpers.WriteConstants(tp,32) + "};"
+  print "t_q    = ", hex(tq)             # 1024-bits
   print "Plaintext    = ", hex(Pt3)             # 1024-bits
   print "uint32_t Plaintext[32] = {" + helpers.WriteConstants(Pt3,32) + "};"
 
