@@ -75,10 +75,9 @@ int main()
 
     //test_mont_exp();
 
-	test_hw_mont_exp();
+	//test_hw_mont_exp();
 
-	//test_hw_mont_decrypt();
-    //printMontExpResult(32);
+	test_hw_mont_decrypt();
 
     STOP_TIMING
 
@@ -496,16 +495,27 @@ void test_mont_exp() {
 
 
 void test_hw_mont_decrypt() {
+
+	uint32_t Ciphertext[32] = {0xa3d415ac, 0xefcc27c0, 0x7972aa7f, 0x1457149c, 0x43ee92b5, 0x9aa803ae, 0xba9c56b1, 0x85f626a5, 0x0fe1842a, 0xfa822bb1, 0x50eb3cfb, 0x01138a29, 0x60bdccb2, 0xc03018b2, 0xb001e294, 0xd3bc7109, 0xc8e69161, 0x9151edad, 0xb1311689, 0x9a923026, 0x7e1fa35d, 0xaf6adb05, 0xde6e3e55, 0xdeb9e643, 0xca3924e2, 0xaa67bcff, 0x8660b8a0, 0x5ffc107a, 0x54a4d0bd, 0xbc552740, 0xf0469dc5, 0x9e06163c};
+	uint32_t Plaintext[32] = {0x63afb1f7, 0xaba87eec, 0xb6764251, 0x1621871e, 0x681db671, 0x3a66370a, 0x16038424, 0xf234598d, 0xa5009e03, 0x68d08548, 0xd87b9eb4, 0x59c17605, 0xf5e083e7, 0x1ff9df49, 0xef859016, 0x3c76a767, 0x97339f71, 0x09050752, 0x5d9fe843, 0x2c09ee7b, 0x98e60159, 0x0c4eac22, 0xffc30f02, 0xe0d26a83, 0xcb29d89e, 0x970f2ca9, 0xe5b50190, 0x9a62c45c, 0x66bd8b51, 0xfa14d73c, 0xa7aaae2e, 0xa33a8771};
+
 	unsigned int Cp[16];
 	unsigned int Cq[16];
 	uint32_t Pp[16];
 	uint32_t Pq[16];
-	reduce_cipher((unsigned int*)result, Cp, Cq);
+	reduce_cipher((unsigned int*)Ciphertext, Cp, Cq);
 	uint32_t *nCp = (uint32_t*)Cp;
 	uint32_t *nCq = (uint32_t*)Cq;
 	hw_mod_exp(nCp, d_p,d_p_len, p, Rp, R2p, Pp);
 	hw_mod_exp(nCq, d_q,d_q_len, q, Rq, R2q, Pq);
 	combineResult(Pp, Pq, result);
+
+	if (memcmp(result, Plaintext, 32) != 0) {
+		xil_printf("Montgomery decrypt failed\r\n");
+		abort();
+	}
+
+	xil_printf("Montgomery decrypt succeeded\r\n");
 }
 
 void printMontResult(uint32_t size)

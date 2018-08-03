@@ -287,15 +287,15 @@ if operation == 5:
         # If need to debug, by observing the intermediate values,
         # then can be uncommented.
 
-  P_p = HW.MontExp_512(Ct_p, d_p, p)           # 512-bit HW modular exp.
+  #P_p = HW.MontExp_512(Ct_p, d_p, p)           # 512-bit HW modular exp.
   #P_q = HW.MontExp_512(Ct_q, d_q, q)           # 512-bit HW modular exp.
  
 
-  #P_p = helpers.Modexp(Ct_p, d_p, p)            # 512-bit HW modular exp.
+  P_p = helpers.Modexp(Ct_p, d_p, p)            # 512-bit HW modular exp.
   P_q = helpers.Modexp(Ct_q, d_q, q)            # 512-bit HW modular exp.
 
-  x_tilde   = HW.MontMul_512(Ct_p, R2p, p)           # 512-bits HW montgomery mult.
-  A = HW.MontMul_512(Rp, Rp, p) 
+  #x_tilde   = HW.MontMul_512(Ct_p, R2p, p)           # 512-bits HW montgomery mult.
+  #A = HW.MontMul_512(Rp, Rp, p) 
 
 
   #t = helpers.bitlen(d_p)
@@ -346,5 +346,6 @@ if operation == 5:
   Pt3     = SW.MontMul_1024(s , R2_1024, N);    # 1024-bit SW montgomery mult.
 
   print "Plaintext    = ", hex(Pt3)             # 1024-bits
+  print "uint32_t Plaintext[32] = {" + helpers.WriteConstants(Pt3,32) + "};"
 
   print "\n\ntestvector.c file is created in this directory."
