@@ -61,7 +61,7 @@ int main()
 
     START_TIMING
 
-	//test_dma_transfer();
+	test_dma_transfer();
 
 	//test_mp_add();
 
@@ -71,7 +71,7 @@ int main()
     
     //test_mont_mult();
 
-	test_hw_mont_mult();
+	//test_hw_mont_mult();
 
     //test_mont_exp();
 

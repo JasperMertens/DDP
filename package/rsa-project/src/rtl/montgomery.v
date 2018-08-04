@@ -64,13 +64,15 @@ module montgomery(
     assign in_a_a = c;
     
     wire [513:0] in_b_a_wire;
-    reg select_mb;
+    //reg select_mb;
     assign in_b_a_wire = ((next_state == INLOOPADDSHIFT) | (next_state == INLOOPADDSHIFTWAIT) | (next_state == MODULOCHECK) | (next_state == MODULOCHECKWAIT)) ? m : b;
-
+    
     reg [513:0] reg_result;
 
     reg [STATESBITS-1:0]    state;
     reg [STATESBITS-1:0]    next_state;
+    
+    reg [12:0] cyclecounter;
     
     assign done = (state == STOP);
   
@@ -86,8 +88,15 @@ module montgomery(
                 next_state <= IDLE;
 
         FORLOOP:                                        // STATE 1
-            next_state <= FORLOOPWAIT;
-            
+            //if (a[i] == 1'b0) begin
+            //    if (result_a[0] == 1'b0)
+            //        next_state <= INLOOPSHIFT;
+             //   else 
+            //    next_state <= INLOOPADDSHIFT;
+            //end
+            //else
+                next_state <= FORLOOPWAIT;
+
         FORLOOPWAIT:                                    // STATE 2
             if (done_a) begin
                 //if (c[0] == 1'b0)
@@ -120,12 +129,12 @@ module montgomery(
         
         MODULOCHECK:                                    // STATE 6
             next_state <= MODULOCHECKWAIT;
-         
+            //next_state <= CHOOSERESULT;
         MODULOCHECKWAIT:                                // STATE 7
-            if (done_a == 1'b1) 
+            //if (done_a == 1'b1) 
                 next_state <= CHOOSERESULT;
-            else
-                next_state <= MODULOCHECKWAIT;
+            //else
+               // next_state <= MODULOCHECKWAIT;
                 
         CHOOSERESULT:                                         // STATE 8
             next_state <= STOP;
@@ -156,25 +165,29 @@ module montgomery(
     begin : FSM_OUT
     if (resetn == 1'b0) begin
         start_a <= 1'b0;
+        cyclecounter <= {12{1'b0}};
         // assign resetn_a = resetn; check iets naar boven
     end
     else begin 
+        cyclecounter <= cyclecounter + 1;
         case(state)
         IDLE: 
             begin
                 start_a <= 1'b0;
-                //done_m <= 1'b0;
-                select_mb <= 1'b0;      // 1 -> m, 0 -> b
                 shift_a <= 1'b0;
                 subtract_a <= 1'b0;
+                cyclecounter <= {12{1'b0}};
             end              
         FORLOOP: 
             begin
                 start_a <= 1'b1;
-                select_mb <= 1'b0;
+                //if (a[i] == 1'b0)
+                //    start_a <= 1'b0;
+                //else 
+                //    start_a <= 1'b1;
+                //select_mb <= 1'b0;
                 subtract_a <= 1'b0;
                 shift_a <= 1'b0;
-                //done_m <= 1'b0;
             end
         FORLOOPWAIT: 
             begin
@@ -183,15 +196,12 @@ module montgomery(
         INLOOPSHIFT: 
             begin
                 start_a <= 1'b0;
-                //done_m <= 1'b0;        
             end
         INLOOPADDSHIFT:
             begin
                 start_a <= 1'b1;
-                //select_mb <= 1'b1;
                 subtract_a <= 1'b0;
                 shift_a <= 1'b1;
-                //done_m <= 1'b0;                        
             end
         INLOOPADDSHIFTWAIT:
             begin
@@ -271,7 +281,7 @@ module montgomery(
                 end
                 MODULOCHECK:
                 begin
-                    in_b_a <= in_b_a_wire;
+                    //in_b_a <= in_b_a_wire;
                     reg_result <= result_a[513:0];
                 end
                 MODULOCHECKWAIT:
