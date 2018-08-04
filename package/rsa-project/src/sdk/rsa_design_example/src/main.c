@@ -179,6 +179,29 @@ int main()
     return 0;
 }
 
+void test_mod_add() {
+	// mod add in reduction p with seed 2017.5
+	uint32_t Ct_h[16] = {0x24edc7cb, 0x5f7b06f3, 0xf95a4326, 0x146275dc, 0x37d3967d, 0x0fdac629, 0x69f9296f, 0xbf7b3444, 0x9b4e069b, 0xb3b2dbe4, 0x453de278, 0x9ec53891, 0x6889ffc8, 0xed432111, 0xd4912772, 0x60f4e9a4};
+	uint32_t Ct_l[16] = {0x19165bf2, 0x1a1e07ac, 0xa710d7e8, 0x8a73ce23, 0xf0e74c50, 0x45314e0f, 0x7d208d38, 0x56b2d58d, 0x26f4443b, 0x77e3874f, 0x77414fb2, 0x001c768a, 0x9d3866bb, 0x6bea2e7a, 0x67772f96, 0xd805b8f2};
+	uint32_t M[16] = {0xb4d8c50d, 0xab2d4239, 0xcc52c6bd, 0xbcfc0dc9, 0x06e74d5b, 0x51c9419e, 0x2b625fbe, 0x27752c42, 0xa2e6ed3d, 0x466e8aa1, 0xd6cd644d, 0xc8b75f23, 0xcbb78fe1, 0x5fe14b0c, 0x838da10f, 0x884fb732};
+	uint32_t expected_output[16] = {0xd45299a3, 0x233e8a2b, 0x07c58d93, 0x24de286d, 0x1aec4816, 0xb17990fd, 0x9054f72a, 0xc743b14d, 0x7c74705c, 0x9eb94df0, 0x0ee46990, 0x0d72f0d4, 0x6e5346c0, 0x996ab972, 0x34ed14ea, 0x285b3432};
+
+	mod_add(Ct_h , Ct_l, M, result, 16);
+
+	xil_printf("\r\n");
+	printMontResult(16);
+	xil_printf("Expected ");
+	printArray(expected_output, 16);
+
+	if (memcmp(result, expected_output, 16) != 0) {
+		xil_printf("Mod add failed\r\n");
+		abort();
+	}
+
+	xil_printf("Mod add succeeded\r\n");
+}
+
+
 void test_mont_mult() {
 
 #define MULT_TESTVECTOR 5
@@ -264,6 +287,13 @@ void test_hw_mont_mult() {
 	uint32_t B16[16] = 				{0x2ef60fd0, 0xc5ee76dc, 0xbf02bafa, 0x0750058d, 0x2ef0bf03, 0x041f5a19, 0x0602feea, 0xd53bf718, 0x53983960, 0x034b0262, 0x3a212201, 0x1cae2854, 0x4dd916b4, 0x29755811, 0xf9257b18, 0x3ba8ea30};
 	uint32_t N16[16] = 				{0xad534215, 0x79edc1b4, 0x8f1e3221, 0x5acae35e, 0x9ab95cc4, 0x193f63d2, 0x025b8522, 0x098ae441, 0x9381690d, 0x5a6d61a8, 0xa3b05b56, 0x08d00149, 0x874f15f3, 0x972a08ec, 0x6328529f, 0xa58cc33e};
 	uint32_t expected_output[16] = 	{0xf5a6cd97, 0xf8963f1a, 0x664a2281, 0x2b748cfd, 0x18d433d0, 0xb36528fa, 0x585b3d53, 0x03dcf1ee, 0xeb636354, 0xa2c8fd98, 0x73c19b5e, 0x67a1446b, 0xf89bfb05, 0xdff54a43, 0xc9ab43c6, 0x1d2662ce};
+
+	#elif HW_MONT_MULT_TESTVECTOR == 5
+	// multiplication in reduction p with seed 2017.5
+	uint32_t A16[16] = {0x69b231e5, 0xedcf485b, 0x7296a3a5, 0x18e7359e, 0xdb6ee0fe, 0xf44a328e, 0x6ed95807, 0x13f8e5fe, 0xaacf2980, 0x5da1b6b3, 0xf909711a, 0x752c6f44, 0x055d877d, 0x71898cee, 0x2b81d3e0, 0x29612ac0};
+	uint32_t B16[16] = {0xaef0309e, 0x835b1c26, 0x7c8c7c98, 0x5bd1261d, 0xba15e4d9, 0xe9e5286e, 0x3d7700f6, 0xc89b0109, 0xb2489412, 0x68095cd1, 0x23c27478, 0x4ee0f592, 0x980b80e8, 0xd42d7d6f, 0xa80a8645, 0x268171a0};
+	uint32_t N16[16] = {0xb4d8c50d, 0xab2d4239, 0xcc52c6bd, 0xbcfc0dc9, 0x06e74d5b, 0x51c9419e, 0x2b625fbe, 0x27752c42, 0xa2e6ed3d, 0x466e8aa1, 0xd6cd644d, 0xc8b75f23, 0xcbb78fe1, 0x5fe14b0c, 0x838da10f, 0x884fb732};
+	uint32_t expected_output[16] = {0x24edc7cb, 0x5f7b06f3, 0xf95a4326, 0x146275dc, 0x37d3967d, 0x0fdac629, 0x69f9296f, 0xbf7b3444, 0x9b4e069b, 0xb3b2dbe4, 0x453de278, 0x9ec53891, 0x6889ffc8, 0xed432111, 0xd4912772, 0x60f4e9a4};
 
 	#else // HW_MONT_MULT_TESTVECTOR
 	uint32_t A16[16] =			 	{0xe99c0d36, 0xf9c07fe3, 0xcc848d93, 0x0995e07a, 0xb0fd3fa7, 0xe8a63fff, 0x65f0c2fc, 0x7786425f, 0xa53b20f0, 0x6ac46232, 0xf0acb0d0, 0x0b1ff924, 0x1285dd24, 0xc9022bad, 0x27cc58be, 0x8e999818};
@@ -541,6 +571,7 @@ void test_mont_exp() {
 
 }
 
+
 void test_reduce_cipher() {
 
 	unsigned int Cp[16];
@@ -549,6 +580,8 @@ void test_reduce_cipher() {
 
 	xil_printf("Ciphertext_p ");
 	printArray((uint32_t*)Cp, 16);
+	xil_printf("Expected: ");
+	printArray((uint32_t*)Ciphertext_p, 16);
 
 	if (memcmp(Cp, Ciphertext_p, 16) != 0) {
 		xil_printf("Reduction failed p\r\n");
@@ -557,6 +590,8 @@ void test_reduce_cipher() {
 
 	xil_printf("Ciphertext_q ");
 	printArray((uint32_t*)Cq, 16);
+	xil_printf("Expected: ");
+	printArray((uint32_t*)Ciphertext_q, 16);
 
 	if (memcmp(Cq, Ciphertext_q, 16) != 0) {
 		xil_printf("Reduction failed q\r\n");

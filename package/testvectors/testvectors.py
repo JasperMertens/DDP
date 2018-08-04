@@ -268,12 +268,13 @@ if operation == 5:
   #print "uint32_t Ct2h[16] = {" + helpers.WriteConstants(Ct2h,16) + "};"
   #print "uint32_t R2p[16] = {" + helpers.WriteConstants(R2p,16) + "};"
   #print "uint32_t p[16] = {" + helpers.WriteConstants(p,16) + "};"
-  #print "uint32_t tp[16] = {" + helpers.WriteConstants(tp,16) + "};"
+  print "uint32_t tp[16] = {" + helpers.WriteConstants(tp,16) + "};"
   tq   = HW.MontMul_512(Ct2h, R2q, q)           # 512-bits HW montgomery mult.
 
   Ct_p = (tp + Ct2l) % p                        # 512-bits HW/SW modular add.
-  #print "uint32_t C_tp[16] = {" + helpers.WriteConstants(Ct_p,16) + "};"
-  #print "uint32_t Ct2l[16] = {" + helpers.WriteConstants(Ct2l,16) + "};"
+  print "uint32_t Ct2l[16] = {" + helpers.WriteConstants(Ct2l,16) + "};"
+  print "uint32_t C_tp[16] = {" + helpers.WriteConstants(Ct_p,16) + "};"
+  print " Ct2l >= p: ", Ct2l > p 
   Ct_q = (tq + Ct2l) % q                        # 512-bits HW/SW modular add.
 
   print "Ciphertext_p = ", hex(Ct_p)            # 512-bits

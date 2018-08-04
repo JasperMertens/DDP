@@ -148,23 +148,50 @@ void printArray(uint32_t *result, uint32_t size)
 
 // Calculates res = (a + b) mod N.
 // a and b represent operands, N is the modulus. They are large integers stored in uint32_t arrays of size elements
-void mod_add(uint32_t *a, uint32_t *b, uint32_t *N, uint32_t *res, uint32_t size)
+/*void mod_add2(uint32_t *a, uint32_t *b, uint32_t *N, uint32_t *res, uint32_t size)
 {
 	uint32_t save = res[size];		// retain this data
 	mp_add(a, b, res, size);		// this overrides data at res[size]
 	if (res[size] == 1) {			// if the addition ended with a carry bit
-						// then sum > N
+									// then sum > N
 		mp_sub(res, N, res, size);	// ==> result = sum-N
 	} else {
 		int i = size-1;
 		while (i>0 && res[i] == N[i]) { // skip until the numbers differ
-						// or the whole array but the final
-						// element has been traversed
+										// or the whole array but the final
+										// element has been traversed
 			i--;
 		}
 		if (res[i] >= N[i]) {		   // sum >= N
 			mp_sub(res, N, res, size); // ==> result = sum-N
 		}
+	}
+	res[size] = save;			// put the data back
+}
+*/
+
+// Calculates res = (a + b) mod N.
+// a and b represent operands, N is the modulus. They are large integers stored in uint32_t arrays of size elements
+void mod_add(uint32_t *a, uint32_t *b, uint32_t *N, uint32_t *res, uint32_t size)
+{
+	uint32_t save = res[size];		// retain this data
+	mp_add(a, b, res, size);		// this overrides data at res[size]
+	if (res[size] == 1) {			// if the addition ended with a carry bit
+									// then sum > N
+		mp_sub(res, N, res, size);	// ==> result = sum-N
+	}
+	//uint32_t stop = 0;
+	while (1) {
+		int i = size-1;
+		while (i>0 && res[i] == N[i]) { // skip until the numbers differ
+										// or the whole array but the final
+										// element has been traversed
+			i--;
+		}
+		if (res[i] >= N[i]) {		   // sum >= N
+			mp_sub(res, N, res, size); // ==> result = sum-N
+		} else
+			break;
 	}
 	res[size] = save;			// put the data back
 }
