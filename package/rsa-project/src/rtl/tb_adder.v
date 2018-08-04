@@ -132,6 +132,7 @@ module tb_adder();
     
     result_ok = (result==expected);
 
+
     #`CLK_PERIOD;     
     $display("result calculated=%x", result);
     $display("result expected  =%x", expected);
@@ -140,9 +141,11 @@ module tb_adder();
     // Test shifting as well
     #`CLK_PERIOD;    
     shift <= 1'b1;
+    expected  = 515'h287fbad745828dbf04b3305d35afc96981dd5eb440d576422192f8f1058a64e64a16ea9d7939c8efc2d33dee3c28ded0014e5d71d5baa1d9ec2cfb38b5ff66278;
+    perform_add(514'h26cabac64f8573fc11798243176c861695c2e41c76022b91b1bcf50c0e5fe57945bba72cc65bec65fdb51b08218e98a93be857e4e6deb90b2841e3ac65bc72386,
+                514'h2a34bae83b7fa781f7ecde7753f30cbc6df7d94c0ba8c0f29168fcd5fcb4e4534e722e0e2c17a57987f160d456c324f6c6b462fec4968aa8b01812c506425a16a);
     #`CLK_PERIOD; 
     shift <= 1'b0;
-    expected  = 515'h287fbad745828dbf04b3305d35afc96981dd5eb440d576422192f8f1058a64e64a16ea9d7939c8efc2d33dee3c28ded0014e5d71d5baa1d9ec2cfb38b5ff66278;
     
     result_ok = (result==expected);
     
