@@ -210,7 +210,7 @@ if operation == 5:
   print "R_1024       = ", hex(R_1024)          # 1024-bits
   print "R2_1024      = ", hex(R2_1024)         # 1024-bits
 
-  helpers.CreateConstants(M, p, q, N, e, d_p, d_q, x_p, x_q, Rp, Rq, R2p, R2q, R_1024, R2_1024, seed);
+  
     
   #####################################################
 
@@ -296,8 +296,8 @@ if operation == 5:
   P_p = helpers.Modexp(Ct_p, d_p, p)            # 512-bit HW modular exp.
   P_q = helpers.Modexp(Ct_q, d_q, q)            # 512-bit HW modular exp.
 
-  print "uint32_t P_p[16] = {" + helpers.WriteConstants(P_p,16) + "};"
-  print "uint32_t P_q[16] = {" + helpers.WriteConstants(P_q,16) + "};"
+  print "uint32_t Plaintext_p[16] = {" + helpers.WriteConstants(P_p,16) + "};"
+  print "uint32_t Plaintext_q[16] = {" + helpers.WriteConstants(P_q,16) + "};"
 
   #x_tilde   = HW.MontMul_512(Ct_p, R2p, p)           # 512-bits HW montgomery mult.
   #A = HW.MontMul_512(Rp, Rp, p) 
@@ -355,5 +355,8 @@ if operation == 5:
   print "t_q    = ", hex(tq)             # 1024-bits
   print "Plaintext    = ", hex(Pt3)             # 1024-bits
   print "uint32_t Plaintext[32] = {" + helpers.WriteConstants(Pt3,32) + "};"
+
+  helpers.CreateConstants(M, p, q, N, e, d_p, d_q, x_p, x_q, Rp, Rq, R2p, R2q, R_1024, R2_1024, seed,
+  	Ct2, Ct_p, Ct_q, P_p, P_q, Pt3);
 
   print "\n\ntestvector.c file is created in this directory."

@@ -138,7 +138,7 @@ def WriteConstants(number, size):
     
     # print (out)
 
-def CreateConstants(M, p, q, N, e, d_p, d_q, x_p, x_q, Rp, Rq, R2p, R2q, R_1024, R2_1024, seed):
+def CreateConstants(M, p, q, N, e, d_p, d_q, x_p, x_q, Rp, Rq, R2p, R2q, R_1024, R2_1024, seed, Ct2, Ct_p, Ct_q, P_p, P_q, Pt3):
     target = open("./testvector.c", 'w')
     target.truncate()
 
@@ -191,8 +191,8 @@ def CreateConstants(M, p, q, N, e, d_p, d_q, x_p, x_q, Rp, Rq, R2p, R2q, R_1024,
     "// decryption exponent, reduced to p and q                       \n" +
     "uint32_t d_p[16] = {" + WriteConstants(d_p,16) + "};             \n" +
     "uint32_t d_q[16] = {" + WriteConstants(d_q,16) + "};             \n" +
-    "uint32_t d_p_len =  " + str(int(round(math.log(d_p, 2)))) + ";   \n" +
-    "uint32_t d_q_len =  " + str(int(round(math.log(d_q, 2)))) + ";   \n" +    
+    "uint32_t d_p_len =  " + str(int(math.ceil(math.log(d_p, 2)))) + ";\n" +
+    "uint32_t d_q_len =  " + str(int(math.ceil(math.log(d_q, 2)))) + ";\n" +    
     "                                                                 \n" +
     "// x_p and x_q                                                   \n" +
     "uint32_t x_p[32] = {" + WriteConstants(x_p,32) + "};             \n" +
@@ -211,6 +211,23 @@ def CreateConstants(M, p, q, N, e, d_p, d_q, x_p, x_q, Rp, Rq, R2p, R2q, R_1024,
     "uint32_t R2_1024[32] = {" + WriteConstants(R2_1024,32) + "};     \n" +
     "                                                                 \n" +
     "// One                                                           \n" +
-    "uint32_t One[32] = {1,0};                                          " )
+    "uint32_t One[32] = {1,0};                                        \n" +
+    "                                                                 \n" +
+    "///////////////// FOR VERIFICATION //////////////////            \n" +
+    "                                                                 \n" +
+    "// Ciphertext, input of hardware decryption                      \n" +
+    "uint32_t Ciphertext[32]  = {" + WriteConstants(Ct2,32) + "};     \n" +
+    "                                                                 \n" +
+    "// Ciphertext_p and Ciphertext_q, output of reduction            \n" +
+    "uint32_t Ciphertext_p[16]  = {" + WriteConstants(Ct_p,16) + "};  \n" +
+    "uint32_t Ciphertext_q[16] = {" + WriteConstants(Ct_q,16) + "};   \n" +
+    "                                                                 \n" +
+    "// Plaintext_p and Plaintext_q, output of exponentiation         \n" +
+    "// (needs to be allocate space for 32 words to combine correctly)\n" +
+    "uint32_t Plaintext_p[32]  = {" + WriteConstants(P_p,16) + "};    \n" +
+    "uint32_t Plaintext_q[32] = {" + WriteConstants(P_q,16) + "};     \n" +
+    "                                                                 \n" +
+    "// Plaintext, output of hardware decryption                      \n" +
+    "uint32_t Plaintext[32]  = {" + WriteConstants(Pt3,32) + "};        " )
 
     target.close()
