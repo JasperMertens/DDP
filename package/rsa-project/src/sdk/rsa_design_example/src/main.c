@@ -12,7 +12,7 @@
 #include "hw.h"
 
 ///////////////////////////////////////////////////////////
-#include "montgomery2.h"
+#include "montgomeryASM.h"
 ///////////////////////////////////////////////////////////
 
 // These variables are defined and assigned in testvector.c
@@ -71,7 +71,7 @@ int main()
 
 	//test_mod_add();
     
-    //test_mont_mult();
+    test_mont_mult();
 
 	//test_hw_mont_mult();
 
@@ -83,7 +83,7 @@ int main()
 
     //test_combine_result();
 
-	test_hw_mont_decrypt();
+	//test_hw_mont_decrypt();
 
     STOP_TIMING
 
@@ -177,7 +177,7 @@ int main()
 
 void test_mont_mult() {
 
-#define MULT_TESTVECTOR 5
+#define MULT_TESTVECTOR 3
 
 	#if MULT_TESTVECTOR == 1
 	uint32_t a[32] = 				{0xf484e847, 0x4ae251f1, 0xedfa617d, 0x58ab6bf4, 0x46bf4848, 0xf67c1061, 0x8811c17a, 0x578fde16, 0x493ee595, 0x1eafc4c3, 0xc4f11a2e, 0x8cb6fba7, 0x724c03a4, 0x2e6c1dbd, 0x57ebc43d, 0x3e6ee260, 0x4089c050, 0xf0384e03, 0x7357f72c, 0x87acb658, 0x7ea2490e, 0x61069112, 0x42e3f8b9, 0x9e778cef, 0x5cdf77c7, 0x10bce41c, 0x1121beec, 0x3db59a36, 0xc34620c5, 0xc6b030ae, 0xe8fc5934, 0x63a0a0cb};
@@ -216,8 +216,7 @@ void test_mont_mult() {
 	uint32_t expected_output[32] = {0x5464e333, 0x44f8fe2b, 0xf83eecfe, 0xdfc33e69, 0x740c3e43, 0x6695b71e, 0x274097c8, 0x54880ddd, 0x56496d92, 0x606da4bf, 0x86662e38, 0x7a023e3c, 0x35f23153, 0x813409a4, 0xe2b91b54, 0x83863679, 0xfbc44c0e, 0xafe7d499, 0xefcb0f6e, 0x47fbbd56, 0x16fb41ad, 0x77821593, 0x7595f37f, 0xbac577d0, 0x8633b85d, 0x0af8b3d8, 0xfe363ab2, 0xe2dfc91c, 0xe8a56a7b, 0x69af670d, 0x0c5e8901, 0x0a1d976c};
 	#endif /*MULT_TESTVECTOR*/
 
-	// Code Jasper semester 2 from montgomery2.c
-	mont_mult(a, b, N, n_prime, result, 32);
+	mont_mult_asm(a, b, N, n_prime, result, 32);
 
 	// Code semester 1 from sw.c
 	// montgomery_multiply(A16, B16, N16, N_prime16, result, 16);
