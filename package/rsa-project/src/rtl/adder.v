@@ -163,9 +163,9 @@ module adder(
             case(state)
                 IDLE:
                 begin
-                    if ((start == 1'b1) | (shift == 1'b1)) begin
+                    //if ((start == 1'b1) | (shift == 1'b1)) begin
                         result_reg <= resultwire;
-                    end
+                    //end
                 end
                 
                 DONE:
