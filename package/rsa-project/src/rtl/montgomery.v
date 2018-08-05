@@ -62,29 +62,27 @@ module montgomery(
     
     reg [9:0] i;
     reg [n-1:0] a, b, m;
-    wire [n+1:0] c;
-    assign c = result_a;
+    
     assign in_a_a = state == IDLE ? {514{1'b0}} : result_a;
     reg [513:0] reg_result;         
     reg [12:0] cyclecounter;
     
     assign done = (state == STOP);
-    
+        
     wire [513:0] idlewire, forloopwire, inforloopwire, modulocheckwire;
     
     assign idlewire = {514{1'b0}};
     assign forloopwire = a[i] ? b : {514{1'b0}};
-    assign inforloopwire = c[0] ? m : {514{1'b0}};
+    assign inforloopwire = result_a[0] ? m : {514{1'b0}};
     assign modulocheckwire = m;
     
     assign in_b_a = state == IDLE ? idlewire : (state == FORLOOP ? forloopwire : (state == INFORLOOP ? inforloopwire : (state == MODULOCHECK ? modulocheckwire : {514{1'b0}}))) ;
     
-    assign result = c[511:0];    
+    assign result = result_a[512] ? reg_result[511:0] : result_a[511:0];    
   
     // FSM next state combo logic
     always @(state or start or done_a)
     begin : FSM_COMBO
-        //next_state = 9'b000000000;
         case(state)
         IDLE:                                           // STATE 0
             if (start == 1'b1)
@@ -125,7 +123,6 @@ module montgomery(
     if (resetn == 1'b0) begin
         start_a <= 1'b0;
         cyclecounter <= {12{1'b0}};
-        // assign resetn_a = resetn; check iets naar boven
     end
     else begin 
         cyclecounter <= cyclecounter + 1;
@@ -141,20 +138,21 @@ module montgomery(
         FORLOOP: 
             begin
                 start_a <= 1'b1;
+                shift_a <= 1'b1;
                 subtract_a <= 1'b0;
-                shift_a <= 1'b0;
             end
         INFORLOOP: 
             begin
                 start_a <= 1'b1;
-                shift_a <= 1'b1;
-                subtract_a <= 1'b0;
+                shift_a <= 1'b0;
+                if (i <= n-1) subtract_a <= 1'b0;
+                else subtract_a <= 1'b1;
             end
         MODULOCHECK:
             begin
-                start_a <= 1'b1;
+                start_a <= 1'b0;
                 shift_a <= 1'b0;
-                subtract_a <= 1'b1;
+                subtract_a <= 1'b0;
             end
         STOP:
             begin
@@ -169,16 +167,12 @@ module montgomery(
     always @(posedge clk)
     begin : DATAPATH
         if (resetn==1'b0) begin
-            //c <= {(n+2){1'b0}};
             i <= {9{1'b0}};
         end
         else begin
             case(state)
                 IDLE:
                 begin
-                    //c <= {(n+2){1'b0}};
-                    //if (start) i <= 1'b1;
-                    //else i <= {9{1'b0}};
                     i <= {9{1'b0}};
                     a <= in_a;
                     b <= in_b;
@@ -190,7 +184,7 @@ module montgomery(
                 end
                 INFORLOOP:
                 begin
-                    //c <= result_a;
+                    reg_result <= {514{1'b0}};
                 end
                 MODULOCHECK:
                 begin
