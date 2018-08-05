@@ -45,18 +45,13 @@ module montgomery(
         
                          
     parameter n = 512;
-    parameter STATES = 9;
-    parameter STATESBITS = 4;
-    parameter IDLE =                4'b0000,  // state 0
-              FORLOOP =             4'b0001,  // state 1
-              INFORLOOP =           4'b0010,  // state 2
-              INLOOPSHIFT =         4'b0011,  // state 3
-              INLOOPADDSHIFT =      4'b0100,  // state 4
-              INLOOPADDSHIFTWAIT =  4'b0101,  // state 5
-              MODULOCHECK =         4'b0110,  // state 6
-              MODULOCHECKWAIT =     4'b0111,  // state 7
-              CHOOSERESULT =        4'b1000,  // state 8
-              STOP =                4'b1001;  // state 9
+    parameter STATES = 5;
+    parameter STATESBITS = 3;
+    parameter IDLE =                3'b000,  // state 0
+              FORLOOP =             3'b001,  // state 1
+              INFORLOOP =           3'b010,  // state 2
+              MODULOCHECK =         3'b011,  // state 3
+              STOP =                3'b100;  // state 4
     reg [STATESBITS-1:0]    state;
     reg [STATESBITS-1:0]    next_state;  
     
@@ -81,7 +76,7 @@ module montgomery(
     assign result = result_a[512] ? reg_result[511:0] : result_a[511:0];    
   
     // FSM next state combo logic
-    always @(state or start or done_a)
+    always @(state or start)
     begin : FSM_COMBO
         case(state)
         IDLE:                                           // STATE 0
