@@ -58,26 +58,27 @@ module montgomery(
     reg [n-1:0] a, b, m;
     
     assign in_a_a = ((state == IDLE) | (state == STOP)) ? {514{1'b0}} : result_a;
+    
     reg [513:0] reg_result;         
     reg [12:0] cyclecounter;
     
     reg [513:0] in_b_a_reg = {514{1'b0}};
-    reg control = 1'b0;
+    reg control = 1'b1;
     wire [513:0] in_b_a_wire;
     
     assign done = (state == STOP);
         
-    wire [513:0] idlewire, forloopwire, inforloopwire, modulocheckwire;
+    //wire [513:0] idlewire, forloopwire, inforloopwire, modulocheckwire;
     
-    assign idlewire = in_b;
+    //assign idlewire = in_b;
     //assign forloopwire = in_b_a_reg;
-    assign inforloopwire = result_a[0] ? m : {514{1'b0}};
+    //assign inforloopwire = result_a[0] ? m : {514{1'b0}};
     assign modulocheckwire = m;
     
     assign in_b_a = control ? in_b_a_reg : in_b_a_wire;
     //assign in_b_a_wire = state == IDLE ? idlewire : (state == FORLOOP ? forloopwire : (state == INFORLOOP ? inforloopwire : (state == MODULOCHECK ? modulocheckwire : {514{1'b0}}))) ;
-    assign in_b_a_wire = state == IDLE ? idlewire : (state == INFORLOOP ? inforloopwire : (state == MODULOCHECK ? modulocheckwire : {514{1'b0}})) ;
-        
+    assign in_b_a_wire = result_a[0] ? m : {514{1'b0}};
+            
     assign result = result_a[512] ? reg_result[511:0] : result_a[511:0];    
   
     // FSM next state combo logic
