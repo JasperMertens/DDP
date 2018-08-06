@@ -81,7 +81,7 @@ int main()
 
     //test_mont_exp();
 
-	//test_hw_mont_exp();
+	test_hw_mont_exp();
 
 	//test_reduce_cipher();
 
@@ -303,7 +303,7 @@ void test_hw_mont_mult() {
 
 	#endif
 
-	hw_montgomery_multiply((unsigned int*) A16, (unsigned int*) B16, (unsigned int*) N16, (unsigned int*) result, 16);
+	hw_montgomery_multiply_first((unsigned int*) A16, (unsigned int*) B16, (unsigned int*) N16, (unsigned int*) result, 16);
 	printMontResult(16);
 	xil_printf("Expected: \r\n");
 	printArray(expected_output, 16);
@@ -318,7 +318,7 @@ void test_hw_mont_mult() {
 
 void test_hw_mont_exp() {
 
-#define HW_EXP_TESTVECTOR 15
+#define HW_EXP_TESTVECTOR 11
 
 	#if HW_EXP_TESTVECTOR == 1
 	uint32_t X[16] = {0xe1e4acac, 0xcfa2f28e, 0x79abcdd4, 0x7d90773f, 0xa844ad2f, 0xe93b3a0e, 0xf321f2da, 0x1b80c645, 0x365232bd, 0xd77af168, 0xe805b057, 0xf5e2e949, 0x472d5f9c, 0x9a5824e5, 0xffc0b738, 0x1c836853};

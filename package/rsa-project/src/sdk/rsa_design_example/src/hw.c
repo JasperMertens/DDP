@@ -30,9 +30,9 @@ extern uint32_t M[32],
 void reduce_cipher(unsigned int *cipher, unsigned int *Cp, unsigned int *Cq) {
 	unsigned int *Ch = cipher + 16;
 
-	hw_montgomery_multiply(Ch, (unsigned int *) R2p, (unsigned int *) p, Cp, 16);
+	hw_montgomery_multiply_first(Ch, (unsigned int *) R2p, (unsigned int *) p, Cp, 16);
 	mod_add((uint32_t *)Cp, (uint32_t *)cipher, p, (uint32_t *)Cp, 16);
-	hw_montgomery_multiply(Ch, (unsigned int *) R2q, (unsigned int *) q, Cq, 16);
+	hw_montgomery_multiply_first(Ch, (unsigned int *) R2q, (unsigned int *) q, Cq, 16);
 	mod_add((uint32_t *)Cq, (uint32_t *)cipher, q, (uint32_t *)Cq, 16);
 }
 
@@ -46,7 +46,7 @@ void hw_mod_exp(uint32_t *msg, uint32_t *exp, uint32_t exp_len, uint32_t *n, uin
 
 	// Calculate x_tilde = MontMul(x, R^2 mod m)
 	//   R2_1024 is defined in global.h
-	hw_montgomery_multiply((unsigned int *) msg, (unsigned int *)R2, (unsigned int *)n, x_tilde, 16);
+	hw_montgomery_multiply_first((unsigned int *) msg, (unsigned int *)R2, (unsigned int *)n, x_tilde, 16);
 
 	// Copy R to A
 	//   R_1024 is defined in global.h
@@ -59,22 +59,22 @@ void hw_mod_exp(uint32_t *msg, uint32_t *exp, uint32_t exp_len, uint32_t *n, uin
 		bit = (exp[exp_len/32] >> (exp_len%32)) & 1;
 		//xil_printf("Bit[%d] of exponent is: %d\n\r", exp_len, bit);
 		// Calculate A = MontMul(A, A)
-		hw_montgomery_multiply(A, A, (unsigned int *)n, A, 16);
+		hw_montgomery_multiply_no_mod(A, A, A, 16);
 		if(bit)
 		{
 			// Calculate A = MontMul(A, x_tilde)
-			hw_montgomery_multiply(A, x_tilde, (unsigned int *)n, A, 16);
+			hw_montgomery_multiply_no_mod(A, x_tilde, A, 16);
 		}
 	}
 
 	// Calculate A = MontMul(A, 1)
 	//   One is defined in global.h
-	hw_montgomery_multiply(A, (unsigned int *)One, (unsigned int *)n, A, 16);
+	hw_montgomery_multiply_no_mod(A, (unsigned int *)One, A, 16);
 
 }
 
 
-void hw_montgomery_multiply(unsigned int  *a, unsigned int  *b, unsigned int  *n, unsigned int  *res, unsigned int SIZE) {
+void hw_montgomery_multiply_first(unsigned int  *a, unsigned int  *b, unsigned int  *n, unsigned int  *res, unsigned int SIZE) {
 
 	my_montgomery_port[0] = CMD_READ_A;
 	bram_dma_transfer(dma_config,a,SIZE);
@@ -86,6 +86,25 @@ void hw_montgomery_multiply(unsigned int  *a, unsigned int  *b, unsigned int  *n
 
 	my_montgomery_port[0] = CMD_READ_M;
 	bram_dma_transfer(dma_config,n,SIZE);
+	port2_wait_for_done();
+
+	my_montgomery_port[0] = CMD_COMPUTE;
+	port2_wait_for_done();
+
+	my_montgomery_port[0] = CMD_WRITE;
+	port2_wait_for_done();
+
+	copy_bram_to(res, SIZE);
+}
+
+void hw_montgomery_multiply_no_mod(unsigned int  *a, unsigned int  *b, unsigned int  *res, unsigned int SIZE) {
+
+	my_montgomery_port[0] = CMD_READ_A;
+	bram_dma_transfer(dma_config,a,SIZE);
+	port2_wait_for_done();
+
+	my_montgomery_port[0] = CMD_READ_B;
+	bram_dma_transfer(dma_config,b,SIZE);
 	port2_wait_for_done();
 
 	my_montgomery_port[0] = CMD_COMPUTE;

@@ -237,9 +237,9 @@ module montgomery_wrapper
                 STATE_WRITE_DATA:
                     begin
                         start   <= 1'b0;
-                        a_in    <= 512'b0;
-                        b_in    <= 512'b0;
-                        m_in    <= 512'b0;
+                        //a_in    <= 512'b0;
+                        //b_in    <= 512'b0;
+                        //m_in    <= 512'b0;
                     end
                 default:
                     begin
