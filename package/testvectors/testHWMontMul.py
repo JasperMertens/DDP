@@ -65,6 +65,14 @@ def MontMul_512(A, B, M):
 #in_m = 0xfe93fee7fd5d369339166e57cf5f773c1698c44b91a9f9a4be462bee6a82552d982845cd2787e90bc0245b4e781b9e1be10c615e2c814b3d85b78e358fa2c393
 #expected = 0x949031c785e1767b10ba755667f53317d8d5f1a90f417270509b2b297fbcb536f7e61b05ced28916eba6fedb32920cabbece7750fb6a1a21c943b46b9dad43f9
 
+# Testvector 1
+
+in_a = 0xa84ff2f71071936d568335f4e31da1c104c831dc18d7b9199f5d96b9df7315bd0fa8db7a6201cf9ae0842c7f6797a025684296de2089f536c18b7a583c7a9fc5
+in_b = 0xb9cf554dbc2f7d876274c0895b10c21a0322d9435a2cd1af43a483a61f7cfb92f984df1a0d9357bc796f8e582427a609d99348f8079de7731fc8a31b3eea6c6e
+in_m = 0xef449a8c29c1266af559bdb8d0c42c042b9a46f619b28d7094369f2842ebe42175eb00442338301d1a509aef69043c1dee3bc1f3a06da74e54d094bc7e4ec49b
+expected = 0x989c4842b4d4e09c463ce7eb282963433113fc4f59dd86fc94ae85db3a992a9da4d38f4aaf9c263810e38ba8969c21e32857163a64deb38db64bb0c957fd0578
+
+
 
 # Testvector 2
 
@@ -112,13 +120,13 @@ def MontMul_512(A, B, M):
 
 
 
-in_m = helpers.getModulus(512)
-in_a = helpers.getRandomInt(512) % in_m
-in_b = helpers.getRandomInt(512) % in_m
-expected = 0
+#in_m = helpers.getModulus(512)
+#in_a = helpers.getRandomInt(512) % in_m
+#in_b = helpers.getRandomInt(512) % in_m
+#expected = 0
 
 
-result = MontMul_512(in_a, in_b, in_m)
+result = MontMul_512_print(in_a, in_b, in_m)
 
 print
 print "in_a     <= 512'h" + format(in_a, "02x") + ";"

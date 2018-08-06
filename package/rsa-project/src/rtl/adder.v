@@ -130,6 +130,8 @@ module adder(
     always @(posedge clk)
     begin : DATAPATH
         if (resetn==1'b0) result_reg   <= {(514){1'b0}};
-        else result_reg <= resultwire;
+        else begin
+            if (start == 1'b1) result_reg <= resultwire;
+        end
     end
 endmodule

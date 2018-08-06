@@ -57,8 +57,7 @@ module montgomery(
     reg [9:0] i;
     reg [n-1:0] a, b, m;
     
-    //assign in_a_a = ((state == IDLE) | (state == STOP)) ? {514{1'b0}} : result_a;
-    assign in_a_a = state == IDLE ? {514{1'b0}} : result_a;
+    assign in_a_a = ((state == IDLE) | (state == STOP)) ? {514{1'b0}} : result_a;
     reg [513:0] reg_result;         
     reg [12:0] cyclecounter;
     
@@ -132,7 +131,7 @@ module montgomery(
                         start_a <= 1'b1;
                     end
                     else begin
-                        in_b_a_reg <= {513{1'b0}};
+                        //in_b_a_reg <= {513{1'b0}};
                         start_a <= 1'b0;
                     end
                 end
@@ -163,7 +162,7 @@ module montgomery(
                         start_a <= 1'b1;
                     end
                     else begin
-                        in_b_a_reg <= {513{1'b0}};
+                        //in_b_a_reg <= {513{1'b0}};
                         start_a <= 1'b0;
                     end
                 end
@@ -178,11 +177,12 @@ module montgomery(
                 start_a <= 1'b0;
                 shift_a <= 1'b0;
                 subtract_a <= 1'b0;
-                in_b_a_reg <= {514{1'b0}};
+                //in_b_a_reg <= {514{1'b0}};
             end
         STOP:
             begin
-                start_a <= 1'b0;
+                start_a <= 1'b1;
+                control <= 1'b1;
                 //if (result_a[512] == 1'b0) reg_result <= result_a[511:0];
             end
        endcase
@@ -219,7 +219,7 @@ module montgomery(
                 end
                 STOP:
                 begin
-                    
+                    in_b_a_reg <= {514{1'b0}};
                 end
             endcase    
         end
