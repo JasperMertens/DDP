@@ -81,13 +81,13 @@ int main()
 
     //test_mont_exp();
 
-	test_hw_mont_exp();
+	//test_hw_mont_exp();
 
 	//test_reduce_cipher();
 
     //test_combine_result();
 
-	//test_hw_mont_decrypt();
+	test_hw_mont_decrypt();
 
     STOP_TIMING
 
