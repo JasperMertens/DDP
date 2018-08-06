@@ -57,7 +57,8 @@ module montgomery(
     reg [9:0] i;
     reg [n-1:0] a, b, m;
     
-    assign in_a_a = ((state == IDLE) | (state == STOP)) ? {514{1'b0}} : result_a;
+    //assign in_a_a = ((state == IDLE) | (state == STOP)) ? {514{1'b0}} : result_a;
+    assign in_a_a = state == IDLE ? {514{1'b0}} : result_a;
     reg [513:0] reg_result;         
     reg [12:0] cyclecounter;
     
@@ -70,13 +71,14 @@ module montgomery(
     wire [513:0] idlewire, forloopwire, inforloopwire, modulocheckwire;
     
     assign idlewire = in_b;
-    assign forloopwire = in_b_a_reg;
+    //assign forloopwire = in_b_a_reg;
     assign inforloopwire = result_a[0] ? m : {514{1'b0}};
     assign modulocheckwire = m;
     
     assign in_b_a = control ? in_b_a_reg : in_b_a_wire;
-    assign in_b_a_wire = state == IDLE ? idlewire : (state == FORLOOP ? forloopwire : (state == INFORLOOP ? inforloopwire : (state == MODULOCHECK ? modulocheckwire : {514{1'b0}}))) ;
-    
+    //assign in_b_a_wire = state == IDLE ? idlewire : (state == FORLOOP ? forloopwire : (state == INFORLOOP ? inforloopwire : (state == MODULOCHECK ? modulocheckwire : {514{1'b0}}))) ;
+    assign in_b_a_wire = state == IDLE ? idlewire : (state == INFORLOOP ? inforloopwire : (state == MODULOCHECK ? modulocheckwire : {514{1'b0}})) ;
+        
     assign result = result_a[512] ? reg_result[511:0] : result_a[511:0];    
   
     // FSM next state combo logic
@@ -124,11 +126,18 @@ module montgomery(
         IDLE: 
             begin
                 if (start == 1'b1) begin 
-                    start_a <= 1'b1;
-                    if (in_a[0] == 1'b1) in_b_a_reg <= in_b;
-                    else in_b_a_reg <= {513{1'b0}};
+                    //start_a <= 1'b1;
+                    if (in_a[0] == 1'b1) begin
+                        in_b_a_reg <= in_b;
+                        start_a <= 1'b1;
+                    end
+                    else begin
+                        in_b_a_reg <= {513{1'b0}};
+                        start_a <= 1'b0;
+                    end
                 end
                 else start_a <= 1'b0;
+                
                 shift_a <= 1'b0;
                 subtract_a <= 1'b0;
                 cyclecounter <= {12{1'b0}};
@@ -147,8 +156,16 @@ module montgomery(
                 shift_a <= 1'b0;
                 if (i <= n-1) begin
                     subtract_a <= 1'b0;
-                    if (a[i] == 1'b1) in_b_a_reg <= b;
-                    else in_b_a_reg <= {513{1'b0}};
+                    //if (a[i] == 1'b1) in_b_a_reg <= b;
+                    //else in_b_a_reg <= {513{1'b0}};
+                    if (a[i] == 1'b1) begin
+                        in_b_a_reg <= b;
+                        start_a <= 1'b1;
+                    end
+                    else begin
+                        in_b_a_reg <= {513{1'b0}};
+                        start_a <= 1'b0;
+                    end
                 end
                 else begin
                     subtract_a <= 1'b1;
