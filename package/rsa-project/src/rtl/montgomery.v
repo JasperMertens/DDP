@@ -67,16 +67,11 @@ module montgomery(
     wire [513:0] in_b_a_wire;
     
     assign done = (state == STOP);
-        
-    //wire [513:0] idlewire, forloopwire, inforloopwire, modulocheckwire;
-    
-    //assign idlewire = in_b;
-    //assign forloopwire = in_b_a_reg;
-    //assign inforloopwire = result_a[0] ? m : {514{1'b0}};
+
     assign modulocheckwire = m;
     
     assign in_b_a = control ? in_b_a_reg : in_b_a_wire;
-    //assign in_b_a_wire = state == IDLE ? idlewire : (state == FORLOOP ? forloopwire : (state == INFORLOOP ? inforloopwire : (state == MODULOCHECK ? modulocheckwire : {514{1'b0}}))) ;
+   
     assign in_b_a_wire = result_a[0] ? m : {514{1'b0}};
             
     assign result = result_a[512] ? reg_result[511:0] : result_a[511:0];    
@@ -126,18 +121,19 @@ module montgomery(
         IDLE: 
             begin
                 if (start == 1'b1) begin 
-                    //start_a <= 1'b1;
                     if (in_a[0] == 1'b1) begin
                         in_b_a_reg <= in_b;
                         start_a <= 1'b1;
                     end
                     else begin
-                        //in_b_a_reg <= {513{1'b0}};
+                        in_b_a_reg <= {513{1'b0}};
                         start_a <= 1'b0;
                     end
                 end
-                else start_a <= 1'b0;
-                
+                else begin 
+                    in_b_a_reg <= {513{1'b0}};
+                    start_a <= 1'b0;
+                end
                 shift_a <= 1'b0;
                 subtract_a <= 1'b0;
                 cyclecounter <= {12{1'b0}};
@@ -152,39 +148,39 @@ module montgomery(
             end
         INFORLOOP: 
             begin
-                start_a <= 1'b1;
                 shift_a <= 1'b0;
+                control <= 1'b1;
                 if (i <= n-1) begin
                     subtract_a <= 1'b0;
-                    //if (a[i] == 1'b1) in_b_a_reg <= b;
-                    //else in_b_a_reg <= {513{1'b0}};
                     if (a[i] == 1'b1) begin
                         in_b_a_reg <= b;
                         start_a <= 1'b1;
                     end
                     else begin
-                        //in_b_a_reg <= {513{1'b0}};
+                        in_b_a_reg <= {513{1'b0}};
                         start_a <= 1'b0;
                     end
                 end
                 else begin
-                    subtract_a <= 1'b1;
                     in_b_a_reg <= m;
+                    start_a <= 1'b1;
+                    subtract_a <= 1'b1;
                 end
-                control <= 1'b1;
             end
         MODULOCHECK:
             begin
+                in_b_a_reg <= {514{1'b0}};
                 start_a <= 1'b0;
                 shift_a <= 1'b0;
                 subtract_a <= 1'b0;
-                //in_b_a_reg <= {514{1'b0}};
+                control <= 1'b1;
             end
         STOP:
             begin
                 start_a <= 1'b1;
+                shift_a <= 1'b0;
+                subtract_a <= 1'b0;
                 control <= 1'b1;
-                //if (result_a[512] == 1'b0) reg_result <= result_a[511:0];
             end
        endcase
     end
@@ -220,7 +216,7 @@ module montgomery(
                 end
                 STOP:
                 begin
-                    in_b_a_reg <= {514{1'b0}};
+       //             in_b_a_reg <= {514{1'b0}};   Causes multi-driven net
                 end
             endcase    
         end
