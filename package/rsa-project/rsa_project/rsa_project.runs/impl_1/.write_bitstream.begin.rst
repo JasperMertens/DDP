@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command=".planAhead." Owner="r0575928" Host="pc-klas1-10.esat.kuleuven.be" Pid="31390">
-    </Process>
-</ProcessHandle>

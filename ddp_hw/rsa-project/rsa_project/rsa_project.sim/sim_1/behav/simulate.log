@@ -1,5 +1,0 @@
-Vivado Simulator 2016.2
-Time resolution is 1 ps
-result=3cae6faa5a33f7b644fa44e3366e1027b6e3b765113475c1fc4fee955901dfad931b4ee3efa4d6c3ce29feaf1ba45d18ba6691aa518b36d3c4bb4b15983879c51
-result=0000000000000000000000000000000000000000000196ed41f4c5b737a5daacf0a16e146d8c2f25c62352f8bcb6fcbc37194ea6ef14fee06746cdd4b742fb81b
-$finish called at time : 305 ns : File "/users/start2015/r0575928/Desktop/ddplatforms_2017/ddp_hw/rsa-project/src/rtl/tb_adder.v" Line 131
