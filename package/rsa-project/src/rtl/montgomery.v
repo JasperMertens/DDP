@@ -63,16 +63,23 @@ module montgomery(
     reg [12:0] cyclecounter;
     
     reg [513:0] in_b_a_reg = {514{1'b0}};
-    reg control = 1'b1;
-    wire [513:0] in_b_a_wire;
+    //reg control = 1'b1;
+    //wire [513:0] in_b_a_wire;
+    //reg c_0_reg;
+    wire c_0_wire_0;
+    wire c_0_wire_1;
+    
     
     assign done = (state == STOP);
 
-    assign modulocheckwire = m;
+    //assign modulocheckwire = m;
     
-    assign in_b_a = control ? in_b_a_reg : in_b_a_wire;
+    //assign in_b_a = control ? in_b_a_reg : in_b_a_wire;
+    assign in_b_a = in_b_a_reg;
    
-    assign in_b_a_wire = result_a[0] ? m : {514{1'b0}};
+    //assign in_b_a_wire = result_a[0] ? m : {514{1'b0}};
+    assign c_0_wire_0 = in_a_a[0];
+    assign c_0_wire_1 = in_a_a[0] ^ b[0];
             
     assign result = result_a[512] ? reg_result[511:0] : result_a[511:0];    
   
@@ -121,6 +128,7 @@ module montgomery(
         IDLE: 
             begin
                 if (start == 1'b1) begin 
+                    //c_0_reg <= in_b[0];
                     if (in_a[0] == 1'b1) begin
                         in_b_a_reg <= in_b;
                         start_a <= 1'b1;
@@ -137,20 +145,33 @@ module montgomery(
                 shift_a <= 1'b0;
                 subtract_a <= 1'b0;
                 cyclecounter <= {12{1'b0}};
-                control <= 1'b1;
+               // control <= 1'b1;
             end              
         FORLOOP: 
             begin
                 start_a <= 1'b1;
                 shift_a <= 1'b1;
                 subtract_a <= 1'b0;
-                control <= 1'b0;
+               // control <= 1'b0;
+               if (in_a[i] == 1'b1) begin
+                  if (c_0_wire_1 == 1'b1)
+                    in_b_a_reg <= m;
+                  else
+                    in_b_a_reg <= {513{1'b0}};
+               end
+               else begin
+                  if (c_0_wire_0 == 1'b1)
+                    in_b_a_reg <= m;
+                  else
+                    in_b_a_reg <= {513{1'b0}};
+               end
             end
         INFORLOOP: 
             begin
                 shift_a <= 1'b0;
-                control <= 1'b1;
+                //control <= 1'b1;
                 if (i <= n-1) begin
+                    //c_0_reg <= c_0_wire;
                     subtract_a <= 1'b0;
                     if (a[i] == 1'b1) begin
                         in_b_a_reg <= b;
@@ -173,14 +194,14 @@ module montgomery(
                 start_a <= 1'b0;
                 shift_a <= 1'b0;
                 subtract_a <= 1'b0;
-                control <= 1'b1;
+               // control <= 1'b1;
             end
         STOP:
             begin
                 start_a <= 1'b1;
                 shift_a <= 1'b0;
                 subtract_a <= 1'b0;
-                control <= 1'b1;
+               // control <= 1'b1;
             end
        endcase
     end
