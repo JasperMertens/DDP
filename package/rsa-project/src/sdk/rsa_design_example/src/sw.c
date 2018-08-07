@@ -25,7 +25,7 @@ void sub_cond(uint32_t *t, uint32_t *n, uint32_t *p);
 #define SIZEA 32
 
 // Calculates res = (x^exp) mod N
-void mod_exp(uint32_t *msg, uint32_t *exp, uint32_t exp_len, uint32_t *n, uint32_t *n_prime, uint32_t *res) {
+void mod_exp(uint32_t *msg, uint32_t *exp, uint32_t exp_len, uint32_t *n, uint32_t *n_prime, uint32_t *R, uint32_t *R2, uint32_t *res) {
 	int i;
 	int bit;
 
@@ -34,18 +34,18 @@ void mod_exp(uint32_t *msg, uint32_t *exp, uint32_t exp_len, uint32_t *n, uint32
 
 	// Calculate x_tilde = MontMul(x, R^2 mod m)
 	//   R2_1024 is defined in global.h
-	montgomery_multiply(msg, R2_1024, n, n_prime, x_tilde, SIZEA);
+	montgomery_multiply(msg, R2, n, n_prime, x_tilde, SIZEA);
 
 	// Copy R to A
 	//   R_1024 is defined in global.h
 	for(i = 0; i < 32; i++) {
-	    A[i] = R_1024[i];
+	    A[i] = R[i];
 	}
 	while(exp_len>0)
 	{
 		exp_len--;
 		bit = (exp[exp_len/32] >> (exp_len%32)) & 1;
-		xil_printf("Bit[%d] of exponent is: %d\n\r", exp_len, bit);
+		// xil_printf("Bit[%d] of exponent is: %d\n\r", exp_len, bit);
 		// Calculate A = MontMul(A, A)
 		montgomery_multiply(A, A, n, n_prime, A, SIZEA);
 		if(bit)
@@ -83,6 +83,15 @@ void montgomery_multiply(uint32_t *a, uint32_t *b, uint32_t *n, uint32_t *n0, ui
 		sub_cond(t,n, res);
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
 
 void sub_cond(uint32_t *u, uint32_t *n, uint32_t *p){
 	uint32_t B = 0;
@@ -122,7 +131,7 @@ void combineResult(uint32_t *pp, uint32_t *pq, uint32_t *result) {
 	montgomery_multiply(T, R2_1024, N, N_prime, result, SIZEA);
 }
 
-void printMontResult(uint32_t *result, uint32_t size)
+void printArray(uint32_t *result, uint32_t size)
 {
 	int i;
 	if (result[size-1] != 0) {
@@ -144,18 +153,21 @@ void mod_add(uint32_t *a, uint32_t *b, uint32_t *N, uint32_t *res, uint32_t size
 	uint32_t save = res[size];		// retain this data
 	mp_add(a, b, res, size);		// this overrides data at res[size]
 	if (res[size] == 1) {			// if the addition ended with a carry bit
-						// then sum > N
+									// then sum > N
 		mp_sub(res, N, res, size);	// ==> result = sum-N
-	} else {
+	}
+	//uint32_t stop = 0;
+	while (1) {
 		int i = size-1;
 		while (i>0 && res[i] == N[i]) { // skip until the numbers differ
-						// or the whole array but the final
-						// element has been traversed
+										// or the whole array but the final
+										// element has been traversed
 			i--;
 		}
 		if (res[i] >= N[i]) {		   // sum >= N
 			mp_sub(res, N, res, size); // ==> result = sum-N
-		}
+		} else
+			break;
 	}
 	res[size] = save;			// put the data back
 }

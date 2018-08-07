@@ -30,126 +30,210 @@ module adder(
     // assign result = in_a + in_b;
     // assign done = 1'b1;
     
-    parameter nb_bits = 172;
+    wire [513:0] in_b_new;
+    assign in_b_new = subtract ? ~in_b : in_b;
+   
+    parameter n = 103;
     
-    reg [nb_bits-1:0] a,b;
-    reg [2:0] count = 3'b000;
-    reg c;
-    assign carry = c;
-    reg keep_result;
-    reg [513:0] in_a_reg, in_b_reg;
-    
-    reg [515:0] reg_result;
-    
-    wire [nb_bits:0] add_out;
-    assign add_out = a + b + c;
-    
-    wire [515:0] resultwire;
-    
-    assign resultwire = keep_result ? reg_result[515:0] : {add_out[nb_bits-1:0], reg_result[515:nb_bits]};
-    
-//    wire [515:0] shiftwire;
-//    assign shiftwire = {1'b0,resultwire[515:1]};
-    
-    //assign res_shift = shift ? {1'b0,resultwire[515:1]} : resultwire[515:0];
-    //assign res_shift = resultwire[514:0];
-    
-    //assign result= {(c^subtract), reg_result[515:0]};   // XOR the carry bit with substract
-    //assign result = shift ? {c, 1'b0,resultwire[514:1]} : {c,reg_result[514:0]};
-    assign result = shift ? {c,resultwire[514:1]} : {c,reg_result[514:0]};
+    wire [n-1:0] A0  = in_a[n-1:0];
+    wire [n-1:0] A1  = in_a[2*n-1:n];
+    wire [n-1:0] A2  = in_a[3*n-1:2*n];
+    wire [n-1:0] A3  = in_a[4*n-1:3*n];
+    wire [n-1:0] A4 =  {1'b0, in_a[5*n-2:4*n]};
 
+    wire [n-1:0] B0 = in_b_new[n-1:0];
+    wire [n-1:0] B1 = in_b_new[2*n-1:n];
+    wire [n-1:0] B2 = in_b_new[3*n-1:2*n];
+    wire [n-1:0] B3 = in_b_new[4*n-1:3*n];
+    wire [n-1:0] B4 = {1'b0, in_b_new[5*n-2:4*n]};
     
-    assign done = (count == 3'b100);
+    
+    wire [n-1:0] S0, S1, S2, S3;
+    wire [n-2:0] S4;
+    wire C1, C2, C3, C4, C5;
+    
+    wire [514:0] resultwire;
+    reg [514:0] result_reg;
+        
+    carryselect     X0(A0, B0, subtract, S0, C1);
+    //assign {C1, S0} = A0 + B0 + subtract;
+    carryselect     X1( A1,  B1,  C1,  S1,  C2);
+    carryselect     X2( A2,  B2,  C2,  S2,  C3);
+    carryselect     X3( A3,  B3,  C3,  S3,  C4);
+    carryselectlast X4( A4,  B4,  C4,  S4,  C5);   
+       
+    assign resultwire = shift ? {1'b0, (C5^subtract), S4, S3, S2, S1, S0[n-1:1]} : {(C5^subtract), S4, S3, S2, S1, S0};
+    assign result = result_reg;       
+     
+    reg done_reg;
+    assign done = done_reg;
+        
+    always @(posedge clk)
+    begin : OUTPUT_LOGIC
+        if (start == 1'b1)
+            done_reg <= 1'b1;
+        else  
+            done_reg = 1'b0;        
+    end
     
     always @(posedge clk)
-    begin
-    if (resetn==1'b0) begin     // a <= 0;
-        c <= 0;                 // b <= 0;
-        reg_result <= {516{1'b0}};
-        count <= 3'b000;
-        keep_result <= 1'b0;     
-    end
-    else if (start==1'd1) begin     // a <= in_a[nb_bits-1:0];
-        c <= subtract;              // b <= (~)in_b[nb_bits-1:0];
-        reg_result <= {516{1'b0}};
-        count <= 3'b001;   
-        keep_result <= 1'b0;     
-    end
-    else if (shift == 1'b1) begin
-        c <= subtract;
-        reg_result <= {c,resultwire[514:1]};
-        count <= 3'b100;
-        keep_result <= 1'b1;
-    end 
-    else if (start == 1'b0 && done != 1'b1) begin   // different inputs are selected for a and b
-        reg_result <= resultwire;
-        //reg_result <= res_shift;
-        c <= add_out[nb_bits];
-        if (count == 3'b011) begin
-            keep_result <= 1'b1;
-            end
-        count <= count+1;
-    end
-    else if (start == 1'b0 && done == 1'b1) begin   // a <= 0;
-        count <= 0;                                 // b <= 0;
-    end
-    else begin                                      // a <= 0;
-        c <= 0;                                     // b <= 0;
-        count <= 0;
-        reg_result <= 0;
-    end
-    end 
-    
-//    always @(posedge clk)
-//    begin
-//    if (shift==1'b1) begin
-//    reg_result <= reg_result >> 1;
-//    end
-//    end
-    
-    always @(posedge clk)
-    begin
-        if (resetn==1'b0) begin                             // c <= 0;
-            a <= 0;                                         // reg_result <= 0;
-            b <= 0;                                         // count <= 3'b000;
+    begin : DATAPATH
+        if (resetn==1'b0) 
+            result_reg <= {(514){1'b0}};
+        else begin
+            if (start == 1'b1) result_reg <= resultwire;
+            else result_reg <= result_reg;
         end
-        else if (start==1'd1 && subtract == 1'b0) begin     // c <= 0;
-            a <= in_a[nb_bits-1:0];                         // reg_result <= 0;
-            b <= in_b[nb_bits-1:0];                         // count <= 3'b001;
-            in_a_reg <= in_a;
-            in_b_reg <= in_b;
-        end
-        else if (start==1'd1 && subtract == 1'b1) begin     // c <= 1;
-            a <= in_a[nb_bits-1:0];                         // reg_result <= 0;
-            b <= ~in_b[nb_bits-1:0];                        // count <= 3'b001;
-            in_a_reg <= in_a;
-            in_b_reg <= in_b;
-        end
-        else if (start == 1'b0 && done != 1'b1) begin       // reg_result <= resultwire;
-                                                            // c <= add_out[nb_bits];      
-                                                            // count <= count+1;          
-            if (count == 3'b001) begin
-                a <= in_a_reg[(2*nb_bits)-1:nb_bits];
-                if (subtract == 1'b0) b <= in_b_reg[(2*nb_bits)-1:nb_bits];
-                else b <= ~in_b_reg[(2*nb_bits)-1:nb_bits];
-            end
-            else if (count == 3'b010) begin
-                a <= in_a_reg[(3*nb_bits)-3:2*nb_bits];
-                if (subtract == 1'b0) b <= in_b_reg[(3*nb_bits)-3:2*nb_bits];
-                else b <= ~in_b_reg[(3*nb_bits)-3:2*nb_bits];
-            end
-        end
-        //else if (start == 1'b0 && done == 1'b1) begin
-            //a <= 0;
-            //b <= 0;
-            //c <= c;
-            //reg_result <= loop;
-            //count <= 0;
-        //end
-        /*else begin
-            //a <= 0;
-            //b <= 0;
-        end*/
-    end 
-
+    end
 endmodule
+
+module carryselect(
+    input  wire [102:0] a,
+    input  wire [102:0] b,
+    input  wire        c_in,
+    output wire [102:0] s,
+    output wire        c_out);
+    
+    wire [103:0] sumcarry0, sumcarry1;
+    
+    assign sumcarry0 = a + b;
+    assign sumcarry1 = a + b + 1'b1;
+    
+    assign s     = c_in ? sumcarry1[102:0] : sumcarry0[102:0];
+    assign c_out = c_in ? sumcarry1[103]   : sumcarry0[103];
+    
+endmodule
+
+module carryselectlast(
+    input  wire [101:0] a,
+    input  wire [101:0] b,
+    input  wire        c_in,
+    output wire [101:0] s,
+    output wire        c_out);
+    
+    wire [102:0] sumcarry0, sumcarry1;
+    
+    assign sumcarry0 = a + b;
+    assign sumcarry1 = a + b + 1'b1;
+    
+    assign s     = c_in ? sumcarry1[101:0] : sumcarry0[101:0];
+    assign c_out = c_in ? sumcarry1[102]   : sumcarry0[102];
+    
+endmodule  
+    
+    
+    
+    
+    
+    
+    
+    
+    /*
+    
+    
+    
+    
+    
+    wire [513:0] in_b_new;
+    assign in_b_new = subtract ? ~in_b : in_b;
+   
+    parameter n = 52;
+    
+    wire [n-1:0] A0  = in_a[n-1:0];
+    wire [n-1:0] A1  = in_a[2*n-1:n];
+    wire [n-1:0] A2  = in_a[3*n-1:2*n];
+    wire [n-1:0] A3  = in_a[4*n-1:3*n];
+    wire [n-1:0] A4  = in_a[5*n-1:4*n];
+    wire [n-1:0] A5  = in_a[6*n-1:5*n];
+    wire [n-1:0] A6  = in_a[7*n-1:6*n];
+    wire [n-1:0] A7  = in_a[8*n-1:7*n];
+    wire [n-1:0] A8  = in_a[9*n-1:8*n];
+    wire [n-1:0] A9 = {6'b000000, in_a[10*n-7:9*n]};
+
+    wire [n-1:0] B0 = in_b_new[n-1:0];
+    wire [n-1:0] B1 = in_b_new[2*n-1:n];
+    wire [n-1:0] B2 = in_b_new[3*n-1:2*n];
+    wire [n-1:0] B3 = in_b_new[4*n-1:3*n];
+    wire [n-1:0] B4 = in_b_new[5*n-1:4*n];
+    wire [n-1:0] B5 = in_b_new[6*n-1:5*n];
+    wire [n-1:0] B6 = in_b_new[7*n-1:6*n];
+    wire [n-1:0] B7 = in_b_new[8*n-1:7*n];
+    wire [n-1:0] B8 = in_b_new[9*n-1:8*n];
+    wire [n-1:0] B9 = {6'b000000, in_b_new[10*n-7:9*n]};
+    
+    
+    wire [n-1:0] S0, S1, S2, S3, S4, S5, S6, S7, S8;
+    wire [n-7:0] S9;
+    wire C1, C2, C3, C4, C5, C6, C7, C8, C9, C10;
+    
+    wire [514:0] resultwire;
+    reg [514:0] result_reg;
+        
+    carryselect     X0(A0, B0, subtract, S0, C1);
+    //assign {C1, S0} = A0 + B0 + subtract;
+    carryselect     X1( A1,  B1,  C1,  S1,  C2);
+    carryselect     X2( A2,  B2,  C2,  S2,  C3);
+    carryselect     X3( A3,  B3,  C3,  S3,  C4);
+    carryselect     X4( A4,  B4,  C4,  S4,  C5);
+    carryselect     X5( A5,  B5,  C5,  S5,  C6);
+    carryselect     X6( A6,  B6,  C6,  S6,  C7);
+    carryselect     X7( A7,  B7,  C7,  S7,  C8);
+    carryselect     X8( A8,  B8,  C8,  S8,  C9);
+    carryselectlast X9( A9,  B9,  C9,  S9,  C10);    
+       
+    assign resultwire = shift ? {1'b0, (C10^subtract),S9, S8, S7, S6, S5, S4, S3, S2, S1, S0[n-1:1]} : {(C10^subtract), S9, S8, S7, S6, S5, S4, S3, S2, S1, S0};
+    assign result = result_reg;       
+     
+    reg done_reg;
+    assign done = done_reg;
+        
+    always @(posedge clk)
+    begin : OUTPUT_LOGIC
+        if (start == 1'b1)
+            done_reg <= 1'b1;
+        else  
+            done_reg = 1'b0;        
+    end
+    
+    always @(posedge clk)
+    begin : DATAPATH
+        if (resetn==1'b0) result_reg <= {(514){1'b0}};
+        else result_reg <= resultwire;
+    end
+endmodule
+
+module carryselect(
+    input  wire [51:0] a,
+    input  wire [51:0] b,
+    input  wire        c_in,
+    output wire [51:0] s,
+    output wire        c_out);
+    
+    wire [52:0] sumcarry0, sumcarry1;
+    
+    assign sumcarry0 = a + b;
+    assign sumcarry1 = a + b + 1'b1;
+    
+    assign s     = c_in ? sumcarry1[51:0] : sumcarry0[51:0];
+    assign c_out = c_in ? sumcarry1[52]   : sumcarry0[52];
+    
+endmodule
+
+module carryselectlast(
+    input  wire [45:0] a,
+    input  wire [45:0] b,
+    input  wire        c_in,
+    output wire [45:0] s,
+    output wire        c_out);
+    
+    wire [46:0] sumcarry0, sumcarry1;
+    
+    assign sumcarry0 = a + b;
+    assign sumcarry1 = a + b + 1'b1;
+    
+    assign s     = c_in ? sumcarry1[45:0] : sumcarry0[45:0];
+    assign c_out = c_in ? sumcarry1[46]   : sumcarry0[46];
+    
+endmodule
+
+*/

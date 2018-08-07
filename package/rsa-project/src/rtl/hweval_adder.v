@@ -27,6 +27,8 @@ module hweval_adder(
         .done     (done    ));
 
     // Assign values to the inputs to the adder
+    //test 
+    
     always @(posedge(clk))
     begin
         if (resetn==0)

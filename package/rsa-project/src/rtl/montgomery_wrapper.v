@@ -237,9 +237,9 @@ module montgomery_wrapper
                 STATE_WRITE_DATA:
                     begin
                         start   <= 1'b0;
-                        a_in    <= 512'b0;
-                        b_in    <= 512'b0;
-                        m_in    <= 512'b0;
+                        //a_in    <= 512'b0;
+                        //b_in    <= 512'b0;
+                        //m_in    <= 512'b0;
                     end
                 default:
                     begin
@@ -289,9 +289,8 @@ module montgomery_wrapper
     assign bram_dout1_valid = r_bram_dout1_valid;
     // assign bram_dout2_valid = r_bram_dout2_valid;
 
-    ////////////// - Port handshake
-    
 
+    ////////////// - Port handshake
     always @(posedge(clk))
     begin        
         r_port2_valid      <= (r_state==STATE_WRITE_PORT2);
