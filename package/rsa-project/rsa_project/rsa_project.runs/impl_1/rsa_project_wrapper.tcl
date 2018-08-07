@@ -42,7 +42,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 set_msg_config -id {HDL-1065} -limit 10000
@@ -60,8 +59,8 @@ set_msg_config  -ruleid {9}  -id {IP_Flow 19-2207}  -new_severity {INFO}
 start_step write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  open_checkpoint rsa_project_wrapper_routed.dcp
-  set_property webtalk.parent_dir /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.cache/wt [current_project]
+  open_checkpoint rsa_project_wrapper_postroute_physopt.dcp
+  set_property webtalk.parent_dir /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.cache/wt [current_project]
   catch { write_mem_info -force rsa_project_wrapper.mmi }
   write_bitstream -force rsa_project_wrapper.bit 
   catch { write_sysdef -hwdef rsa_project_wrapper.hwdef -bitfile rsa_project_wrapper.bit -meminfo rsa_project_wrapper.mmi -file rsa_project_wrapper.sysdef }

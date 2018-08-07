@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/synth_1'
+HD_PWD='/users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

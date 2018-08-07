@@ -259,6 +259,58 @@ module tb_montgomery();
         
         #`CLK_PERIOD;
         
+       
+        // TESTVECTOR 5 
+        
+         result_ok = 0;
+                       
+       #`RESET_TIME
+       
+       in_a     <= 512'h2266dfd35b839d9584e9fc9b4e477ea07805aeb64b029710631036650dd36d7730b2d4145d87835824e3ea8d142f7c624585659a308a06c405f1f9511d42803f;
+       in_b     <= 512'h8003892db22eb9a44895c40ff7762ea91dd74f61a794995ad7df83506fc8869d902465117950e42f80fc7d66235fb809c645678d0e6cfffbb4e8e9f7021f8195;
+       in_m     <= 512'h9f229799de5b7470cf4680b94f28b51f53b37c047b684396e1bd2b09c4504bb6deabef2cfe1921d42ccd5b786cb526527d4fecb79de5fd21d3d328e0c7cb40bb;
+       expected <= 512'h28656b6ac06697daea4f6457ecfe574b6ffdb6a23c207f3ccf1505a68369b89a6525d5abb19da641a64b33059a5ff0196204bcc35a39bd6b7c02b0c0aab8e1a;
+
+       start<=1;
+       #`CLK_PERIOD;
+       start<=0;
+       
+       wait (done==1);
+       
+       result_ok = (result==expected);
+
+       $display("\n Testvector 5");
+       $display("result calculated =%x", result);
+       $display("result expected   =%x", expected);
+       $display("error             =%x", expected-result);
+       
+        #`CLK_PERIOD;
+        
+        // TESTVECTOR 6 (same as in main.c) 
+           
+        result_ok = 0;
+                      
+        #`RESET_TIME
+        
+        in_a     <= 512'hc51931a952132ef036d3028f13cbfd6b806b8cac22e43d058b7d54cac8ae12c74dcc390705c0a4a8ab8e05261fad952504561a829f030fbd7957b1be51977946;
+        in_b     <= 512'hb220f8c0ca83b6555f0012cccb4fba56e3d5644598e985d3154a73de20669791c57840133d61e9143548fef68b55af12c0810a9f2d5929f796dec8945fc3d1ef;
+        in_m     <= 512'hc6bb131b105d393e10943525c871a4de28470c406ae0754b0a3be041aa19906f2e3b3a4ccea1ed9f052304af6ed897f20f02d0b458727656948cb7ab0ebd5f75;
+        expected <= 512'h9712a9297e49f069da554d8dc901b64c4c2446883f359f29b6df247f7b232ec666dd18b8fd0d421a5370eae758b4d35bffe854d55e453a5ae265cbb79e31ea81;
+ 
+        start<=1;
+        #`CLK_PERIOD;
+        start<=0;
+        
+        wait (done==1);
+        
+        result_ok = (result==expected);
+        
+        $display("\n Testvector 6 (same as in main.c)");
+        $display("result calculated =%x", result);
+        $display("result expected   =%x", expected);
+        $display("error             =%x", expected-result);
+        
+        #`CLK_PERIOD;
         
         $finish;
     end

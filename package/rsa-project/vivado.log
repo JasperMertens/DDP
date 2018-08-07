@@ -2,153 +2,24 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Wed Aug  1 12:40:45 2018
-# Process ID: 3409
-# Current directory: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project
+# Start of session at: Tue Aug  7 10:41:14 2018
+# Process ID: 5970
+# Current directory: /users/start2016/r0594518/Desktop/Merger/package/rsa-project
 # Command line: vivado rsa_project/rsa_project.xpr -tempDir /tmp
-# Log file: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/vivado.log
-# Journal file: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/vivado.jou
+# Log file: /users/start2016/r0594518/Desktop/Merger/package/rsa-project/vivado.log
+# Journal file: /users/start2016/r0594518/Desktop/Merger/package/rsa-project/vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project rsa_project/rsa_project.xpr
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo'.
-INFO: [IP_Flow 19-2207] Repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo' already exists; ignoring attempt to add it again.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/ip_repo'.
+INFO: [IP_Flow 19-2207] Repository '/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/ip_repo' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip'.
-open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 6009.500 ; gain = 169.312 ; free physical = 4785 ; free virtual = 22659
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 6017.625 ; gain = 181.641 ; free physical = 3885 ; free virtual = 22158
 update_compile_order -fileset sources_1
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_adder' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
-xvlog -m64 --relax -prj tb_adder_vlog.prj
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_cdc_single
-INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
-INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
-INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
-INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
-INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
-INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_base.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_base
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dpdistram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dprom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sdpram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_spram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_spram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sprom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_tdpram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/rtl/adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/rtl/tb_adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-xvhdl -m64 --relax -prj tb_adder_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" into library xpm
-INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
-Vivado Simulator 2016.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 10582d6fc8a8429fb5d2fea8b7665be0 --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_adder_behav xil_defaultlib.tb_adder xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.adder
-Compiling module xil_defaultlib.tb_adder
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_adder_behav
-
-****** Webtalk v2016.2 (64-bit)
-  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
-  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
-
-source /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/xsim.dir/tb_adder_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Wed Aug  1 13:28:52 2018...
-INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_adder_behav -key {Behavioral:sim_1:Functional:tb_adder} -tclbatch {tb_adder.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2016.2
-Time resolution is 1 ps
-source tb_adder.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-
-Addition with testvector 1
-result calculated=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002
-result expected  =000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002
-error            =000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-
-Addition with testvector 2
-result calculated=10ff75ae8b051b7e096660ba6b5f92d303babd6881aaec844325f1e20b14c9cc942dd53af27391df85a67bdc7851bda0029cbae3ab7543b3d859f6716bfecc4f0
-result expected  =50ff75ae8b051b7e096660ba6b5f92d303babd6881aaec844325f1e20b14c9cc942dd53af27391df85a67bdc7851bda0029cbae3ab7543b3d859f6716bfecc4f0
-error            =400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-result shifted   =287fbad745828dbf04b3305d35afc96981dd5eb440d576422192f8f1058a64e64a16ea9d7939c8efc2d33dee3c28ded0014e5d71d5baa1d9ec2cfb38b5ff66278
-result expected  =287fbad745828dbf04b3305d35afc96981dd5eb440d576422192f8f1058a64e64a16ea9d7939c8efc2d33dee3c28ded0014e5d71d5baa1d9ec2cfb38b5ff66278
-error            =000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-
-Subtraction with testvector 1
-result calculated=400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-result expected  =000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-error            =400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-
-Subtraction with testvector 2
-result calculated=3faab323076a6b6a71bf04cb4484edae6174b535c1c8aae072f1b2ea0bccb608f6562358fafc4971af9d3939bbe3ae4e7d8ad3d9d19136a05386b4be79c3c59e5
-result expected  =7faab323076a6b6a71bf04cb4484edae6174b535c1c8aae072f1b2ea0bccb608f6562358fafc4971af9d3939bbe3ae4e7d8ad3d9d19136a05386b4be79c3c59e5
-error            =400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-result shifted   =3fd5599183b535b538df8265a24276d730ba5a9ae0e455703978d97505e65b047b2b11ac7d7e24b8d7ce9c9cddf1d7273ec569ece8c89b5029c35a5f3ce1e2cf2
-
-
-
-Addition with EXTRA testvector
-result calculated=20142d6e7030948b75d17e9ddb8c6f2ec40019e16e93870d6e213e20fa932e0a75ad2aedb5db5b34ff6276d4d6d2d8f9b87266541adb91f1dab11634cccf926b3
-result expected  =60142d6e7030948b75d17e9ddb8c6f2ec40019e16e93870d6e213e20fa932e0a75ad2aedb5db5b34ff6276d4d6d2d8f9b87266541adb91f1dab11634cccf926b3
-error            =400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-result shifted   =300a16b738184a45bae8bf4eedc6379762000cf0b749c386b7109f107d4997053ad69576daedad9a7fb13b6a6b696c7cdc39332a0d6dc8f8ed588b1a6667c9359
-
-
-
-SUBSTRACTION with MONT RESULT testvector
-result calculated=40ab67db87ec68e882eb8c6e5276aaaffedc0ba10a7c427b07dd51b591f8a4d4da95c818f63f8f97d261690ff1cbba1f298e82f80f5a0a5103fe6550358281578
-result expected  =00ab67db87ec68e882eb8c6e5276aaaffedc0ba10a7c427b07dd51b591f8a4d4da95c818f63f8f97d261690ff1cbba1f298e82f80f5a0a5103fe6550358281578
-error            =400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-result shifted   =4055b3edc3f634744175c637293b5557ff6e05d0853e213d83eea8dac8fc526a6d4ae40c7b1fc7cbe930b487f8e5dd0f94c7417c07ad052881ff32a81ac140abc
-
-
-$finish called at time : 555 ns : File "/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/rtl/tb_adder.v" Line 267
-xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 6164.410 ; gain = 113.355 ; free physical = 4194 ; free virtual = 22456
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_adder_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:27 ; elapsed = 00:01:07 . Memory (MB): peak = 6164.410 ; gain = 127.602 ; free physical = 4194 ; free virtual = 22456
-reset_run synth_1
 update_module_reference rsa_project_montgomery_wrapper_0_0
 INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
 INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
@@ -160,10 +31,10 @@ INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'cl
 INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'resetn'.
 INFO: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo'.
-INFO: [IP_Flow 19-2207] Repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo' already exists; ignoring attempt to add it again.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo'.
-Upgrading '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd'
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/ip_repo'.
+INFO: [IP_Flow 19-2207] Repository '/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/ip_repo' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/ip_repo'.
+Upgrading '/users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd'
 Adding cell -- user.org:user:Montgomery_Interface:1.0 - Montgomery_Interface_0
 Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
 Adding cell -- user.org:user:axis_to_bram:1.0 - axis_to_bram_0
@@ -177,223 +48,22 @@ Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
 Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
 Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
 Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
-Successfully read diagram <rsa_project> from BD file </users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd>
+Successfully read diagram <rsa_project> from BD file </users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd>
 INFO: [IP_Flow 19-1972] Upgraded rsa_project_montgomery_wrapper_0_0 from montgomery_wrapper_v1_0 1.0 to montgomery_wrapper_v1_0 1.0
-Wrote  : </users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd> 
-upgrade_ip: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 6201.105 ; gain = 25.320 ; free physical = 1451 ; free virtual = 21454
-update_module_reference: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 6201.105 ; gain = 28.312 ; free physical = 1451 ; free virtual = 21454
-launch_runs synth_1 -jobs 2
-INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
-Verilog Output written to : /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.v
-Verilog Output written to : /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project_wrapper.v
-Wrote  : </users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd> 
-INFO: [BD 41-1029] Generation completed for the IP Integrator block Montgomery_Interface_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_to_bram_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block montgomery_wrapper_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/xbar .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m01_couplers/auto_pc .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m02_couplers/auto_pc .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m03_couplers/auto_pc .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
-Exporting to file /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project.hwh
-Generated Block Design Tcl file /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project_bd.tcl
-Generated Hardware Definition File /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.hwdef
-INFO: [HDL 9-2216] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.v" into library work [/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.v:1]
-[Wed Aug  1 13:55:50 2018] Launched synth_1...
-Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/synth_1/runme.log
-launch_runs: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 6405.422 ; gain = 204.316 ; free physical = 1308 ; free virtual = 21315
-launch_runs impl_1 -jobs 2
-[Wed Aug  1 14:03:13 2018] Launched impl_1...
-Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Wed Aug  1 14:07:51 2018] Launched impl_1...
-Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log
-open_run impl_1
-INFO: [Netlist 29-17] Analyzing 136 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2016.2
-INFO: [Device 21-403] Loading part xc7z010clg400-1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/tmp/.Xil_r0575928/Vivado-3409-pc-klas1-10.esat.kuleuven.be/dcp/rsa_project_wrapper_early.xdc]
-Finished Parsing XDC File [/tmp/.Xil_r0575928/Vivado-3409-pc-klas1-10.esat.kuleuven.be/dcp/rsa_project_wrapper_early.xdc]
-Parsing XDC File [/tmp/.Xil_r0575928/Vivado-3409-pc-klas1-10.esat.kuleuven.be/dcp/rsa_project_wrapper.xdc]
-Finished Parsing XDC File [/tmp/.Xil_r0575928/Vivado-3409-pc-klas1-10.esat.kuleuven.be/dcp/rsa_project_wrapper.xdc]
-Parsing XDC File [/tmp/.Xil_r0575928/Vivado-3409-pc-klas1-10.esat.kuleuven.be/dcp/rsa_project_wrapper_late.xdc]
-Finished Parsing XDC File [/tmp/.Xil_r0575928/Vivado-3409-pc-klas1-10.esat.kuleuven.be/dcp/rsa_project_wrapper_late.xdc]
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.77 ; elapsed = 00:00:00.77 . Memory (MB): peak = 6623.070 ; gain = 8.000 ; free physical = 1247 ; free virtual = 20899
-Restored from archive | CPU: 0.780000 secs | Memory: 7.574982 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.77 ; elapsed = 00:00:00.77 . Memory (MB): peak = 6623.070 ; gain = 8.000 ; free physical = 1247 ; free virtual = 20899
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 1 instances were transformed.
-  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
-
-open_run: Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 6749.043 ; gain = 335.285 ; free physical = 1131 ; free virtual = 20775
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Wed Aug  1 14:09:30 2018] Launched impl_1...
-Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log
-file copy -force /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/rsa_project_wrapper.sysdef /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf
-
-source ./export_bitstream.tcl
-# file copy -force ./rsa_project/rsa_project.runs/impl_1/rsa_project_wrapper.bit ./src/sdk/rsa_project_wrapper_hw_platform_0/rsa_project_wrapper.bit
-launch_sdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf
-INFO: [Vivado 12-393] Launching SDK...
-INFO: [Vivado 12-417] Running xsdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf
-INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
-reset_run synth_1
-update_module_reference rsa_project_montgomery_wrapper_0_0
-INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'STATE_BITS' by 4 for port or parameter 'r_state'
-INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'STATE_BITS' by 4 for port or parameter 'next_state'
-INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'resetn' as interface 'resetn'.
-INFO: [IP_Flow 19-4728] Bus Interface 'resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
-INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
-INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'resetn'.
-INFO: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo'.
-INFO: [IP_Flow 19-2207] Repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo' already exists; ignoring attempt to add it again.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo'.
-Upgrading '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd'
-INFO: [IP_Flow 19-1972] Upgraded rsa_project_montgomery_wrapper_0_0 from montgomery_wrapper_v1_0 1.0 to montgomery_wrapper_v1_0 1.0
-Wrote  : </users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd> 
-launch_runs synth_1 -jobs 2
-Verilog Output written to : /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.v
-Verilog Output written to : /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project_wrapper.v
-Wrote  : </users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd> 
-INFO: [BD 41-1029] Generation completed for the IP Integrator block Montgomery_Interface_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_to_bram_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block montgomery_wrapper_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/xbar .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m01_couplers/auto_pc .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m02_couplers/auto_pc .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m03_couplers/auto_pc .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
-Exporting to file /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project.hwh
-Generated Block Design Tcl file /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project_bd.tcl
-Generated Hardware Definition File /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.hwdef
-INFO: [HDL 9-2216] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.v" into library work [/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.v:1]
-[Wed Aug  1 14:41:06 2018] Launched synth_1...
-Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/synth_1/runme.log
-launch_runs: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 7075.066 ; gain = 0.000 ; free physical = 944 ; free virtual = 20463
-reset_run synth_1 -noclean_dir 
-set_property top hweval_adder [current_fileset]
-update_compile_order -fileset sources_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/rtl/montgomery.v" into library work [/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/rtl/montgomery.v:1]
-[Wed Aug  1 14:47:47 2018] Launched synth_1...
-Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/synth_1/runme.log
-update_module_reference rsa_project_montgomery_wrapper_0_0
-INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'STATE_BITS' by 4 for port or parameter 'r_state'
-INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'STATE_BITS' by 4 for port or parameter 'next_state'
-INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'resetn' as interface 'resetn'.
-INFO: [IP_Flow 19-4728] Bus Interface 'resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
-INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
-INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'resetn'.
-INFO: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo'.
-INFO: [IP_Flow 19-2207] Repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo' already exists; ignoring attempt to add it again.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo'.
-Upgrading '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd'
-INFO: [IP_Flow 19-1972] Upgraded rsa_project_montgomery_wrapper_0_0 from montgomery_wrapper_v1_0 1.0 to montgomery_wrapper_v1_0 1.0
-Wrote  : </users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd> 
-launch_runs impl_1 -jobs 2
-[Wed Aug  1 14:48:52 2018] Launched impl_1...
-Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log
-refresh_design
-INFO: [Netlist 29-17] Analyzing 89 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2016.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/tmp/.Xil_r0575928/Vivado-3409-pc-klas1-10.esat.kuleuven.be/dcp/hweval_adder.xdc]
-Finished Parsing XDC File [/tmp/.Xil_r0575928/Vivado-3409-pc-klas1-10.esat.kuleuven.be/dcp/hweval_adder.xdc]
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.21 . Memory (MB): peak = 7076.543 ; gain = 0.000 ; free physical = 1032 ; free virtual = 20409
-Restored from archive | CPU: 0.220000 secs | Memory: 4.818260 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.21 . Memory (MB): peak = 7076.543 ; gain = 0.000 ; free physical = 1032 ; free virtual = 20409
-run all
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 7101.844 ; gain = 0.000 ; free physical = 966 ; free virtual = 20394
-INFO: [Common 17-344] 'run' was cancelled
-run all
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 7101.844 ; gain = 0.000 ; free physical = 920 ; free virtual = 20390
-INFO: [Common 17-344] 'run' was cancelled
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run all
-
-Addition with testvector 1
-result calculated=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002
-result expected  =000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002
-error            =000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-
-Addition with testvector 2
-result calculated=10ff75ae8b051b7e096660ba6b5f92d303babd6881aaec844325f1e20b14c9cc942dd53af27391df85a67bdc7851bda0029cbae3ab7543b3d859f6716bfecc4f0
-result expected  =50ff75ae8b051b7e096660ba6b5f92d303babd6881aaec844325f1e20b14c9cc942dd53af27391df85a67bdc7851bda0029cbae3ab7543b3d859f6716bfecc4f0
-error            =400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-result shifted   =287fbad745828dbf04b3305d35afc96981dd5eb440d576422192f8f1058a64e64a16ea9d7939c8efc2d33dee3c28ded0014e5d71d5baa1d9ec2cfb38b5ff66278
-result expected  =287fbad745828dbf04b3305d35afc96981dd5eb440d576422192f8f1058a64e64a16ea9d7939c8efc2d33dee3c28ded0014e5d71d5baa1d9ec2cfb38b5ff66278
-error            =000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-
-Subtraction with testvector 1
-result calculated=400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-result expected  =000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-error            =400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-
-Subtraction with testvector 2
-result calculated=3faab323076a6b6a71bf04cb4484edae6174b535c1c8aae072f1b2ea0bccb608f6562358fafc4971af9d3939bbe3ae4e7d8ad3d9d19136a05386b4be79c3c59e5
-result expected  =7faab323076a6b6a71bf04cb4484edae6174b535c1c8aae072f1b2ea0bccb608f6562358fafc4971af9d3939bbe3ae4e7d8ad3d9d19136a05386b4be79c3c59e5
-error            =400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-result shifted   =3fd5599183b535b538df8265a24276d730ba5a9ae0e455703978d97505e65b047b2b11ac7d7e24b8d7ce9c9cddf1d7273ec569ece8c89b5029c35a5f3ce1e2cf2
-
-
-
-Addition with EXTRA testvector
-result calculated=20142d6e7030948b75d17e9ddb8c6f2ec40019e16e93870d6e213e20fa932e0a75ad2aedb5db5b34ff6276d4d6d2d8f9b87266541adb91f1dab11634cccf926b3
-result expected  =60142d6e7030948b75d17e9ddb8c6f2ec40019e16e93870d6e213e20fa932e0a75ad2aedb5db5b34ff6276d4d6d2d8f9b87266541adb91f1dab11634cccf926b3
-error            =400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-result shifted   =300a16b738184a45bae8bf4eedc6379762000cf0b749c386b7109f107d4997053ad69576daedad9a7fb13b6a6b696c7cdc39332a0d6dc8f8ed588b1a6667c9359
-
-
-
-SUBSTRACTION with MONT RESULT testvector
-result calculated=40ab67db87ec68e882eb8c6e5276aaaffedc0ba10a7c427b07dd51b591f8a4d4da95c818f63f8f97d261690ff1cbba1f298e82f80f5a0a5103fe6550358281578
-result expected  =00ab67db87ec68e882eb8c6e5276aaaffedc0ba10a7c427b07dd51b591f8a4d4da95c818f63f8f97d261690ff1cbba1f298e82f80f5a0a5103fe6550358281578
-error            =400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-result shifted   =4055b3edc3f634744175c637293b5557ff6e05d0853e213d83eea8dac8fc526a6d4ae40c7b1fc7cbe930b487f8e5dd0f94c7417c07ad052881ff32a81ac140abc
-
-
-$finish called at time : 555 ns : File "/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/rtl/tb_adder.v" Line 267
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
+Wrote  : </users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd> 
+upgrade_ip: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 6055.430 ; gain = 35.805 ; free physical = 3833 ; free virtual = 22113
+update_module_reference: Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 6055.430 ; gain = 37.805 ; free physical = 3833 ; free virtual = 22113
+set_property top tb_montgomery_wrapper [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
 launch_simulation
 INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_adder' in fileset 'sim_1'...
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_montgomery_wrapper' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
-xvlog -m64 --relax -prj tb_adder_vlog.prj
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_montgomery_wrapper_vlog.prj
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module xpm_cdc_single
 INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
@@ -416,47 +86,58 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xil
 INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_tdpram.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/rtl/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/rtl/adder.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/rtl/tb_adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module carryselect
+INFO: [VRFC 10-311] analyzing module carryselectlast
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/rtl/montgomery.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/rtl/montgomery_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/rtl/tb_montgomery_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_montgomery_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
-xvhdl -m64 --relax -prj tb_adder_vhdl.prj
+xvhdl -m64 --relax -prj tb_montgomery_wrapper_vhdl.prj
 INFO: [VRFC 10-163] Analyzing VHDL file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" into library xpm
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
 Vivado Simulator 2016.2
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 10582d6fc8a8429fb5d2fea8b7665be0 --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_adder_behav xil_defaultlib.tb_adder xil_defaultlib.glbl -log elaborate.log 
+Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto db510e6f95be439180a510813d312943 --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_montgomery_wrapper_behav xil_defaultlib.tb_montgomery_wrapper xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 103 differs from formal bit length 102 for port a [/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/rtl/adder.v:63]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.carryselect
+Compiling module xil_defaultlib.carryselectlast
 Compiling module xil_defaultlib.adder
-Compiling module xil_defaultlib.tb_adder
+Compiling module xil_defaultlib.montgomery
+Compiling module xil_defaultlib.montgomery_wrapper
+Compiling module xil_defaultlib.tb_montgomery_wrapper
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_adder_behav
+Built simulation snapshot tb_montgomery_wrapper_behav
 
 ****** Webtalk v2016.2 (64-bit)
   **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
   **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 
-source /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/xsim.dir/tb_adder_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Wed Aug  1 14:53:22 2018...
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+source /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/xsim.dir/tb_montgomery_wrapper_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Aug  7 10:43:11 2018...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_adder_behav -key {Behavioral:sim_1:Functional:tb_adder} -tclbatch {tb_adder.tcl} -log {simulate.log}"
+   with args "tb_montgomery_wrapper_behav -key {Behavioral:sim_1:Functional:tb_montgomery_wrapper} -tclbatch {tb_montgomery_wrapper.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2016.2
 Time resolution is 1 ps
-source tb_adder.tcl
+source tb_montgomery_wrapper.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -468,75 +149,30 @@ source tb_adder.tcl
 # }
 # run 1000ns
 
-Addition with testvector 1
-result calculated=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002
-result expected  =000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002
-error            =000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
-Addition with testvector 2
-result calculated=50ff75ae8b051b7e096660ba6b5f92d303babd6881aaec844325f1e20b14c9cc942dd53af27391df85a67bdc7851bda0029cbae3ab7543b3d859f6716bfecc4f0
-result expected  =50ff75ae8b051b7e096660ba6b5f92d303babd6881aaec844325f1e20b14c9cc942dd53af27391df85a67bdc7851bda0029cbae3ab7543b3d859f6716bfecc4f0
-error            =000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-result shifted   =287fbad745828dbf04b3305d35afc96981dd5eb440d576422192f8f1058a64e64a16ea9d7939c8efc2d33dee3c28ded0014e5d71d5baa1d9ec2cfb38b5ff66278
-result expected  =287fbad745828dbf04b3305d35afc96981dd5eb440d576422192f8f1058a64e64a16ea9d7939c8efc2d33dee3c28ded0014e5d71d5baa1d9ec2cfb38b5ff66278
-error            =000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-
-Subtraction with testvector 1
-result calculated=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-result expected  =000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-error            =000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-
-Subtraction with testvector 2
-result calculated=7faab323076a6b6a71bf04cb4484edae6174b535c1c8aae072f1b2ea0bccb608f6562358fafc4971af9d3939bbe3ae4e7d8ad3d9d19136a05386b4be79c3c59e5
-result expected  =7faab323076a6b6a71bf04cb4484edae6174b535c1c8aae072f1b2ea0bccb608f6562358fafc4971af9d3939bbe3ae4e7d8ad3d9d19136a05386b4be79c3c59e5
-error            =000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-result shifted   =3fd5599183b535b538df8265a24276d730ba5a9ae0e455703978d97505e65b047b2b11ac7d7e24b8d7ce9c9cddf1d7273ec569ece8c89b5029c35a5f3ce1e2cf2
-
-
-
-Addition with EXTRA testvector
-result calculated=60142d6e7030948b75d17e9ddb8c6f2ec40019e16e93870d6e213e20fa932e0a75ad2aedb5db5b34ff6276d4d6d2d8f9b87266541adb91f1dab11634cccf926b3
-result expected  =60142d6e7030948b75d17e9ddb8c6f2ec40019e16e93870d6e213e20fa932e0a75ad2aedb5db5b34ff6276d4d6d2d8f9b87266541adb91f1dab11634cccf926b3
-error            =000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-result shifted   =300a16b738184a45bae8bf4eedc6379762000cf0b749c386b7109f107d4997053ad69576daedad9a7fb13b6a6b696c7cdc39332a0d6dc8f8ed588b1a6667c9359
-
-
-
-SUBSTRACTION with MONT RESULT testvector
-result calculated=00ab67db87ec68e882eb8c6e5276aaaffedc0ba10a7c427b07dd51b591f8a4d4da95c818f63f8f97d261690ff1cbba1f298e82f80f5a0a5103fe6550358281578
-result expected  =00ab67db87ec68e882eb8c6e5276aaaffedc0ba10a7c427b07dd51b591f8a4d4da95c818f63f8f97d261690ff1cbba1f298e82f80f5a0a5103fe6550358281578
-error            =000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-result shifted   =4055b3edc3f634744175c637293b5557ff6e05d0853e213d83eea8dac8fc526a6d4ae40c7b1fc7cbe930b487f8e5dd0f94c7417c07ad052881ff32a81ac140abc
-
-
-$finish called at time : 555 ns : File "/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/rtl/tb_adder.v" Line 267
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_adder_behav' loaded.
+SIMULATING with NUM_OF_CORES=00000001
+P1=00000001
+Write BRAM_1: c51931a952132ef036d3028f13cbfd6b806b8cac22e43d058b7d54cac8ae12c74dcc390705c0a4a8ab8e05261fad952504561a829f030fbd7957b1be51977946
+P1=00000002
+Write BRAM_1: b220f8c0ca83b6555f0012cccb4fba56e3d5644598e985d3154a73de20669791c57840133d61e9143548fef68b55af12c0810a9f2d5929f796dec8945fc3d1ef
+P1=00000003
+Write BRAM_1: c6bb131b105d393e10943525c871a4de28470c406ae0754b0a3be041aa19906f2e3b3a4ccea1ed9f052304af6ed897f20f02d0b458727656948cb7ab0ebd5f75
+P1=00000004
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 6155.965 ; gain = 55.352 ; free physical = 3583 ; free virtual = 22053
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_montgomery_wrapper_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:12 ; elapsed = 00:00:55 . Memory (MB): peak = 7101.844 ; gain = 0.000 ; free physical = 832 ; free virtual = 20380
-set_property top rsa_project_wrapper [current_fileset]
-update_compile_order -fileset sources_1
+launch_simulation: Time (s): cpu = 00:00:25 ; elapsed = 00:01:01 . Memory (MB): peak = 6155.965 ; gain = 64.586 ; free physical = 3583 ; free virtual = 22053
+run all
+P1=00000005
+Read BRAM_1   :   9712a9297e49f069da554d8dc901b64c4c2446883f359f29b6df247f7b232ec666dd18b8fd0d421a5370eae758b4d35bffe854d55e453a5ae265cbb79e31ea81
+result expected = 9712a9297e49f069da554d8dc901b64c4c2446883f359f29b6df247f7b232ec666dd18b8fd0d421a5370eae758b4d35bffe854d55e453a5ae265cbb79e31ea81
+$finish called at time : 25955 ns : File "/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/rtl/tb_montgomery_wrapper.v" Line 234
 reset_run synth_1
-update_module_reference rsa_project_montgomery_wrapper_0_0
-INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'STATE_BITS' by 4 for port or parameter 'r_state'
-INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'STATE_BITS' by 4 for port or parameter 'next_state'
-INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'resetn' as interface 'resetn'.
-INFO: [IP_Flow 19-4728] Bus Interface 'resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
-INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
-INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'resetn'.
-INFO: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo'.
-INFO: [IP_Flow 19-2207] Repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo' already exists; ignoring attempt to add it again.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/src/ip_repo'.
-Upgrading '/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd'
-INFO: [IP_Flow 19-1972] Upgraded rsa_project_montgomery_wrapper_0_0 from montgomery_wrapper_v1_0 1.0 to montgomery_wrapper_v1_0 1.0
-Wrote  : </users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd> 
-launch_runs synth_1 -jobs 2
-Verilog Output written to : /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.v
-Verilog Output written to : /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project_wrapper.v
-Wrote  : </users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd> 
+launch_runs impl_1
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Verilog Output written to : /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.v
+Verilog Output written to : /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project_wrapper.v
+Wrote  : </users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd> 
 INFO: [BD 41-1029] Generation completed for the IP Integrator block Montgomery_Interface_0 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_to_bram_0 .
@@ -550,24 +186,270 @@ INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_s
 INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m02_couplers/auto_pc .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m03_couplers/auto_pc .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
-Exporting to file /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project.hwh
-Generated Block Design Tcl file /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project_bd.tcl
-Generated Hardware Definition File /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.hwdef
-INFO: [HDL 9-2216] Analyzing Verilog file "/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.v" into library work [/users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.v:1]
-[Wed Aug  1 14:54:39 2018] Launched synth_1...
-Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/synth_1/runme.log
-launch_runs: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 7106.562 ; gain = 4.719 ; free physical = 820 ; free virtual = 20348
-launch_runs impl_1 -jobs 2
-[Wed Aug  1 15:02:11 2018] Launched impl_1...
-Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Wed Aug  1 15:04:17 2018] Launched impl_1...
-Run output will be captured here: /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log
-file copy -force /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.runs/impl_1/rsa_project_wrapper.sysdef /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf
+Exporting to file /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project.hwh
+Generated Block Design Tcl file /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project_bd.tcl
+Generated Hardware Definition File /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.hwdef
+[Tue Aug  7 10:44:03 2018] Launched synth_1...
+Run output will be captured here: /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.runs/synth_1/runme.log
+[Tue Aug  7 10:44:03 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 6367.551 ; gain = 184.625 ; free physical = 3458 ; free virtual = 21897
+launch_runs impl_1 -to_step write_bitstream
+[Tue Aug  7 10:53:39 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 352 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/tmp/.Xil_r0594518/Vivado-5970-pc-klas1-3.esat.kuleuven.be/dcp/rsa_project_wrapper_early.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0594518/Vivado-5970-pc-klas1-3.esat.kuleuven.be/dcp/rsa_project_wrapper_early.xdc]
+Parsing XDC File [/tmp/.Xil_r0594518/Vivado-5970-pc-klas1-3.esat.kuleuven.be/dcp/rsa_project_wrapper.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0594518/Vivado-5970-pc-klas1-3.esat.kuleuven.be/dcp/rsa_project_wrapper.xdc]
+Parsing XDC File [/tmp/.Xil_r0594518/Vivado-5970-pc-klas1-3.esat.kuleuven.be/dcp/rsa_project_wrapper_late.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0594518/Vivado-5970-pc-klas1-3.esat.kuleuven.be/dcp/rsa_project_wrapper_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.85 ; elapsed = 00:00:00.84 . Memory (MB): peak = 6581.863 ; gain = 11.000 ; free physical = 3093 ; free virtual = 21636
+Restored from archive | CPU: 0.870000 secs | Memory: 14.781761 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.85 ; elapsed = 00:00:00.84 . Memory (MB): peak = 6581.863 ; gain = 11.000 ; free physical = 3093 ; free virtual = 21636
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
+
+open_run: Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 6701.121 ; gain = 327.578 ; free physical = 3008 ; free virtual = 21528
+file copy -force /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.runs/impl_1/rsa_project_wrapper.sysdef /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf
+
+launch_sdk -workspace /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.sdk -hwspec /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.sdk -hwspec /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+source ./export_bitstream.tcl
+# file copy -force ./rsa_project/rsa_project.runs/impl_1/rsa_project_wrapper.bit ./src/sdk/rsa_project_wrapper_hw_platform_0/rsa_project_wrapper.bit
+update_module_reference rsa_project_montgomery_wrapper_0_0
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'STATE_BITS' by 4 for port or parameter 'r_state'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'STATE_BITS' by 4 for port or parameter 'next_state'
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'resetn' as interface 'resetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'resetn'.
+INFO: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/ip_repo'.
+INFO: [IP_Flow 19-2207] Repository '/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/ip_repo' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/ip_repo'.
+Upgrading '/users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd'
+INFO: [IP_Flow 19-1972] Upgraded rsa_project_montgomery_wrapper_0_0 from montgomery_wrapper_v1_0 1.0 to montgomery_wrapper_v1_0 1.0
+Wrote  : </users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd> 
+set_property top tb_montgomery [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_montgomery' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_montgomery_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_cdc_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
+INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
+INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
+INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_base.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_base
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dpdistram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dprom.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sdpram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_spram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_spram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sprom.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_tdpram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/rtl/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module carryselect
+INFO: [VRFC 10-311] analyzing module carryselectlast
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/rtl/montgomery.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/rtl/tb_montgomery.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_montgomery
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl -m64 --relax -prj tb_montgomery_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" into library xpm
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto db510e6f95be439180a510813d312943 --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_montgomery_behav xil_defaultlib.tb_montgomery xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 103 differs from formal bit length 102 for port a [/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/rtl/adder.v:63]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.carryselect
+Compiling module xil_defaultlib.carryselectlast
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.montgomery
+Compiling module xil_defaultlib.tb_montgomery
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_montgomery_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav/xsim.dir/tb_montgomery_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Aug  7 13:02:35 2018...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_montgomery_behav -key {Behavioral:sim_1:Functional:tb_montgomery} -tclbatch {tb_montgomery.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+source tb_montgomery.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 7098.523 ; gain = 54.793 ; free physical = 514 ; free virtual = 19603
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_montgomery_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:40 ; elapsed = 00:01:21 . Memory (MB): peak = 7098.523 ; gain = 54.793 ; free physical = 514 ; free virtual = 19603
+run all
+
+ Original testvector, no modulo operation
+result calculated =949031c785e1767b10ba755667f53317d8d5f1a90f417270509b2b297fbcb536f7e61b05ced28916eba6fedb32920cabbece7750fb6a1a21c943b46b9dad43f9
+result expected   =949031c785e1767b10ba755667f53317d8d5f1a90f417270509b2b297fbcb536f7e61b05ced28916eba6fedb32920cabbece7750fb6a1a21c943b46b9dad43f9
+error             =00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+ Testvector 1 old script, no modulo operation
+result calculated =989c4842b4d4e09c463ce7eb282963433113fc4f59dd86fc94ae85db3a992a9da4d38f4aaf9c263810e38ba8969c21e32857163a64deb38db64bb0c957fd0578
+result expected   =989c4842b4d4e09c463ce7eb282963433113fc4f59dd86fc94ae85db3a992a9da4d38f4aaf9c263810e38ba8969c21e32857163a64deb38db64bb0c957fd0578
+error             =00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+ Testvector 2 old script with modulo operation
+result calculated =0ab67db87ec68e882eb8c6e5276aaaffedc0ba10a7c427b07dd51b591f8a4d4da95c818f63f8f97d261690ff1cbba1f298e82f80f5a0a5103fe6550358281578
+result expected   =0ab67db87ec68e882eb8c6e5276aaaffedc0ba10a7c427b07dd51b591f8a4d4da95c818f63f8f97d261690ff1cbba1f298e82f80f5a0a5103fe6550358281578
+error             =00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+ Testvector 3 old script with modulo operation, fishy result
+result calculated       =9230b601210a46386366ec250e86e95f0fae87b491bbefc042785554e0740f797f5140f286a6275910f178c74b6b3579e8ea5b505d3ff5c72a53daf3a78d1ecc
+result expected         =0d2c7a007de6e0bcd84baa0c8614cb8168afa2004dc70c2e33b76c7b7f2aa091bdaa6004c70e5f40a63f74c43a5ddc95ecb7ac30de4742c452f8135cbb2a7955
+error                   =7afbc3ff5cdc9a8474e4bde7778de22259011a4bbc0b1c6df13f17269eb691183e591f12406837e7954dfbfceef2a71c03cd50e081074cfd28a43869139d5a89
+result calculated - m   =0d2c7a007de6e0bcd84baa0c8614cb8168afa2004dc70c2e33b76c7b7f2aa091bdaa6004c70e5f40a63f74c43a5ddc95ecb7ac30de4742c452f8135cbb2a7955
+result expected         =0d2c7a007de6e0bcd84baa0c8614cb8168afa2004dc70c2e33b76c7b7f2aa091bdaa6004c70e5f40a63f74c43a5ddc95ecb7ac30de4742c452f8135cbb2a7955
+error                   =00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+ Testvector 1 new script without modulo operation
+result calculated =e40e9abd5ae86562dc91dc76d9db38e5bb7fefa51693f93f7d9cf5225f16a1d4fcba14682763a76daf72ae1251f7f244039912aee4e7dd67e44ae46274965540
+result expected   =e40e9abd5ae86562dc91dc76d9db38e5bb7fefa51693f93f7d9cf5225f16a1d4fcba14682763a76daf72ae1251f7f244039912aee4e7dd67e44ae46274965540
+error             =00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+ Testvector 2 new script with modulo operation
+result calculated =6c14285ea125ff316712e423226ac84fef1f76c001bfa558326a42a8b7555a31bdbc0e3561373b022b848271ccc06026461a8b569c63e8cb69f111c14265afed
+result expected   =6c14285ea125ff316712e423226ac84fef1f76c001bfa558326a42a8b7555a31bdbc0e3561373b022b848271ccc06026461a8b569c63e8cb69f111c14265afed
+error             =00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+ Testvector 3 new script with modulo operation
+result calculated =27491996f90ebcb4a11bc29ed6578d17d4d9f642e61a994476813191c63aa4a47b5d4873555bbbe35ce46dd0ae4a2c656abaa6005d6e2469ac59d608a820806c
+result expected   =27491996f90ebcb4a11bc29ed6578d17d4d9f642e61a994476813191c63aa4a47b5d4873555bbbe35ce46dd0ae4a2c656abaa6005d6e2469ac59d608a820806c
+error             =00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+ Testvector 4 new script with modulo operation
+result calculated =01a3c6ffae1b9f200f6b69839020c1eabd238777e3741aad68332a8ddfd5eebd300252f0c1bd68271e0f89724114733ec26a6961bdbb619e55cefe29752edb01
+result expected   =01a3c6ffae1b9f200f6b69839020c1eabd238777e3741aad68332a8ddfd5eebd300252f0c1bd68271e0f89724114733ec26a6961bdbb619e55cefe29752edb01
+error             =00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+ Testvector 5
+result calculated =028656b6ac06697daea4f6457ecfe574b6ffdb6a23c207f3ccf1505a68369b89a6525d5abb19da641a64b33059a5ff0196204bcc35a39bd6b7c02b0c0aab8e1a
+result expected   =028656b6ac06697daea4f6457ecfe574b6ffdb6a23c207f3ccf1505a68369b89a6525d5abb19da641a64b33059a5ff0196204bcc35a39bd6b7c02b0c0aab8e1a
+error             =00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+ Testvector 6 (same as in main.c)
+result calculated =9712a9297e49f069da554d8dc901b64c4c2446883f359f29b6df247f7b232ec666dd18b8fd0d421a5370eae758b4d35bffe854d55e453a5ae265cbb79e31ea81
+result expected   =9712a9297e49f069da554d8dc901b64c4c2446883f359f29b6df247f7b232ec666dd18b8fd0d421a5370eae758b4d35bffe854d55e453a5ae265cbb79e31ea81
+error             =00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+$finish called at time : 102905 ns : File "/users/start2016/r0594518/Desktop/Merger/package/rsa-project/src/rtl/tb_montgomery.v" Line 315
+set_property STEPS.PLACE_DESIGN.ARGS.DIRECTIVE ExtraPostPlacementOpt [get_runs impl_1]
+set_property STEPS.PHYS_OPT_DESIGN.IS_ENABLED true [get_runs impl_1]
+set_property STEPS.PHYS_OPT_DESIGN.ARGS.DIRECTIVE AggressiveExplore [get_runs impl_1]
+set_property STEPS.ROUTE_DESIGN.ARGS.DIRECTIVE Explore [get_runs impl_1]
+set_property STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED true [get_runs impl_1]
+set_property STEPS.POST_ROUTE_PHYS_OPT_DESIGN.ARGS.DIRECTIVE AggressiveExplore [get_runs impl_1]
+reset_run synth_1
+launch_runs impl_1
+Verilog Output written to : /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.v
+Verilog Output written to : /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project_wrapper.v
+Wrote  : </users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/rsa_project.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Montgomery_Interface_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_to_bram_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block montgomery_wrapper_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m01_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m02_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m03_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project.hwh
+Generated Block Design Tcl file /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project_bd.tcl
+Generated Hardware Definition File /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.srcs/sources_1/bd/rsa_project/hdl/rsa_project.hwdef
+[Tue Aug  7 13:05:29 2018] Launched synth_1...
+Run output will be captured here: /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.runs/synth_1/runme.log
+[Tue Aug  7 13:05:29 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 7187.688 ; gain = 0.000 ; free physical = 383 ; free virtual = 19448
+refresh_design
+INFO: [Netlist 29-17] Analyzing 352 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/tmp/.Xil_r0594518/Vivado-5970-pc-klas1-3.esat.kuleuven.be/dcp/rsa_project_wrapper_early.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0594518/Vivado-5970-pc-klas1-3.esat.kuleuven.be/dcp/rsa_project_wrapper_early.xdc]
+Parsing XDC File [/tmp/.Xil_r0594518/Vivado-5970-pc-klas1-3.esat.kuleuven.be/dcp/rsa_project_wrapper.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0594518/Vivado-5970-pc-klas1-3.esat.kuleuven.be/dcp/rsa_project_wrapper.xdc]
+Parsing XDC File [/tmp/.Xil_r0594518/Vivado-5970-pc-klas1-3.esat.kuleuven.be/dcp/rsa_project_wrapper_late.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0594518/Vivado-5970-pc-klas1-3.esat.kuleuven.be/dcp/rsa_project_wrapper_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.90 ; elapsed = 00:00:00.88 . Memory (MB): peak = 7192.691 ; gain = 0.000 ; free physical = 1117 ; free virtual = 19322
+Restored from archive | CPU: 0.910000 secs | Memory: 16.063499 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.90 ; elapsed = 00:00:00.88 . Memory (MB): peak = 7192.691 ; gain = 0.000 ; free physical = 1117 ; free virtual = 19322
+refresh_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 7264.539 ; gain = 76.852 ; free physical = 1099 ; free virtual = 19277
+launch_runs impl_1 -to_step write_bitstream
+[Tue Aug  7 13:27:47 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.runs/impl_1/runme.log
+file copy -force /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.runs/impl_1/rsa_project_wrapper.sysdef /users/start2016/r0594518/Desktop/Merger/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf
 
 source ./export_bitstream.tcl
 # file copy -force ./rsa_project/rsa_project.runs/impl_1/rsa_project_wrapper.bit ./src/sdk/rsa_project_wrapper_hw_platform_0/rsa_project_wrapper.bit
-launch_sdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf
-INFO: [Vivado 12-393] Launching SDK...
-INFO: [Vivado 12-417] Running xsdk -workspace /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk -hwspec /users/start2015/r0575928/Desktop/ddplatforms_2017/package/rsa-project/rsa_project/rsa_project.sdk/rsa_project_wrapper.hdf
-INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.

@@ -9,4 +9,4 @@ then
 exit $RETVAL
 fi
 }
-ExecStep $xv_path/bin/xsim tb_adder_behav -key {Behavioral:sim_1:Functional:tb_adder} -tclbatch tb_adder.tcl -log simulate.log
+ExecStep $xv_path/bin/xsim tb_montgomery_behav -key {Behavioral:sim_1:Functional:tb_montgomery} -tclbatch tb_montgomery.tcl -log simulate.log

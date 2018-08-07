@@ -71,7 +71,6 @@ if operation == 3:
 
   A = helpers.getRandomInt(512)
   B = helpers.getRandomInt(512)
-  A = B
   M = helpers.getModulus(512)
   C = HW.MontMul_512(A, B, M)
   D = (A*B*helpers.Modinv(2**512,M)) % M
@@ -87,6 +86,8 @@ if operation == 3:
   print "uint32_t A[16] = {" + helpers.WriteConstants(A,16) + "};"
   print "uint32_t B[16] = {" + helpers.WriteConstants(B,16) + "};"   
   print "uint32_t M[16] = {" + helpers.WriteConstants(M,16) + "};" 
+  print "uint32_t EXPECTED[16] = {" + helpers.WriteConstants(C,16) + "};" 
+
 #####################################################
 if operation == 6:
   print "Debug Montgomery Exponentiation\n"
@@ -145,7 +146,8 @@ if operation == 4:
 
   print "uint32_t X[16] = {" + helpers.WriteConstants(X,16) + "};"
   print "uint32_t E[16] = {" + helpers.WriteConstants(E,16) + "};"   
-  print "uint32_t M[16] = {" + helpers.WriteConstants(M,16) + "};"       
+  print "uint32_t M[16] = {" + helpers.WriteConstants(M,16) + "};" 
+  print "uint32_t EXPECTED[16] = {" + helpers.WriteConstants(C,16) + "};"       
 
 #####################################################
 
@@ -208,7 +210,7 @@ if operation == 5:
   print "R_1024       = ", hex(R_1024)          # 1024-bits
   print "R2_1024      = ", hex(R2_1024)         # 1024-bits
 
-  helpers.CreateConstants(M, p, q, N, e, d_p, d_q, x_p, x_q, Rp, Rq, R2p, R2q, R_1024, R2_1024, seed);
+  
     
   #####################################################
 
@@ -266,16 +268,19 @@ if operation == 5:
   #print "uint32_t Ct2h[16] = {" + helpers.WriteConstants(Ct2h,16) + "};"
   #print "uint32_t R2p[16] = {" + helpers.WriteConstants(R2p,16) + "};"
   #print "uint32_t p[16] = {" + helpers.WriteConstants(p,16) + "};"
-  #print "uint32_t tp[16] = {" + helpers.WriteConstants(tp,16) + "};"
+  print "uint32_t tp[16] = {" + helpers.WriteConstants(tp,16) + "};"
   tq   = HW.MontMul_512(Ct2h, R2q, q)           # 512-bits HW montgomery mult.
 
   Ct_p = (tp + Ct2l) % p                        # 512-bits HW/SW modular add.
-  #print "uint32_t C_tp[16] = {" + helpers.WriteConstants(Ct_p,16) + "};"
-  #print "uint32_t Ct2l[16] = {" + helpers.WriteConstants(Ct2l,16) + "};"
+  print "uint32_t Ct2l[16] = {" + helpers.WriteConstants(Ct2l,16) + "};"
+  print "uint32_t C_tp[16] = {" + helpers.WriteConstants(Ct_p,16) + "};"
+  print " Ct2l >= p: ", Ct2l > p 
   Ct_q = (tq + Ct2l) % q                        # 512-bits HW/SW modular add.
 
   print "Ciphertext_p = ", hex(Ct_p)            # 512-bits
   print "Ciphertext_q = ", hex(Ct_q)            # 512-bits
+  print "uint32_t Ciphertext_p[16] = {" + helpers.WriteConstants(Ct_p,16) + "};"
+  print "uint32_t Ciphertext_q[16] = {" + helpers.WriteConstants(Ct_q,16) + "};"
 
   # Exponentiation, in Hardware
   
@@ -285,15 +290,18 @@ if operation == 5:
         # If need to debug, by observing the intermediate values,
         # then can be uncommented.
 
-  P_p = HW.MontExp_512(Ct_p, d_p, p)           # 512-bit HW modular exp.
+  #P_p = HW.MontExp_512(Ct_p, d_p, p)           # 512-bit HW modular exp.
   #P_q = HW.MontExp_512(Ct_q, d_q, q)           # 512-bit HW modular exp.
  
 
-  #P_p = helpers.Modexp(Ct_p, d_p, p)            # 512-bit HW modular exp.
+  P_p = helpers.Modexp(Ct_p, d_p, p)            # 512-bit HW modular exp.
   P_q = helpers.Modexp(Ct_q, d_q, q)            # 512-bit HW modular exp.
 
-  x_tilde   = HW.MontMul_512(Ct_p, R2p, p)           # 512-bits HW montgomery mult.
-  A = HW.MontMul_512(Rp, Rp, p) 
+  print "uint32_t Plaintext_p[16] = {" + helpers.WriteConstants(P_p,16) + "};"
+  print "uint32_t Plaintext_q[16] = {" + helpers.WriteConstants(P_q,16) + "};"
+
+  #x_tilde   = HW.MontMul_512(Ct_p, R2p, p)           # 512-bits HW montgomery mult.
+  #A = HW.MontMul_512(Rp, Rp, p) 
 
 
   #t = helpers.bitlen(d_p)
@@ -343,6 +351,13 @@ if operation == 5:
   s       = (tp + tq) % N                       # 1024-bit SW addition
   Pt3     = SW.MontMul_1024(s , R2_1024, N);    # 1024-bit SW montgomery mult.
 
+  print "t_p    = ", hex(tp)             # 1024-bits
+  print "uint32_t t_p[32] = {" + helpers.WriteConstants(tp,32) + "};"
+  print "t_q    = ", hex(tq)             # 1024-bits
   print "Plaintext    = ", hex(Pt3)             # 1024-bits
+  print "uint32_t Plaintext[32] = {" + helpers.WriteConstants(Pt3,32) + "};"
+
+  helpers.CreateConstants(M, p, q, N, e, d_p, d_q, x_p, x_q, Rp, Rq, R2p, R2q, R_1024, R2_1024, seed,
+  	Ct2, Ct_p, Ct_q, P_p, P_q, Pt3);
 
   print "\n\ntestvector.c file is created in this directory."

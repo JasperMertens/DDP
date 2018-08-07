@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="r0575928" Host="pc-klas1-10.esat.kuleuven.be" Pid="29461">
+    <Process Command="vivado" Owner="r0594518" Host="pc-klas1-3.esat.kuleuven.be" Pid="31860">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="r0575928" Host="pc-klas1-10.esat.kuleuven.be" Pid="31361">
+    <Process Command="vivado" Owner="r0594518" Host="pc-klas1-3.esat.kuleuven.be" Pid="3713">
     </Process>
 </ProcessHandle>
