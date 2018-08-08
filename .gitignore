@@ -25,4 +25,10 @@
 
 /package/rsa-project/src/*
 !/package/rsa-project/src/rtl
+!/package/rsa-project/src/sdk
 
+/package/rsa-project/src/sdk/*
+!/package/rsa-project/src/sdk/rsa_design_example
+
+/package/rsa-project/src/sdk/rsa_design_example/*
+!/package/rsa-project/src/sdk/rsa_design_example/src
