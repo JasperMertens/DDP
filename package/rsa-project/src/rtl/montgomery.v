@@ -143,7 +143,7 @@ module montgomery(
                 start_a <= 1'b1;
                 shift_a <= 1'b1;
                 subtract_a <= 1'b0;
-               if (in_a[i] == 1'b1) begin
+               if (a[i] == 1'b1) begin
                   if (c_0_wire_1 == 1'b1)
                     in_b_a_reg <= m;
                   else
@@ -171,7 +171,7 @@ module montgomery(
                     end
                 end
                 else begin
-                    in_b_a_reg <= m;
+                    in_b_a_reg <= ~m;
                     start_a <= 1'b1;
                     subtract_a <= 1'b1;
                 end

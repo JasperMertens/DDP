@@ -233,6 +233,10 @@ module montgomery_wrapper
                     begin
                         start       <= 1'b0;
                         result_save <= result; 
+                        if (done == 1'b1) begin
+                            a_in <= result;
+                            b_in <= result;
+                        end
                     end
                 STATE_WRITE_DATA:
                     begin

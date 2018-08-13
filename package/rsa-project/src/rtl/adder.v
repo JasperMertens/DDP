@@ -31,8 +31,9 @@ module adder(
     // assign done = 1'b1;
     
     wire [513:0] in_b_new;
-    assign in_b_new = subtract ? ~in_b : in_b;
-   
+    //assign in_b_new = subtract ? ~in_b : in_b;
+    assign in_b_new = in_b;
+       
     parameter n = 103;
     
     wire [n-1:0] A0  = in_a[n-1:0];

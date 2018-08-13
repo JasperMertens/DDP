@@ -91,7 +91,7 @@ int main()
 
     //test_encryption_noprint();
 
-	//test_hw_mont_exp();
+	test_hw_mont_exp();
 
 	//test_reduce_cipher();
 
@@ -101,7 +101,7 @@ int main()
 
 	//test_hw_mont_decrypt_noprint();
 
-	test_encrypt_decrypt_print();
+	//test_encrypt_decrypt_print();
 
 	//test_encrypt_decrypt_noprint();
 
@@ -847,10 +847,10 @@ void test_hw_mont_exp() {
 	//xil_printf("Expected: \r\n");
 	//printArray(expected_output, 16);
 
-	//if (memcmp(result, expected_output, 16) != 0) {
-	//	xil_printf("Hardware montgomery exp failed\r\n");
-	//	abort();
-	//}
+	if (memcmp(result, expected_output, 16) != 0) {
+		xil_printf("Hardware montgomery exp failed\r\n");
+		abort();
+	}
 
 	//xil_printf("Test hardware montgomery exp succeeded\r\n");
 
