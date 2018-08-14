@@ -12,7 +12,7 @@
 #include "hw.h"
 
 ///////////////////////////////////////////////////////////
-#include "montgomeryASM.h"
+//#include "montgomeryASM.h"
 ///////////////////////////////////////////////////////////
 
 // These variables are defined and assigned in testvector.c
@@ -240,8 +240,8 @@ void test_encrypt_decrypt_print(){
 		abort();
 	}
 
-	xil_printf("Expected: ");
-	printArray(Plaintext_q, 16);
+	//xil_printf("Expected: ");
+	//printArray(Plaintext_q, 16);
 	if (memcmp(Pq, Plaintext_q, 16) != 0) {
 		xil_printf("Hardware montgomery exp q failed\r\n");
 		abort();
@@ -321,8 +321,8 @@ void test_hw_mont_decrypt_print() {
 	//xil_printf("Pq: ");
 	//printArray(Pq, 16);
 
-	xil_printf("Expected: ");
-	printArray(Plaintext_q, 16);
+	//xil_printf("Expected: ");
+	//printArray(Plaintext_q, 16);
 	if (memcmp(Pq, Plaintext_q, 16) != 0) {
 		xil_printf("Hardware montgomery exp q failed\r\n");
 		abort();
@@ -690,7 +690,7 @@ void test_hw_mont_mult() {
 
 void test_hw_mont_exp() {
 
-#define HW_EXP_TESTVECTOR 13
+#define HW_EXP_TESTVECTOR 15
 
 	#if HW_EXP_TESTVECTOR == 1
 	uint32_t X[16] = {0xe1e4acac, 0xcfa2f28e, 0x79abcdd4, 0x7d90773f, 0xa844ad2f, 0xe93b3a0e, 0xf321f2da, 0x1b80c645, 0x365232bd, 0xd77af168, 0xe805b057, 0xf5e2e949, 0x472d5f9c, 0x9a5824e5, 0xffc0b738, 0x1c836853};
@@ -843,16 +843,16 @@ void test_hw_mont_exp() {
 	#endif /*HW_EXP_TESTVECTOR*/
 
 	hw_mod_exp(X, E, exp_len, M, R, R2, result);
-	//printMontResult(16);
-	//xil_printf("Expected: \r\n");
-	//printArray(expected_output, 16);
+	printMontResult(16);
+	xil_printf("Expected: \r\n");
+	printArray(expected_output, 16);
 
 	if (memcmp(result, expected_output, 16) != 0) {
 		xil_printf("Hardware montgomery exp failed\r\n");
 		abort();
 	}
 
-	//xil_printf("Test hardware montgomery exp succeeded\r\n");
+	xil_printf("Test hardware montgomery exp succeeded\r\n");
 
 }
 
