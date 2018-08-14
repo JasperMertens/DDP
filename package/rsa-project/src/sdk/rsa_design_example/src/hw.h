@@ -19,6 +19,9 @@ void hw_montgomery_multiply_no_mod_no_res(unsigned int  *a, unsigned int  *b, un
 // Executes montgomery multiplication A*B/R % N on the hardware with the last used modulus
 void hw_montgomery_multiply_no_mod_no_res_no_a(unsigned int  *b, unsigned int size);
 
+// Executes montgomery multiplication A*B/R % N on the hardware with the last used modulus
+void hw_montgomery_multiply_no_mod_no_a(unsigned int  *b, unsigned int  *res, unsigned int size);
+
 // Calculates res = (a * b / R) mod N where R = 2^1024 and N is the last used modulus
 void hw_montgomery_multiply_no_mod(unsigned int *a, unsigned int  *b, unsigned int  *res, unsigned int  size);
 

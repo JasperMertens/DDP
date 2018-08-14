@@ -64,13 +64,13 @@ void hw_mod_exp(uint32_t *msg, uint32_t *exp, uint32_t exp_len, uint32_t *n, uin
 		if(bit)
 		{
 			// Calculate A = MontMul(A, x_tilde)
-			hw_montgomery_multiply_no_mod(A, x_tilde, A, 16);
+			hw_montgomery_multiply_no_mod_no_res_no_a(x_tilde, 16);
 		}
 	}
 
 	// Calculate A = MontMul(A, 1)
 	//   One is defined in global.h
-	hw_montgomery_multiply_no_mod(A, (unsigned int *)One, A, 16);
+	hw_montgomery_multiply_no_mod_no_a((unsigned int *)One, A, 16);
 
 }
 
@@ -105,10 +105,10 @@ void hw_montgomery_square_prev(unsigned int  *res, unsigned int SIZE) {
 	my_montgomery_port[0] = CMD_COMPUTE;
 	port2_wait_for_done();
 
-	my_montgomery_port[0] = CMD_WRITE;
-	port2_wait_for_done();
+	//my_montgomery_port[0] = CMD_WRITE;
+	//port2_wait_for_done();
 
-	copy_bram_to(res, SIZE);
+	//copy_bram_to(res, SIZE);
 }
 
 // Executes montgomery multiplication A*B/R % N on the hardware with the last used modulus
@@ -135,6 +135,22 @@ void hw_montgomery_multiply_no_mod_no_res_no_a(unsigned int  *b, unsigned int SI
 
 	my_montgomery_port[0] = CMD_COMPUTE;
 	port2_wait_for_done();
+}
+
+// Executes montgomery multiplication A*B/R % N on the hardware with the last used modulus
+void hw_montgomery_multiply_no_mod_no_a(unsigned int  *b, unsigned int  *res, unsigned int SIZE) {
+
+	my_montgomery_port[0] = CMD_READ_B;
+	bram_dma_transfer(dma_config,b,SIZE);
+	port2_wait_for_done();
+
+	my_montgomery_port[0] = CMD_COMPUTE;
+	port2_wait_for_done();
+
+	my_montgomery_port[0] = CMD_WRITE;
+	port2_wait_for_done();
+
+	copy_bram_to(res, SIZE);
 }
 
 // Executes montgomery multiplication A*B/R % N on the hardware with the last used modulus

@@ -843,16 +843,16 @@ void test_hw_mont_exp() {
 	#endif /*HW_EXP_TESTVECTOR*/
 
 	hw_mod_exp(X, E, exp_len, M, R, R2, result);
-	printMontResult(16);
-	xil_printf("Expected: \r\n");
-	printArray(expected_output, 16);
+	//printMontResult(16);
+	//xil_printf("Expected: \r\n");
+	//printArray(expected_output, 16);
 
 	if (memcmp(result, expected_output, 16) != 0) {
 		xil_printf("Hardware montgomery exp failed\r\n");
 		abort();
 	}
 
-	xil_printf("Test hardware montgomery exp succeeded\r\n");
+	//xil_printf("Test hardware montgomery exp succeeded\r\n");
 
 }
 
