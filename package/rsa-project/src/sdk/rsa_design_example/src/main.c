@@ -29,6 +29,22 @@ extern uint32_t M[32],
 				Plaintext_p[32], Plaintext_q[32],
 				Plaintext[32];
 
+// The testvectors.py file was adjusted to generate a testvector.c file with some intermediate results for verification.
+// If you want to run tests that make use of the testvector.c data, then make sure to generate the testvector.c with the adjusted
+// testvectors.py file and set VERIFICATION_IN_TESTVECTOR_C to 1
+// Otherwise, when generating testvector.c with the standard testvectors.py file, set VERIFICATION_IN_TESTVECTOR_C to 0 to
+// avoid errors.
+#define VERIFICATION_IN_TESTVECTOR_C 0
+
+#if VERIFICATION_IN_TESTVECTOR_C==0
+	uint32_t Ciphertext[32] = {0};
+	uint32_t Ciphertext_p[16] = {0};
+	uint32_t Ciphertext_q[16] = {0};
+	uint32_t Plaintext_p[32] = {0};
+	uint32_t Plaintext_q[32] = {0};
+	uint32_t Plaintext[32] = {0};
+#endif /*VERIFICATION_IN_TESTVECTOR_C*/
+
 
 // Note that these tree CMDs are same as
 // they are defined in montgomery_wrapper.v
@@ -51,7 +67,7 @@ void test_combine_result();
 void test_hw_mont_decrypt_print();
 void test_hw_mont_decrypt_noprint();
 void test_encrypt_decrypt_print();
-void test_encrypt_decrypt_noprint();
+void encrypt_decrypt();
 
 
 uint32_t result[32] = {0};
@@ -97,9 +113,9 @@ int main()
 
 	//test_hw_mont_decrypt_noprint();
 
-	test_encrypt_decrypt_print();
+	//test_encrypt_decrypt_print();
 
-	//test_encrypt_decrypt_noprint();
+	encrypt_decrypt();
 
     STOP_TIMING
 
@@ -258,9 +274,11 @@ void test_encrypt_decrypt_print(){
 	xil_printf("Decryption succeeded\r\n");
 }
 
-void test_encrypt_decrypt_noprint(){
+void encrypt_decrypt(){
 
 	mod_exp(M, e, e_len, N, N_prime, R_1024, R2_1024, result);
+	xil_printf("Ciphertext: \r\n");
+	printMontResult(32);
 
 	unsigned int Cp[32] = {0};
 	unsigned int Cq[32] = {0};
@@ -274,6 +292,9 @@ void test_encrypt_decrypt_noprint(){
 	hw_mod_exp(nCq, d_q, d_q_len, q, Rq, R2q, Pq);
 
 	combineResult(Pp, Pq, result);
+
+	xil_printf("Plaintext: \r\n");
+	printMontResult(32);
 }
 
 void test_hw_mont_decrypt_print() {
