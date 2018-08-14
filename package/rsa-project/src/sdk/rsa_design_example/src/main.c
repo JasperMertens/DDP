@@ -11,10 +11,6 @@
 #include "sw.h"
 #include "hw.h"
 
-///////////////////////////////////////////////////////////
-//#include "montgomeryASM.h"
-///////////////////////////////////////////////////////////
-
 // These variables are defined and assigned in testvector.c
 extern uint32_t M[32],
                 N[32],       N_prime[32],
@@ -91,7 +87,7 @@ int main()
 
     //test_encryption_noprint();
 
-	test_hw_mont_exp();
+	//test_hw_mont_exp();
 
 	//test_reduce_cipher();
 
@@ -101,7 +97,7 @@ int main()
 
 	//test_hw_mont_decrypt_noprint();
 
-	//test_encrypt_decrypt_print();
+	test_encrypt_decrypt_print();
 
 	//test_encrypt_decrypt_noprint();
 
@@ -218,7 +214,7 @@ void test_encrypt_decrypt_print(){
 	unsigned int Cq[32] = {0};
 	uint32_t Pp[32] = {0};
 	uint32_t Pq[32] = {0};
-	reduce_cipher((unsigned int*)Ciphertext, Cp, Cq);
+	reduce_cipher((unsigned int*)result, Cp, Cq);
 
 	if (memcmp(Cp, Ciphertext_p, 16) != 0) {
 		xil_printf("Reduction failed p\r\n");
@@ -251,7 +247,7 @@ void test_encrypt_decrypt_print(){
 
 	xil_printf("\r\n");
 	printMontResult(32);
-	xil_printf("Expected: ");
+	xil_printf("Expected ");
 	printArray(Plaintext, 32);
 
 	if (memcmp(result, Plaintext, 32) != 0) {
@@ -270,7 +266,7 @@ void test_encrypt_decrypt_noprint(){
 	unsigned int Cq[32] = {0};
 	uint32_t Pp[32] = {0};
 	uint32_t Pq[32] = {0};
-	reduce_cipher((unsigned int*)Ciphertext, Cp, Cq);
+	reduce_cipher((unsigned int*)result, Cp, Cq);
 
 	uint32_t *nCp = (uint32_t*)Cp;
 	uint32_t *nCq = (uint32_t*)Cq;
@@ -615,11 +611,7 @@ void test_mont_mult() {
 	uint32_t expected_output[32] = {0x5464e333, 0x44f8fe2b, 0xf83eecfe, 0xdfc33e69, 0x740c3e43, 0x6695b71e, 0x274097c8, 0x54880ddd, 0x56496d92, 0x606da4bf, 0x86662e38, 0x7a023e3c, 0x35f23153, 0x813409a4, 0xe2b91b54, 0x83863679, 0xfbc44c0e, 0xafe7d499, 0xefcb0f6e, 0x47fbbd56, 0x16fb41ad, 0x77821593, 0x7595f37f, 0xbac577d0, 0x8633b85d, 0x0af8b3d8, 0xfe363ab2, 0xe2dfc91c, 0xe8a56a7b, 0x69af670d, 0x0c5e8901, 0x0a1d976c};
 	#endif /*MULT_TESTVECTOR*/
 
-	//mont_mult_asm(a, b, N, n_prime, result, 32);
 	montgomery_multiply(a, b, N, n_prime, result, 32);
-
-	// Code semester 1 from sw.c
-	// montgomery_multiply(A16, B16, N16, N_prime16, result, 16);
 
 	printMontResult(32);
 	xil_printf("Expected ");
@@ -676,16 +668,16 @@ void test_hw_mont_mult() {
 	#endif
 
 	hw_montgomery_multiply_first((unsigned int*) A16, (unsigned int*) B16, (unsigned int*) N16, (unsigned int*) result, 16);
-	//printMontResult(16);
-	//xil_printf("Expected: \r\n");
-	//printArray(expected_output, 16);
+	printMontResult(16);
+	xil_printf("Expected ");
+	printArray(expected_output, 16);
 
-	//if (memcmp(result, expected_output, 16) != 0) {
-	//	xil_printf("Hardware montgomery mult failed\r\n");
-	//	abort();
-	//}
+	if (memcmp(result, expected_output, 16) != 0) {
+		xil_printf("Hardware montgomery mult failed\r\n");
+		abort();
+	}
 
-	//xil_printf("Test hardware montgomery mult succeeded\r\n");
+	xil_printf("Test hardware montgomery mult succeeded\r\n");
 }
 
 void test_hw_mont_exp() {
@@ -844,7 +836,7 @@ void test_hw_mont_exp() {
 
 	hw_mod_exp(X, E, exp_len, M, R, R2, result);
 	printMontResult(16);
-	xil_printf("Expected: \r\n");
+	xil_printf("Expected ");
 	printArray(expected_output, 16);
 
 	if (memcmp(result, expected_output, 16) != 0) {
